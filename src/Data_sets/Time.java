@@ -1,0 +1,49 @@
+package Data_sets;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * Time build time from java.util.Date.
+ */
+
+public class Time {
+	
+	Date time;
+	
+	DateFormat TimeFormater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
+	public Time(Date time) {
+		this.time = time;
+	}
+
+	/**
+	 * @return the time
+	 */
+	public Date getTime() {
+		return time;
+	}
+
+	/**
+	 * @param time the time to set
+	 */
+	public void setTime(Date time) {
+		this.time = time;
+	}
+	
+	/**
+	 *  compare check if 2 times are equals.
+	 */
+	public boolean compare(Time t) {
+		if(this.time.compareTo(t.time)==0) return true;
+			return false;
+	}
+	
+	@Override
+	public String toString() {
+		return TimeFormater.format(time);
+	}
+
+	
+}
+
