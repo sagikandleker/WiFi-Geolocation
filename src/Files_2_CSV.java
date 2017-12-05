@@ -63,26 +63,32 @@ public class Files_2_CSV {
 		Line = br.readLine();
 		Line = br.readLine();
 
+
 		while(Line!=null) {
 			String[] arr = (Line.split(","));
 
-			mac = arr[0];
-			ssid = arr[1];
-			Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
-			frequency = Integer.parseInt(arr[4]);
-			signal = Integer.parseInt(arr[5]);
-			lat = Double.parseDouble(arr[6]);
-			lon = Double.parseDouble(arr[7]);
-			alt = Double.parseDouble(arr[8]);
+                        if(!(arr[1].equals(""))) {
+			 mac = arr[0];
+			 ssid = arr[1];
+			 Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
+			 frequency = Integer.parseInt(arr[4]);
+			 signal = Integer.parseInt(arr[5]);
+			 lat = Double.parseDouble(arr[6]);
+			 lon = Double.parseDouble(arr[7]);
+			 alt = Double.parseDouble(arr[8]);
 			
-			Position pos = new Position(alt, lon, lat);
-			Wifi wifi = new Wifi(ssid, mac, frequency, signal);
-			Time time = new Time(date);
-			Record record = new Record(time, pos);
-			record.addWifi(wifi);
-			data_list.add(record);
+			 Position pos = new Position(alt, lon, lat);
+			 Wifi wifi = new Wifi(ssid, mac, frequency, signal);
+			 Time time = new Time(date);
+			 Record record = new Record(time, pos);
+			 record.addWifi(wifi);
+			 data_list.add(record);
 			
-			Line = br.readLine();		
+			 Line = br.readLine();
+}
+else{
+Line = br.readLine();
+}
 		}
 		
 		br.close();
