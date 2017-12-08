@@ -14,7 +14,7 @@ public class Record {
 	private Position position;
 	private ArrayList<Wifi> WifiList;
 	private int wifinetworks;
-	private int id;
+	private String id;
 	
 	/**
 	 * @param id
@@ -143,11 +143,11 @@ public class Record {
 		this.wifinetworks = wifinetworks;
 	}
 	
-	public int getid() {
-		return id;
+	public String getid() {
+		return  id;
 	}
 
-	public void setid(int id) {
+	public void setid(String id) {
 		this.id = id;
 	}
 	
