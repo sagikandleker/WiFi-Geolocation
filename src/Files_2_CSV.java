@@ -26,7 +26,7 @@ public class Files_2_CSV {
 	 * and sending them to Analyze function.
 	 */
 	public static void getFiles() throws IOException, ParseException {
-		 Write_Headers();
+		Write_Headers();
 		File folder = new File(Main.path_In);
 		String[] files_Names = folder.list();
 
@@ -37,13 +37,13 @@ public class Files_2_CSV {
 				counter++;
 			}	
 		}	
-		
+
 		System.out.println(counter + " CSV Files Founded");
 		if(counter != 0) {
 			System.out.println("CSV has been Created");
 			CSV_2_KML.KML();
 		}
-		
+
 	}
 
 	/**
@@ -51,11 +51,11 @@ public class Files_2_CSV {
 	 */
 	public static void Analayze(String file)throws IOException, ParseException {
 
-		
+
 		String mac,ssid;
 		int signal, frequency;
 		double lat,lon,alt;
-		
+
 		ArrayList<Record> data_list = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
@@ -67,34 +67,34 @@ public class Files_2_CSV {
 		while(Line!=null) {
 			String[] arr = (Line.split(","));
 
-                        if(!(arr[1].equals(""))) {
-			 mac = arr[0];
-			 ssid = arr[1];
-			 Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
-			 frequency = Integer.parseInt(arr[4]);
-			 signal = Integer.parseInt(arr[5]);
-			 lat = Double.parseDouble(arr[6]);
-			 lon = Double.parseDouble(arr[7]);
-			 alt = Double.parseDouble(arr[8]);
-			
-			 Position pos = new Position(alt, lon, lat);
-			 Wifi wifi = new Wifi(ssid, mac, frequency, signal);
-			 Time time = new Time(date);
-			 Record record = new Record(time, pos);
-			 record.addWifi(wifi);
-			 data_list.add(record);
-			
-			 Line = br.readLine();
-}
-else{
-Line = br.readLine();
-}
+			if(!(arr[1].equals(""))) {
+				mac = arr[0];
+				ssid = arr[1];
+				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
+				frequency = Integer.parseInt(arr[4]);
+				signal = Integer.parseInt(arr[5]);
+				lat = Double.parseDouble(arr[6]);
+				lon = Double.parseDouble(arr[7]);
+				alt = Double.parseDouble(arr[8]);
+
+				Position pos = new Position(alt, lon, lat);
+				Wifi wifi = new Wifi(ssid, mac, frequency, signal);
+				Time time = new Time(date);
+				Record record = new Record(time, pos);
+				record.addWifi(wifi);
+				data_list.add(record);
+
+				Line = br.readLine();
+			}
+			else{
+				Line = br.readLine();
+			}
 		}
-		
+
 		br.close();
 		Write_2_CSV(data_list);
 	}
-	
+
 	/**
 	 *  Write_Headers Create CSV file with Headers.
 	 */
@@ -105,40 +105,40 @@ Line = br.readLine();
 		for (int i = 0; i <= 5; i++) {
 			file.write(titles_List[i]+",");
 		}
-		
+
 		for (int i = 1; i <= 10; i++) {
 			for (int j = 6; j < titles_List.length; j++) {
 				file.write(titles_List[j]+i+",");
 			}
 		}
-		
+
 		file.close();
 	}
- 
+
 	/**
 	 * Write_2_CSV Get the ArrayList from the Analyze function and copy the data from it in a sorted way.
 	 * Write to the CSV file with Headers the new sorted ArrayList.
 	 */
 	public static void Write_2_CSV(ArrayList<Record> data_list) throws IOException{
-		
+
 		StringBuilder stringBuilder = new StringBuilder();
 		ArrayList<Record> sorted_data_list = new ArrayList<Record>(); 
 		FileWriter fw = new FileWriter(Main.file_Out, true);
-		
+
 		for(int i = 0; i < data_list.size()-1; i++) {
-			
-				if(data_list.get(i).compare(data_list.get(i+1)) == true) {
-					data_list.get(i+1).mergeWifiList(data_list.get(i).getWifiList());
-				}
-				else {		
-					sorted_data_list.add(data_list.get(i));
-				}			
+
+			if(data_list.get(i).compare(data_list.get(i+1)) == true) {
+				data_list.get(i+1).mergeWifiList(data_list.get(i).getWifiList());
+			}
+			else {		
+				sorted_data_list.add(data_list.get(i));
+			}			
 		}
-		
+
 		int count = 1;
-		
+
 		for (int i = 0; i < sorted_data_list.size(); i++) {
-			
+
 			sorted_data_list.get(i).setWifinetworks(sorted_data_list.get(i).getWifiList().size());
 			sorted_data_list.get(i).setid(count);
 			count++;
