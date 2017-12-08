@@ -90,7 +90,6 @@ public class Files_2_CSV {
 				Line = br.readLine();
 			}
 		}
-
 		br.close();
 		Write_2_CSV(data_list);
 	}
