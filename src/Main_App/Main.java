@@ -1,3 +1,4 @@
+package Main_App;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -12,14 +13,15 @@ import java.text.ParseException;
  */
 
 public class Main {
-	static final String path = "C:\\Users\\itay1\\Desktop\\Project_OOP";
-	static final String path_In = path+"/In";
-	static final String path_Out= path+"/Out";
-	static final String file_Out = path_Out+"/WigleWifi_Sorted.csv";
-	
+	public static final String path = "C:\\Users\\sagik\\git\\OOP";
+	public static final String path_In = path+"/Files read from";
+	public static final String path_Out= path+"/Files create to";
+	public static final String file_Out = path_Out+"/WigleWifi_Sorted.csv";
+
 	public static void main(String[] args) throws IOException, ParseException {
 		
 		Files_2_CSV.getFiles();
-		System.out.println("Finish");
+		System.out.println("Finish All");
+		
 	}
 }
