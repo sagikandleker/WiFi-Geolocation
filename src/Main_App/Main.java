@@ -9,7 +9,7 @@ import java.text.ParseException;
 
 /**
  *  Choose folder from PC to read files.
- * Call functions to continue.
+ * Call functions to continue@.
  */
 
 public class Main {
