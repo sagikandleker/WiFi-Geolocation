@@ -82,4 +82,3 @@ public class Position_Filter {
 		return (rad * 180 / Math.PI);
 	}
 }
-
