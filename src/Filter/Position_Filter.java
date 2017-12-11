@@ -24,7 +24,7 @@ public class Position_Filter {
 		BufferedReader br = new BufferedReader(fr);
 		String Line = br.readLine();
 		Line = br.readLine();
-		int count=0;
+		
 		while(Line != null) 
 		{
 			String[] arr = (Line.split(","));
@@ -32,7 +32,7 @@ public class Position_Filter {
 			double templon=	Double.parseDouble(arr[3]);	
 			if(distance(lat,lon,templat,templon)<=radius)
 			{
-				count++;
+				
 				for (int i = 6; i < arr.length; i=i+4) 
 				{
 				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
@@ -51,11 +51,9 @@ public class Position_Filter {
 		}
 		
 		br.close();
-		if(count==0)System.out.println("Position not found");
-		else
-		{
+		
 			Filter_2_KML.KML(data_list,"Position");	
-		}
+		
 	}
 		
 		
@@ -67,7 +65,7 @@ public class Position_Filter {
 		dist = dist * 60 * 1.1515;
 		dist = dist * 1.609344;
 		
-		return (dist);
+		return (dist)/100;
 	}
 
 	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
