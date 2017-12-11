@@ -13,7 +13,7 @@ import java.text.ParseException;
  */
 
 public class Main {
-	public static final String path = "C:\\Users\\sagik\\git\\OOP";
+	public static final String path = "C:\\Users\\itay1\\eclipse-workspace\\Project_OOP\\Project_OOP";
 	public static final String path_In = path+"/Files read from";
 	public static final String path_Out= path+"/Files create to";
 	public static final String file_Out = path_Out+"/WigleWifi_Sorted.csv";

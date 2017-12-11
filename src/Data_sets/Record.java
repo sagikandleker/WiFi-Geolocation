@@ -35,7 +35,9 @@ public class Record {
 	}
 	
 	/**
-	 *  mergeWifiList merge 2 wifi lists to 1.
+	 * 
+	 * @param wl
+	 * 
 	 */
 	public void mergeWifiList(ArrayList<Wifi> wl)
 	{
