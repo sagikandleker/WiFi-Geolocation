@@ -76,7 +76,7 @@ public class Position_Filter {
 	}
 	
 	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-	/*::	This function converts radians to decimal degrees						 :*/
+	/*::	This function converts radians to @decimal degrees						 :*/
 	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 	private static double rad2deg(double rad) {
 		return (rad * 180 / Math.PI);
