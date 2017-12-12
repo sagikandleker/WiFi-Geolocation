@@ -10,10 +10,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import Data_sets.Position;
-import Data_sets.Record;
-import Data_sets.Time;
-import Data_sets.Wifi;
+import Data_Setup.Position;
+import Data_Setup.Record;
+import Data_Setup.Time;
+import Data_Setup.Wifi;
 
 /**
  * Files_2_CSV Build sorted CSV file.
@@ -38,9 +38,9 @@ public class Files_2_CSV {
 			}	
 		}	
 		
-		System.out.println(counter + " CSV Files Founded");
+		System.out.println(counter + " CSV files founded ["+Main.path_In+"]");
 		if(counter != 0) {
-			System.out.println("CSV has been Created");
+			System.out.println("1 CSV has been created ["+Main.file_Out+"]\n");
 			Filter.Main_Filter.Choosefilter();
 		}
 		
