@@ -9,7 +9,7 @@ public class Main_Filter {
 	public static void Choosefilter() throws ParseException, IOException
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Choose Your Filter: ID/Time/Position");
+		System.out.println("Select a filter you'd like to search for: ID/Time/Position");
 		String Filter_input = sc.nextLine();
 		if(Filter_input.equalsIgnoreCase("ID"))
 		{
@@ -29,9 +29,9 @@ public class Main_Filter {
 		}
 		else if(Filter_input.equalsIgnoreCase("Time")){
 			{
-				System.out.println("Enter start Date and Time (For Example: yyyy-mm-dd hh:mm:ss like this way 2017-10-27 14:23:00");
+				System.out.println("Enter start Date and Time (For Example: yyyy-mm-dd hh:mm:ss like this way 2017-10-27 14:23:00)");
 				String Time_begin = sc.nextLine();
-				System.out.println("Enter end Date and Time (For Example: yyyy-mm-dd hh:mm:ss like this way 2017-10-27 14:23:00");
+				System.out.println("Enter end Date and Time (For Example: yyyy-mm-dd hh:mm:ss like this way 2017-10-27 14:23:00)");
 				String Time_end = sc.nextLine();
 		 		Time_Filter.timefilter(Time_begin,Time_end);
 		

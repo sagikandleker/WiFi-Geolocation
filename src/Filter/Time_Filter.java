@@ -8,9 +8,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import Data_sets.ID;
-import Data_sets.Position;
-import Data_sets.Time;
+
+import Data_Setup.ID;
+import Data_Setup.Position;
+import Data_Setup.Time;
 import Main_App.Main;
 
 public class Time_Filter {
@@ -55,7 +56,7 @@ public class Time_Filter {
  		if(count==0)System.out.println("Time not found");
  		else
  		{
- 			Filter_2_KML.KML(data_list,"Time");	
+ 			Filter_2_KML.KML(data_list,"Time");
  		}
  	}
 		

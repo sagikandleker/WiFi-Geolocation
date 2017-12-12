@@ -1,8 +1,8 @@
 package Filter;
 
-import Data_sets.ID;
-import Data_sets.Position;
-import Data_sets.Time;
+import Data_Setup.ID;
+import Data_Setup.Position;
+import Data_Setup.Time;
 
 
 public class Record_Filter {
