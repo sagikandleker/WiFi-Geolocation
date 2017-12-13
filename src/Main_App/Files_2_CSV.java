@@ -41,7 +41,7 @@ public class Files_2_CSV {
 		System.out.println(counter + " CSV files founded ["+Main.path_In+"]");
 		if(counter != 0) {
 			System.out.println("1 CSV has been created ["+Main.file_Out+"]\n");
-			//Filter.Main_Filter.Choosefilter();
+			
 
 		}
 
