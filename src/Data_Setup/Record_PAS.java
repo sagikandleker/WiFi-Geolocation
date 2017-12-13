@@ -47,7 +47,7 @@ public class Record_PAS {
 		for (int i = 3; i < pas.size(); i++)
 		{
 
-				/*if(pas.get(i).getSignal() > pas.get(i++).getSignal())
+				/*if(pas.get(i).getSignal() > pas.get(i++).getSignal())@
 				{
 					Record_PAS temp;
 					temp=pas.get(i);
