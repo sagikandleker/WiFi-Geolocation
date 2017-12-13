@@ -146,7 +146,7 @@ public class Record {
 	}
 	
 	public String getid() {
-		return  id;
+		return id;
 	}
 
 	public void setid(String id) {

@@ -2,8 +2,12 @@ package Data_Setup;
 
 public class Signal {
 
-	int signal;
+	public int signal;
 
+	public Signal() {
+		this.signal = 0;
+	}
+	
 	public Signal(int signal) {
 
 		this.signal = signal;

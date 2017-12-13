@@ -32,7 +32,7 @@ public class Files_2_CSV {
 
 		int counter = 0;
 		for(int i = 0; i < files_Names.length; i++) {
-			if(files_Names[i].endsWith(".csv")) {
+			if(files_Names[i].startsWith("WigleWifi") && files_Names[i].endsWith(".csv")) {
 				Analayze(Main.path_In+"/"+files_Names[i]);
 				counter++;
 			}	
@@ -41,7 +41,7 @@ public class Files_2_CSV {
 		System.out.println(counter + " CSV files founded ["+Main.path_In+"]");
 		if(counter != 0) {
 			System.out.println("1 CSV has been created ["+Main.file_Out+"]\n");
-			Filter.Main_Filter.Choosefilter();
+			//Filter.Main_Filter.Choosefilter();
 
 		}
 

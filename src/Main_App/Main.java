@@ -23,7 +23,8 @@ public class Main {
 	public static void main(String[] args) throws IOException, ParseException {
 		
 		Files_2_CSV.getFiles();
-		Algorithm1.Naive("a4:2b:b0:ad:2d:34");
+		Algorithm1.Better("a4:2b:b0:ad:2d:34");
+		//Algorithm1.Naive("a4:2b:b0:ad:2d:34");
 		System.out.println("Finish All");
 		
 				

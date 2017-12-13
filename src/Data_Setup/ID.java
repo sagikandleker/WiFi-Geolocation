@@ -2,22 +2,22 @@ package Data_Setup;
 
 public class ID {
 
-	public String ID;
+	public String id;
 
-	public ID(String iD) {
-		ID = iD;
+	public ID(String ID) {
+		ID = id;
 	}
 
 	public String getID() {
-		return ID;
+		return id;
 	}
 
-	public void setID(String iD) {
-		ID = iD;
+	public void setID(String ID) {
+		ID = id;
 	}
 
 	@Override
 	public String toString() {
-		return ""+ID;
+		return ""+id;
 	}
 }

@@ -84,6 +84,4 @@ public class Position {
 	public String toString() {
 		return lat + "," + lon + "," + alt;
 	}
-	
-	
 }

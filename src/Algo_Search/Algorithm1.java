@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Data_Setup.Position;
 import Data_Setup.Record_PAS;
+import Data_Setup.Signal;
 import Main_App.Files_2_CSV;
 
 public class Algorithm1 {
@@ -30,7 +31,7 @@ public class Algorithm1 {
 					if(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getSignal() > max_Signal) {
 
 						max_Signal = Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getSignal();
-						pos = new Position(Files_2_CSV.All_Data_List.get(i).getPosition()); 
+						pos = new Position(Files_2_CSV.All_Data_List.get(i).getPosition());
 					}
 
 				}
@@ -50,20 +51,27 @@ public class Algorithm1 {
 	public static void Better(String mac) throws IOException {
 
 		ArrayList<Record_PAS> ara = new ArrayList<Record_PAS>();
+		Position pos = new Position();
+		Signal signal = new Signal();
+		Record_PAS record = new Record_PAS();
 
 		for (int i = 0; i < Files_2_CSV.All_Data_List.size(); i++) {
 			for (int j = 0; j < Files_2_CSV.All_Data_List.get(i).getWifiList().size(); j++) {
-
 				if(mac.equals(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getMac())) {
+
+					signal = new Signal(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getSignal());
+					pos = new Position(Files_2_CSV.All_Data_List.get(i).getPosition());
+					record = new Record_PAS(pos, signal);
+
+					ara.add(record);
 					
-					//ara.add(Files_2_CSV.All_Data_List.get(i).getPosition());
 				}
-				
+
 			}
 		}
 
-
-
+		;
+		System.out.println(Record_PAS.sort_Signal_Power(ara));
 
 	}
 
