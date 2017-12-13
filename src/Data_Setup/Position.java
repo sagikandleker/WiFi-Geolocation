@@ -9,6 +9,18 @@ public class Position {
 	
 	public double lat, alt, lon;
 	
+	public Position(Position p) {
+		this.alt = p.alt;
+		this.lon = p.lon;
+		this.lat = p.lat;
+	}
+	
+	public Position() {
+		this.alt = 0;
+		this.lon = 0;
+		this.lat = 0;
+	}
+	
 	/**
 	 *  Constructor build position with coordinates (alt, lon, lat)
 	 */
