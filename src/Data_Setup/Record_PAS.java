@@ -44,19 +44,25 @@ public class Record_PAS {
 	public static ArrayList<Record_PAS> sort_Signal_Power(ArrayList<Record_PAS> pas)
 	{
 		
-		for (int i = 3; i < pas.size(); i++)
+		for (int i = 0; i < pas.size(); i++)
 		{
-
-				/*if(pas.get(i).getSignal() > pas.get(i++).getSignal())@
+			for (int j = 0; j < pas.size(); j++)
+			{
+				if((pas.get(i).getSignal().bigger(pas.get(j).getSignal())))
 				{
 					Record_PAS temp;
 					temp=pas.get(i);
-					pas.set(i, pas.get(i++));
-					pas.set(i++, temp);
-				
-			}*/
+					pas.set(i, pas.get(j));
+					pas.set(j, temp);
+				}
+			}
 		}
 		
-		return pas;
+		ArrayList<Record_PAS> four_pos = new ArrayList<Record_PAS>();
+		for (int k = 0; k < 4; k++)
+		{
+			four_pos.add(pas.get(k));
+		}
+		return four_pos;
 	}
 }
