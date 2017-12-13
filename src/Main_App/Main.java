@@ -3,6 +3,8 @@ package Main_App;
 import java.io.IOException;
 import java.text.ParseException;
 
+import Algo_Search.Algorithm1;
+
 /**
  * @author Itay, Sagi & Guy.
  */
@@ -21,7 +23,9 @@ public class Main {
 	public static void main(String[] args) throws IOException, ParseException {
 		
 		Files_2_CSV.getFiles();
+		Algorithm1.Naive("a4:2b:b0:ad:2d:34");
 		System.out.println("Finish All");
 		
+				
 	}
 }
