@@ -21,6 +21,15 @@ public class Signal {
 		this.signal = signal;
 	}
 
+	public boolean bigger(Signal signal2)
+	{
+		if(this.signal>signal2.signal)return true;
+		else
+			return false;
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return ""+signal;
