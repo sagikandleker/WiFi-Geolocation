@@ -54,24 +54,23 @@ public class Algorithm1 {
 		Position pos = new Position();
 		Signal signal = new Signal();
 		Record_PAS record = new Record_PAS();
-
+		boolean found_flag=false;
 		for (int i = 0; i < Files_2_CSV.All_Data_List.size(); i++) {
 			for (int j = 0; j < Files_2_CSV.All_Data_List.get(i).getWifiList().size(); j++) {
 				if(mac.equals(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getMac())) {
-
+					found_flag=true;
 					signal = new Signal(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getSignal());
 					pos = new Position(Files_2_CSV.All_Data_List.get(i).getPosition());
 					record = new Record_PAS(pos, signal);
-
 					ara.add(record);
-					
 				}
-
 			}
 		}
-
-		;
-		System.out.println(Record_PAS.sort_Signal_Power(ara));
+		if(found_flag==true)System.out.println(Record_PAS.sort_Signal_Power(ara));
+		else
+		{
+			System.out.println("mac not found");
+		}
 
 	}
 
