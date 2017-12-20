@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
-import Algo_Search.Algorithm1;
-
 /**
  * @author Itay, Sagi & Guy.
  */
