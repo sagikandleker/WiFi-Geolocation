@@ -1,5 +1,6 @@
 package Algo_Search;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import Data_Setup.Position;
@@ -66,7 +67,11 @@ public class Algorithm1 {
 				}
 			}
 		}
-		if(found_flag==true)System.out.println(Record_PAS.sort_Signal_Power(ara));
+		if(found_flag==true)
+		{
+			System.out.println(Record_PAS.sort_Signal_Power(ara));
+			Algo1(Record_PAS.sort_Signal_Power(ara));
+		}
 		else
 		{
 			System.out.println("mac not found");
@@ -74,4 +79,35 @@ public class Algorithm1 {
 
 	}
 
+	public static void Algo1(ArrayList<Record_PAS> three_pos)
+	{
+
+		Algo_Data all_parameters = new Algo_Data();
+		Position pos = new Position();
+
+		all_parameters.setWeight1(((1/Math.pow((three_pos.get(0).getSignal().cast()),2.0))));
+		all_parameters.setWlat1(three_pos.get(0).getPosition().getLat()*(all_parameters.getWeight1()));
+		all_parameters.setWlon1(three_pos.get(0).getPosition().getLon()*all_parameters.getWeight1());
+		all_parameters.setWalt1(three_pos.get(0).getPosition().getAlt()*all_parameters.getWeight1());
+
+		all_parameters.setWeight2(1/Math.pow((three_pos.get(1).getSignal().cast()),2.0));
+		all_parameters.setWlat2(three_pos.get(1).getPosition().getLat()*all_parameters.getWeight2());
+		all_parameters.setWlon2(three_pos.get(1).getPosition().getLon()*all_parameters.getWeight2());
+		all_parameters.setWalt2(three_pos.get(1).getPosition().getAlt()*all_parameters.getWeight2());
+
+		all_parameters.setWeight3(1/Math.pow((three_pos.get(2).getSignal().cast()),2.0));
+		all_parameters.setWlat3(three_pos.get(2).getPosition().getLat()*all_parameters.getWeight3());
+		all_parameters.setWlon3(three_pos.get(2).getPosition().getLon()*all_parameters.getWeight3());
+		all_parameters.setWalt3(three_pos.get(2).getPosition().getAlt()*all_parameters.getWeight3());
+
+		all_parameters.setWeightsum();
+		all_parameters.setWlatsum();
+		all_parameters.setWlonsum();
+		all_parameters.setWaltsum();
+
+		pos.setLat(all_parameters.getWlatsum()/all_parameters.getWeightsum());
+		pos.setLon(all_parameters.getWlonsum()/all_parameters.getWeightsum());
+		pos.setAlt(all_parameters.getWaltsum()/all_parameters.getWeightsum());
+		System.out.println(pos);
+	}
 }
