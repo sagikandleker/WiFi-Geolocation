@@ -58,11 +58,11 @@ public class Record_PAS {
 			}
 		}
 		
-		ArrayList<Record_PAS> four_pos = new ArrayList<Record_PAS>();
-		for (int k = 0; k < 4; k++)
+		ArrayList<Record_PAS> three_pos = new ArrayList<Record_PAS>();
+		for (int k = 0; k < 3; k++)
 		{
-			four_pos.add(pas.get(k));
+			three_pos.add(pas.get(k));
 		}
-		return four_pos;
+		return three_pos;
 	}
 }
