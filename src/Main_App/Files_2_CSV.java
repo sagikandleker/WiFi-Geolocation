@@ -125,7 +125,7 @@ public class Files_2_CSV {
 	private static void Write_2_CSV(ArrayList<Record> data_list) throws IOException{
 
 		StringBuilder stringBuilder = new StringBuilder();
-		ArrayList<Record> sorted_data_list = new ArrayList<Record>(); 
+		ArrayList<Record> sorted_data_list = new ArrayList<Record>();
 		FileWriter fw = new FileWriter(Main.file_Out, true);
 
 		for(int i = 0; i < data_list.size()-1; i++) {
