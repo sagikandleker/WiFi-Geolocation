@@ -28,7 +28,10 @@ public class Signal {
 			return false;
 	}
 	
-	
+	public double cast()
+	{
+		return (double)signal;
+	}
 	
 	@Override
 	public String toString() {
