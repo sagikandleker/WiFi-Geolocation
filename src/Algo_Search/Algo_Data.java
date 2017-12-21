@@ -8,7 +8,7 @@ public class Algo_Data {
 	wlon1,wlon2,wlon3,wlonsum,
 	walt1,walt2,walt3,waltsum;
 
-
+	
 	public Algo_Data() {
 
 		this.weight1 = 0;
