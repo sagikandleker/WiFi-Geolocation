@@ -21,6 +21,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException, ParseException {
 		Files_2_CSV.getFiles();
+		Files_2_CSV.Hash_Add();
 		
 		Scanner sc = new Scanner(System.in);
 		String input_choice;
