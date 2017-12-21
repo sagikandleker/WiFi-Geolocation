@@ -9,9 +9,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.HashMap;
+import java.util.LinkedList;
 import Data_Setup.Position;
 import Data_Setup.Record;
+import Data_Setup.Record_Pos_Signal;
+import Data_Setup.Signal;
 import Data_Setup.Time;
 import Data_Setup.Wifi;
 
@@ -41,7 +44,7 @@ public class Files_2_CSV {
 		System.out.println(counter + " CSV files founded ["+Main.path_In+"]");
 		if(counter != 0) {
 			System.out.println("1 CSV has been created ["+Main.file_Out+"]\n");
-			
+
 
 		}
 
@@ -56,6 +59,8 @@ public class Files_2_CSV {
 		String mac,ssid;
 		int signal, frequency;
 		double lat,lon,alt;
+
+
 
 		ArrayList<Record> data_list = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
@@ -87,11 +92,13 @@ public class Files_2_CSV {
 				record.setid(id);
 				data_list.add(record);
 
-				Line = br.readLine();	
+				Line = br.readLine();
+
 			}
 			else {
 				Line = br.readLine();
 			}
+
 		}
 
 		br.close();
@@ -145,6 +152,7 @@ public class Files_2_CSV {
 
 		}
 
+
 		for (int i = 0; i < sorted_data_list.size(); i++) {
 			stringBuilder.append("\n");
 			stringBuilder.append((sorted_data_list.get(i).toString().replace("[", "").replace("]", "")));	
@@ -153,9 +161,47 @@ public class Files_2_CSV {
 		fw.write(stringBuilder.toString());
 		fw.close();
 		All_Data_List.addAll(sorted_data_list);
+
 		sorted_data_list.clear();
 		data_list.clear();
 
 	}
-	
+
+	public static void Hash_Add() {
+		
+		HashMap<String,LinkedList<Record_Pos_Signal>> hash = new HashMap<String,LinkedList<Record_Pos_Signal>>();
+		Record_Pos_Signal pos_signal = new Record_Pos_Signal();
+		
+		String mac;
+		int signal;
+		Signal sig;
+		Position pos=new Position();
+
+		for (int i = 0; i < All_Data_List.size(); i++) {
+			pos=All_Data_List.get(i).getPosition();
+			for (int k = 0; k < All_Data_List.get(i).getWifiList().size(); k++) {
+				signal = All_Data_List.get(i).getWifiList().get(k).getSignal();
+				mac = All_Data_List.get(i).getWifiList().get(k).getMac();
+				sig = new Signal(signal);
+				pos_signal = new Record_Pos_Signal(pos,sig);
+
+				LinkedList<Record_Pos_Signal> rps = new LinkedList<Record_Pos_Signal>();
+
+				if(hash.containsKey(mac) && !hash.get(mac).contains(pos_signal)) {
+					hash.get(mac).add(pos_signal);
+				}
+
+				else
+				{
+					rps.add(pos_signal);
+					hash.put(mac, rps);
+
+				}
+
+			}
+			
+		}
+		String ma = "00:1a:dd:e3:06:e4";
+		System.out.println(hash.get(ma).get(0).getSignal());
+	}
 }
