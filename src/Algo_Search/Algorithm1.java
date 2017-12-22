@@ -1,51 +1,11 @@
 package Algo_Search;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
 
-import Data_Setup.Position;
-import Data_Setup.Record_PAS;
+import java.util.ArrayList;
 import Data_Setup.Record_Pos_Signal;
-import Data_Setup.Signal;
 import Main_App.Files_2_CSV;
 
 public class Algorithm1 {
 
-	/*public static void Better(String mac) throws IOException {
-
-		ArrayList<Record_PAS> ara = new ArrayList<Record_PAS>();
-		Position pos = new Position();
-		Signal signal = new Signal();
-		Record_PAS record = new Record_PAS();
-		boolean found_flag=false;
-		for (int i = 0; i < Files_2_CSV.All_Data_List.size(); i++) {
-			for (int j = 0; j < Files_2_CSV.All_Data_List.get(i).getWifiList().size(); j++) {
-				if(mac.equals(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getMac())) {
-					found_flag=true;
-					signal = new Signal(Files_2_CSV.All_Data_List.get(i).getWifiList().get(j).getSignal());
-					pos = new Position(Files_2_CSV.All_Data_List.get(i).getPosition());
-					record = new Record_PAS(pos, signal);
-					ara.add(record);
-				}
-			}
-		}
-		if(found_flag == true)
-		{
-			if(ara.size() == 1) {
-				System.out.println(ara.get(0));
-			}
-			
-			ArrayList<Record_PAS> sorted = new ArrayList<Record_PAS>();
-			sorted = Record_PAS.sort_Signal_Power(ara);
-			Algo1(sorted);
-		}
-		else
-		{
-			System.out.println("mac not found");
-		}
-
-	}*/
 	public static void Better2(String mac) {
 		
 		if(Files_2_CSV.hash.containsKey(mac)) {
