@@ -1,15 +1,18 @@
 package Algo_Search;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 import Data_Setup.Position;
 import Data_Setup.Record_PAS;
+import Data_Setup.Record_Pos_Signal;
 import Data_Setup.Signal;
 import Main_App.Files_2_CSV;
 
 public class Algorithm1 {
 
-	public static void Better(String mac) throws IOException {
+	/*public static void Better(String mac) throws IOException {
 
 		ArrayList<Record_PAS> ara = new ArrayList<Record_PAS>();
 		Position pos = new Position();
@@ -42,11 +45,21 @@ public class Algorithm1 {
 			System.out.println("mac not found");
 		}
 
+	}*/
+	public static void Better2(String mac) {
+		
+		if(Files_2_CSV.hash.containsKey(mac)) {
+			System.out.println(Files_2_CSV.hash.get(mac));
+			System.out.println(Record_Pos_Signal.sort_Signal_Power(Files_2_CSV.hash.get(mac)));
+			Algo1(Record_Pos_Signal.sort_Signal_Power(Files_2_CSV.hash.get(mac)));
+			
+		}
+		
 	}
 
-	public static void Algo1(ArrayList<Record_PAS> three_pos) {
+	public static void Algo1(ArrayList<Record_Pos_Signal> three_pos) {
 		Algo_Data all_parameters = new Algo_Data();
-		Record_PAS pos = new Record_PAS();
+		Record_Pos_Signal pos = new Record_Pos_Signal();
 
 		if(three_pos.size() == 2) {
 
@@ -102,3 +115,6 @@ public class Algorithm1 {
 	}
 
 }
+
+// -73	32.10260039	35.20908298	690.3743628
+//		32.10272855515488,35.208795372052336,689.8946903102753,-73
