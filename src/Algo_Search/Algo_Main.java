@@ -19,7 +19,7 @@ public class Algo_Main {
 			String mac;
 			System.out.println("Enter MAC: ");
 			mac=sc.nextLine();
-			Algorithm1.Better(mac);
+			Algorithm1.Better2(mac);
 
 		}
 		else if(choice.equalsIgnoreCase("algo2"))
