@@ -66,16 +66,16 @@ public class Files_2_CSV {
 		ArrayList<Record> data_list = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
-		String Line = br.readLine();
-		String [] getmodel=Line.split(",");
+		String line = br.readLine();
+		String [] getmodel = line.split(",");
 		String id = getmodel[2].substring(6);
-		Line = br.readLine();
-		Line = br.readLine();
+		line = br.readLine();
+		line = br.readLine();
 
-		while(Line!=null) {
-			String[] arr = (Line.split(","));
+		while(line!=null) {
+			String[] arr = (line.split(","));
 			
-			if(((arr[10].equals("WIFI"))) && (!(arr[1].equals("")))) {
+			if(arr[10].equals("WIFI")) {
 				mac = arr[0];
 				ssid = arr[1];
 				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
@@ -93,11 +93,11 @@ public class Files_2_CSV {
 				record.setid(id);
 				data_list.add(record);
 
-				Line = br.readLine();
+				line = br.readLine();
 
 			}
 			else {
-				Line = br.readLine();
+				line = br.readLine();
 			}
 
 		}
@@ -176,6 +176,7 @@ public class Files_2_CSV {
 		String mac;
 		int signal;
 		Signal sig;
+		String ssid;
 		Position pos = new Position();
 
 		for (int i = 0; i < All_Data_List.size(); i++) {
@@ -184,6 +185,7 @@ public class Files_2_CSV {
 				signal = All_Data_List.get(i).getWifiList().get(k).getSignal();
 				mac = All_Data_List.get(i).getWifiList().get(k).getMac();
 				sig = new Signal(signal);
+				ssid = All_Data_List.get(i).getWifiList().get(k).getSsid();
 				pos_signal = new Record_Pos_Signal(pos,sig);
 
 				ArrayList<Record_Pos_Signal> rps = new ArrayList<Record_Pos_Signal>();
