@@ -1,21 +1,36 @@
 package Algo_Search;
 
 import java.util.ArrayList;
+import java.util.Optional;
+
 import Data_Setup.Record_Pos_Signal;
 import Main_App.Files_2_CSV;
 
 public class Algorithm1 {
 
-	public static void Better2(String mac) {
-		
+	public static void Better(String mac) {
+
 		if(Files_2_CSV.hash.containsKey(mac)) {
+
 			System.out.println(Files_2_CSV.hash.get(mac));
 			System.out.println(Record_Pos_Signal.sort_Signal_Power(Files_2_CSV.hash.get(mac)));
 			Algo1(Record_Pos_Signal.sort_Signal_Power(Files_2_CSV.hash.get(mac)));
-			
+
 		}
-		
+		//for (int i = 0; i < Files_2_CSV.hash.keySet().size(); i++) {
+
+			//String mac1 = Files_2_CSV.hash.keySet().;
+			//Record_Pos_Signal.sort_Signal_Power(Files_2_CSV.hash.get(mac1));	
+
+
+		//}
+
 	}
+
+
+
+
+
 
 	public static void Algo1(ArrayList<Record_Pos_Signal> three_pos) {
 		Algo_Data all_parameters = new Algo_Data();

@@ -18,13 +18,13 @@ public class Algo_Main {
 		{
 			String mac;
 			System.out.println("Enter MAC: ");
-			mac=sc.nextLine();
-			Algorithm1.Better2(mac);
+			mac = sc.nextLine();
+			Algorithm1.Better(mac);
 
 		}
-		else if(choice.equalsIgnoreCase("algo2"))
+		/*else if(choice.equalsIgnoreCase("algo2"))
 		{
-			ArrayList<Record_Mac_Signal> input=new ArrayList<Record_Mac_Signal>();
+			ArrayList<Record_Mac_Signal> input = new ArrayList<Record_Mac_Signal>();
 			String mac;
 			int signal;
 			for(int i=0;i<3;i++)
@@ -32,7 +32,7 @@ public class Algo_Main {
 				System.out.println("enter mac");
 			}
 		}
-		sc.close();
+		sc.close();*/
 	}
 
 }
