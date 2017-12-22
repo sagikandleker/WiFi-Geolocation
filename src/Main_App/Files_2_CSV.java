@@ -24,6 +24,7 @@ import Data_Setup.Wifi;
 
 public class Files_2_CSV {
 	public static final ArrayList<Record> All_Data_List = new ArrayList<Record>();
+	public static HashMap<String,ArrayList<Record_Pos_Signal>> hash = new HashMap<String,ArrayList<Record_Pos_Signal>>();
 	/**
 	 *  getFiles Call to Write_Headers function and check all the CSV files in the folder,
 	 * and sending them to Analyze function.
@@ -67,14 +68,14 @@ public class Files_2_CSV {
 		BufferedReader br = new BufferedReader(fr);
 		String Line = br.readLine();
 		String [] getmodel=Line.split(",");
-		String id=getmodel[2].substring(6);
+		String id = getmodel[2].substring(6);
 		Line = br.readLine();
 		Line = br.readLine();
 
 		while(Line!=null) {
 			String[] arr = (Line.split(","));
-
-			if(!(arr[1].equals(""))) {
+			
+			if(((arr[10].equals("WIFI"))) && (!(arr[1].equals("")))) {
 				mac = arr[0];
 				ssid = arr[1];
 				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
@@ -169,13 +170,13 @@ public class Files_2_CSV {
 
 	public static void Hash_Add() {
 		
-		HashMap<String,LinkedList<Record_Pos_Signal>> hash = new HashMap<String,LinkedList<Record_Pos_Signal>>();
+		
 		Record_Pos_Signal pos_signal = new Record_Pos_Signal();
 		
 		String mac;
 		int signal;
 		Signal sig;
-		Position pos=new Position();
+		Position pos = new Position();
 
 		for (int i = 0; i < All_Data_List.size(); i++) {
 			pos=All_Data_List.get(i).getPosition();
@@ -185,7 +186,7 @@ public class Files_2_CSV {
 				sig = new Signal(signal);
 				pos_signal = new Record_Pos_Signal(pos,sig);
 
-				LinkedList<Record_Pos_Signal> rps = new LinkedList<Record_Pos_Signal>();
+				ArrayList<Record_Pos_Signal> rps = new ArrayList<Record_Pos_Signal>();
 
 				if(hash.containsKey(mac) && !hash.get(mac).contains(pos_signal)) {
 					hash.get(mac).add(pos_signal);
@@ -195,7 +196,6 @@ public class Files_2_CSV {
 				{
 					rps.add(pos_signal);
 					hash.put(mac, rps);
-
 				}
 
 			}
