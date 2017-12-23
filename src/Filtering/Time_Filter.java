@@ -59,6 +59,4 @@ public class Time_Filter {
  			Filter_2_KML.KML(data_list,"Time");
  		}
  	}
-		
-		
 }
