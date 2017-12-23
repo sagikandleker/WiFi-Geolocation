@@ -1,4 +1,4 @@
-package Filter;
+package Filtering;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,11 @@ public class Main_Filter {
 //TODO Filter Object.
 	public static void Choosefilter() throws ParseException, IOException
 	{
-		Scanner sc = new Scanner(System.in);
+		Filter f = new Filter();
+		f.ChooseFilter();
+		
+		
+		/*Scanner sc = new Scanner(System.in);
 		System.out.println("Select a filter you'd like to search for: ID/Time/Position");
 		String Filter_input = sc.nextLine();
 		if(Filter_input.equalsIgnoreCase("ID"))
@@ -38,7 +42,7 @@ public class Main_Filter {
 			}
 			
 		}
-		sc.close();
+		sc.close();*/
 	}
 
 }

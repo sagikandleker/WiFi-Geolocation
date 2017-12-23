@@ -1,4 +1,4 @@
-package Filter;
+package Filtering;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
