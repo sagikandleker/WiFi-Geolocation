@@ -2,534 +2,2203 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
     <Document>
         <Placemark>
-            <name>HOTBOX-D1D7</name>
+            <name>00:1a:dd:e3:06:e4</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name> d8:fe:e3:03:5a:31</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Guest</name>
+            <name> a0:4f:d4:3b:e9:01</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name> 14:ae:db:3a:64:05</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Guest</name>
+            <name> 1c:b9:c4:16:f4:7c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Mouly</name>
+            <name> 10:be:f5:3b:68:2c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name> ec:8c:a2:08:a9:38</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name> ec:8c:a2:08:99:68</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name> ec:8c:a2:08:94:1c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> smartsell</name>
+            <name> a0:4f:d4:3a:a0:e1</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:16:45Z</when>
+                <when>2017-12-03T08:37:13Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80988155918773,32.16766121892341,39.018065819940986</coordinates>
+                <coordinates>35.20734570155965,32.102528187003614,700.1622738859833</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name>888Corp</name>
+            <name>ec:8c:a2:08:94:18</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name> d0:0f:6d:f1:35:2f</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Shaked-Guest WiFi</name>
+            <name> a0:ab:1b:59:55:54</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name> 10:be:f5:39:8f:f2</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> DIRECT-a8-HP M477 LaserJet</name>
+            <name> b0:48:7a:a1:80:8c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name> 00:12:2a:39:2c:3c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Guest</name>
+            <name> 10:be:f5:a7:b4:f4</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> KaymeraDev</name>
+            <name> 1c:b9:c4:96:f1:97</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Efrat Networks MM</name>
+            <name> ec:8c:a2:08:78:cc</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name> 1c:b9:c4:16:d2:88</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:17:01Z</when>
+                <when>2017-12-03T08:37:15Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80992484668563,32.167671222901205,39.29407685136998</coordinates>
+                <coordinates>35.20734901460898,32.10251814263996,698.9056862429085</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name>888Corp</name>
+            <name>ec:8c:a2:09:03:38</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:18Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207339181669674,32.10251581558651,697.993173771496</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name> 14:ae:db:43:88:35</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:18Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207339181669674,32.10251581558651,697.993173771496</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> lavel-2</name>
+            <name> 1c:b9:c4:14:33:c8</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:18Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207339181669674,32.10251581558651,697.993173771496</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Efrat Networks MM</name>
+            <name> 1c:b9:c4:96:28:f7</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:18Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207339181669674,32.10251581558651,697.993173771496</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name>ec:8c:a2:08:94:1c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:21Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207318657702054,32.102520962117886,696.8261810224474</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Guest</name>
+            <name> 1c:b9:c4:96:f4:77</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:21Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207318657702054,32.102520962117886,696.8261810224474</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Guest Neetwork MM</name>
+            <name> ec:8c:a2:88:94:17</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:21Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.207318657702054,32.102520962117886,696.8261810224474</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> iFOREX</name>
+            <name>ec:8c:a2:08:78:c8</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:24Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.2073387273908,32.10251743683182,695.5775665899107</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> lavel-2</name>
+            <name> 00:8c:54:90:ce:d1</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:24Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.2073387273908,32.10251743683182,695.5775665899107</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> INGENEO</name>
+            <name>06:ae:db:3a:64:05</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:38Z</when>
+                <when>2017-12-03T08:37:27Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80970275770306,32.16752947325414,44.784206538209546</coordinates>
+                <coordinates>35.20743113335047,32.102458386443125,694.8881937656644</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name>888Free</name>
+            <name> 1c:b9:c4:14:33:cc</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:50Z</when>
+                <when>2017-12-03T08:37:27Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80888987334706,32.16689631014436,42.95830812528492</coordinates>
+                <coordinates>35.20743113335047,32.102458386443125,694.8881937656644</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> DIRECT-a8-HP M477 LaserJet</name>
+            <name> 14:ae:db:cb:05:f5</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:50Z</when>
+                <when>2017-12-03T08:37:27Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80888987334706,32.16689631014436,42.95830812528492</coordinates>
+                <coordinates>35.20743113335047,32.102458386443125,694.8881937656644</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name> ec:9b:f3:26:ab:3a</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:50Z</when>
+                <when>2017-12-03T08:37:27Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80888987334706,32.16689631014436,42.95830812528492</coordinates>
+                <coordinates>35.20743113335047,32.102458386443125,694.8881937656644</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Guest</name>
+            <name>80:37:73:d7:ab:3a</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:50Z</when>
+                <when>2017-12-03T08:37:30Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80888987334706,32.16689631014436,42.95830812528492</coordinates>
+                <coordinates>35.207563401001366,32.10246378160256,694.129943277534</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name>ec:8c:a2:09:03:3c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:50Z</when>
+                <when>2017-12-03T08:37:33Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80888987334706,32.16689631014436,42.95830812528492</coordinates>
+                <coordinates>35.20759021123835,32.10258798763252,693.1085203108703</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Corp</name>
+            <name> ec:8c:a2:89:03:37</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:50Z</when>
+                <when>2017-12-03T08:37:33Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.80888987334706,32.16689631014436,42.95830812528492</coordinates>
+                <coordinates>35.20759021123835,32.10258798763252,693.1085203108703</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name>HP-Print-A0-LaserJet Pro MFP</name>
+            <name> 1c:b9:c4:16:f4:7c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:33Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.20759021123835,32.10258798763252,693.1085203108703</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Guest</name>
+            <name> 1c:b9:c4:16:d2:8c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:33Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.20759021123835,32.10258798763252,693.1085203108703</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> MOULY MAISON</name>
+            <name> 14:ae:db:58:0d:6d</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:33Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.20759021123835,32.10258798763252,693.1085203108703</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Mouly</name>
+            <name>ec:8c:a2:09:03:38</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:36Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.20757686137406,32.10263460161589,692.0341048029707</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> RS_GUEST</name>
+            <name> cc:fa:00:ae:93:46</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:36Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.20757686137406,32.10263460161589,692.0341048029707</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> RS_GUEST</name>
+            <name> 00:0e:f4:c1:50:14</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:36Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.20757686137406,32.10263460161589,692.0341048029707</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name>ec:8c:a2:08:a9:3c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:39Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.207577232080226,32.10273178324407,691.339489932552</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Training Room</name>
+            <name> 1c:b9:c4:16:28:f8</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:39Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.207577232080226,32.10273178324407,691.339489932552</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> HP-Print-b7-LaserJet 300</name>
+            <name>a4:08:f5:20:72:6a</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:42Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.2076291986019,32.102861507686676,691.1036071541976</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Maxillent</name>
+            <name> ec:8c:a2:08:77:48</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:53Z</when>
+                <when>2017-12-03T08:37:42Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808879325364,32.166882698884585,42.88970818374659</coordinates>
+                <coordinates>35.2076291986019,32.102861507686676,691.1036071541976</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name>888Corp</name>
+            <name> 14:ae:db:cf:86:f5</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:42Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808596256222685,32.16690260644389,41.92228608379519</coordinates>
+                <coordinates>35.2076291986019,32.102861507686676,691.1036071541976</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> 888Free</name>
+            <name>1c:b9:c4:16:f4:78</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:45Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808596256222685,32.16690260644389,41.92228608379519</coordinates>
+                <coordinates>35.20769754582129,32.10297429619621,690.9460551220589</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> lavel-2</name>
+            <name> ec:9b:f3:26:ab:3a</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:45Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808596256222685,32.16690260644389,41.92228608379519</coordinates>
+                <coordinates>35.20769754582129,32.10297429619621,690.9460551220589</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Guest Neetwork MM</name>
+            <name> ec:8c:a2:08:a9:38</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:45Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808596256222685,32.16690260644389,41.92228608379519</coordinates>
+                <coordinates>35.20769754582129,32.10297429619621,690.9460551220589</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> Efrat Networks MM</name>
+            <name> 1c:b9:c4:96:d2:87</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:45Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808596256222685,32.16690260644389,41.92228608379519</coordinates>
+                <coordinates>35.20769754582129,32.10297429619621,690.9460551220589</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> INGENEO</name>
+            <name> ec:8c:a2:09:93:b8</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:45Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>32.17056851117144,34.81260690787796,37.025112252621405
-19</coordinates>
+                <coordinates>35.20769754582129,32.10297429619621,690.9460551220589</coordinates>
             </Point>
         </Placemark>
         <Placemark>
-            <name> ITAYFALUPPPPPPPPPPPPPPP</name>
+            <name>ec:8c:a2:08:a9:3c</name>
             <open>1</open>
             <TimeStamp>
-                <when>2017-10-27T16:18:59Z</when>
+                <when>2017-12-03T08:37:49Z</when>
             </TimeStamp>
             <Point>
-                <coordinates>34.808596256222685,32.16690260644389,41.92228608379519</coordinates>
+                <coordinates>35.20773997080285,32.10309345225589,690.9058112860603</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7a:1c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20773997080285,32.10309345225589,690.9058112860603</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:09:03:38</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2077533608269,32.10317578496331,690.8658803245012</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:a9:28</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2077533608269,32.10317578496331,690.8658803245012</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:09:0c:cc</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2077533608269,32.10317578496331,690.8658803245012</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:78:3c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2077533608269,32.10317578496331,690.8658803245012</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:a9:2c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2077533608269,32.10317578496331,690.8658803245012</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:7a:1c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20776621667453,32.103254567862166,690.8153989055744</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:09:0c:cc</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20776621667453,32.103254567862166,690.8153989055744</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:a9:27</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20776621667453,32.103254567862166,690.8153989055744</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:a9:37</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20776621667453,32.103254567862166,690.8153989055744</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:26:ae:28</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20776621667453,32.103254567862166,690.8153989055744</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> a0:4f:d4:46:a9:e1</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20776621667453,32.103254567862166,690.8153989055744</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:88:7a:17</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7a:1c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7a:18</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:a9:28</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:78:38</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:26:b0:58</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:78:37</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7b:8c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:09:86:d8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20778662747971,32.103323385092075,690.7687922307229</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:09:0c:c8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20780552775216,32.10342051137385,690.6874448611455</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:89:0c:c7</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20780552775216,32.10342051137385,690.6874448611455</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:90:cc</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20780552775216,32.10342051137385,690.6874448611455</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:7b:87</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20780552775216,32.10342051137385,690.6874448611455</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:90:c8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:07Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781063770308,32.10345291720662,690.6563444942567</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:a9:28</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:09:8c:38</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:a9:2c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7b:8c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:bb:3a</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:bb:86</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:09:8c:3c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:94:1c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:94:17</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:d2:88</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20781291804855,32.10353355128237,690.5795129917332</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:7b:8c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:7b:87</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:90:c8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:09:03:3c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:89:03:37</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:89:8c:37</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:0a:08:b8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:d2:8c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:f4:7c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2078263595938,32.10371440835981,690.4758805974767</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:7b:8c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:16Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20786377093516,32.10395115783471,690.3267397654319</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7b:88</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:16Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20786377093516,32.10395115783471,690.3267397654319</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:bb:86</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:16Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20786377093516,32.10395115783471,690.3267397654319</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:25:86:cc:00:f8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788174167889,32.10419402726119,690.126855604218</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:25:86:cc:07:b2</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788174167889,32.10419402726119,690.126855604218</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:7a:18</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:cd:68</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 84:c9:b2:4a:e7:87</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:7a:1c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:7a:17</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:a9:27</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c5</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20788087493433,32.1044140461797,689.9496964638441</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>ec:8c:a2:08:92:48</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20792963641949,32.10461272357625,689.6670161410832</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:92:4c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20792963641949,32.10461272357625,689.6670161410832</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:a9:2c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20792963641949,32.10461272357625,689.6670161410832</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:08:a9:28</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20792963641949,32.10461272357625,689.6670161410832</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:dd:f4:f5:c5</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20808401590763,32.10473074431384,689.6319853475801</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> f0:b0:52:3e:d6:f8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20808401590763,32.10473074431384,689.6319853475801</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> e6:46:da:e4:84:c0</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20808401590763,32.10473074431384,689.6319853475801</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:e0:83</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20808401590763,32.10473074431384,689.6319853475801</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:88:7b:87</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20808401590763,32.10473074431384,689.6319853475801</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:26:d2:c8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20808401590763,32.10473074431384,689.6319853475801</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:16:05:38</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:40Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.208668934230765,32.105051656311176,689.230258092551</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:2f:7f:6b:70</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:43Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20879924441711,32.10513904195773,688.9451857776014</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>b2:6c:ac:a0:7b:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:46Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.208934280260046,32.10522814587199,688.6530227065308</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:2f:7f:6b:70</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:44:58</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> c2:6c:ac:a0:7b:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 90:6c:ac:a0:7b:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:05:3c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 90:6c:ac:9f:fb:1f</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c5</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> d0:bf:9c:db:31:30</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> ec:8c:a2:26:d2:c8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20910319025765,32.10533997449653,688.4228173932764</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>f8:e9:03:12:ef:3b</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2092873567155,32.10545968983351,688.3373272543101</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> a2:6c:ac:9f:fb:27</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2092873567155,32.10545968983351,688.3373272543101</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> c2:6c:ac:9f:fb:27</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2092873567155,32.10545968983351,688.3373272543101</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> b2:6c:ac:9f:fb:27</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2092873567155,32.10545968983351,688.3373272543101</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 90:6c:ac:9f:fb:27</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:52Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2092873567155,32.10545968983351,688.3373272543101</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:27:22:f3:e2:f3</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20951077753986,32.10559677902265,688.4287285025864</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:a6:9a</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20951077753986,32.10559677902265,688.4287285025864</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:06:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20951077753986,32.10559677902265,688.4287285025864</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 58:70:c6:00:d0:f1</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:55Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20951077753986,32.10559677902265,688.4287285025864</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>08:97:58:32:a6:3e</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:2f:7f:6b:70</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> f8:a9:d0:66:06:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> b2:6c:ac:9f:fb:1f</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f5:e9:25</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:44:5c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:42:6c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:11:6b:2a:90:3c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:95:42:67</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:14:2f:a8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:38:58Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.2097599664662,32.10572050842588,688.5550300637956</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:dd:f5:e9:24</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:01Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.210051750641114,32.10583719022133,688.5948451994292</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f5:e9:25</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:01Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.210051750641114,32.10583719022133,688.5948451994292</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:06:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:01Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.210051750641114,32.10583719022133,688.5948451994292</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:ef:04</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:01Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.210051750641114,32.10583719022133,688.5948451994292</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> b2:6c:ac:a0:7b:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:01Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.210051750641114,32.10583719022133,688.5948451994292</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:42:68</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:01Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.210051750641114,32.10583719022133,688.5948451994292</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:dd:f4:ef:04</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f5:06:a4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f5:06:a5</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:44:58</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 58:70:c6:00:d0:f1</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 90:6c:ac:9f:fb:1f</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 90:6c:ac:a0:7b:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:06:ec</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:2d:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:05:38</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:04Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21038076777716,32.10593532045871,688.6045855255679</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:dd:f5:e9:25</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:07Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21072710051793,32.10601667872536,688.676436763853</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:a6:9a</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:07Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21072710051793,32.10601667872536,688.676436763853</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:22:f3:e2:f3</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:07Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21072710051793,32.10601667872536,688.676436763853</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:dd:f5:e9:25</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f5:e9:24</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:ef:c5</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:2f:7f:6b:70</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:0d:f0:3e:fa:ca</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:42:68</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:14:2f:a8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:06:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:96:06:e7</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> b2:6c:ac:a0:7b:4d</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21106968179408,32.106089276564596,688.7624378298848</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:27:22:f3:e2:f3</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 10:be:f5:36:02:e2</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:06:ec</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:ef:c4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c5</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:ef:04</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:13Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21138726608906,32.10614939016676,688.8993666020681</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>cc:b2:55:e7:7e:ba</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:16Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21168763894033,32.106181954122206,689.1981253462078</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:f5:c4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:16Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21168763894033,32.106181954122206,689.1981253462078</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>00:1a:dd:f4:fc:84</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21194838735254,32.106211489963755,689.2763252871639</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:fc:85</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21194838735254,32.106211489963755,689.2763252871639</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> f8:e7:1e:33:87:38</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21194838735254,32.106211489963755,689.2763252871639</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:fc:64</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21194838735254,32.106211489963755,689.2763252871639</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:1a:dd:f4:fc:65</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:19Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21194838735254,32.106211489963755,689.2763252871639</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:96:06:e7</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:22Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.212141756525845,32.10617159646305,689.3311852539475</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:16:cd:18</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21216518835194,32.105995367836144,689.5950093554168</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:56:cd:18</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21216518835194,32.105995367836144,689.5950093554168</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:19:13:fc:a4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:25Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21216518835194,32.105995367836144,689.5950093554168</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>f8:e7:1e:33:87:3c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21207187967583,32.10578181130056,690.5323471428377</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:cd:1c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21207187967583,32.10578181130056,690.5323471428377</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:fd:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:28Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21207187967583,32.10578181130056,690.5323471428377</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:56:cd:18</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:31Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211990487672665,32.10558929316102,691.0898029756444</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:16:cd:18</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:31Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211990487672665,32.10558929316102,691.0898029756444</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 00:27:19:13:fc:a4</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:31Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211990487672665,32.10558929316102,691.0898029756444</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:55:fd:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:31Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211990487672665,32.10558929316102,691.0898029756444</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:15:fd:ec</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:34Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21192983211315,32.105448644069995,691.5885470680463</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:3a:28</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:34Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21192983211315,32.105448644069995,691.5885470680463</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:36:9c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:34Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21192983211315,32.105448644069995,691.5885470680463</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:36:98</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:34Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21192983211315,32.105448644069995,691.5885470680463</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:96:cd:17</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:34Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21192983211315,32.105448644069995,691.5885470680463</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>24:79:2a:2b:34:a8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:37Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21187487697705,32.105338150765675,692.0554072332519</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:3a:2c</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:37Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21187487697705,32.105338150765675,692.0554072332519</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:15:fd:ec</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:40Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211801239749164,32.10524361261086,692.3384221268948</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:15:fd:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:40Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211801239749164,32.10524361261086,692.3384221268948</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name> 1c:b9:c4:55:fd:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:40Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.211801239749164,32.10524361261086,692.3384221268948</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:16:05:78</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:43Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21178480914369,32.105210120790346,692.3547334737405</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>1c:b9:c4:16:2b:e8</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:46Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21178480914369,32.105210120790346,692.3483456627454</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>8c:0c:90:af:76:53</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:39:49Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.21178480914369,32.105210120790346,692.3377115782242</coordinates>
             </Point>
         </Placemark>
     </Document>
