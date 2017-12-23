@@ -29,7 +29,7 @@ public class Algorithm1 {
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> three_pos) {
 		Algo_Data all_parameters = new Algo_Data();
 		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
-
+		//System.out.println(three_pos);
 		if(three_pos.size() == 1) {
 		
 			pos.getPosition().setLat(three_pos.get(0).getPosition().getLat());
