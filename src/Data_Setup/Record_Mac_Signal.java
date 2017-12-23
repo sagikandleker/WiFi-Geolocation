@@ -2,8 +2,8 @@ package Data_Setup;
 
 public class Record_Mac_Signal {
 
-	public Signal signal;
-	public Mac mac;
+	private Signal signal;
+	private Mac mac;
 	
 	public Record_Mac_Signal() {
 		this.signal = new Signal();

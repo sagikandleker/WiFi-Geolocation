@@ -1,6 +1,7 @@
 package Data_Setup;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
@@ -14,7 +15,7 @@ public class Record {
 	private Position position;
 	private ArrayList<Wifi> WifiList;
 	private int wifinetworks;
-	private String id;
+	private ID id;
 	
 	/**
 	 * @param id
@@ -80,8 +81,8 @@ public class Record {
 	/**
 	 * @return the date
 	 */
-	public Time getDate() {
-		return date;
+	public Date getDate() {
+		return date.getTime();
 	}
 
 	/**
@@ -146,11 +147,11 @@ public class Record {
 	}
 	
 	public String getid() {
-		return id;
+		return id.getID();
 	}
 
 	public void setid(String id) {
-		this.id = id;
+		this.id = new ID(id);
 	}
 	
 }
