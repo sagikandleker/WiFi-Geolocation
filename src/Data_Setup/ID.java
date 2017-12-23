@@ -4,10 +4,19 @@ public class ID {
 
 	public String id;
 
-	public ID(String ID) {
-		ID = id;
+	public ID(String id) {
+		this.id = id;
 	}
 
+	public ID() {
+		this.id = "";
+	}
+	
+	public ID(ID id) {
+		this.id = id.id;
+	}
+	
+	
 	public String getID() {
 		return id;
 	}

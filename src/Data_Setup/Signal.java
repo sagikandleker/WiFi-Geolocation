@@ -12,21 +12,20 @@ public class Signal {
 
 		this.signal = signal;
 	}
+	
+	public Signal(Signal signal) {
 
+		this.signal = signal.signal;
+	}
+	
 	public int getSignal() {
 		return signal;
 	}
 
-	public void setSignal(int signal) {
-		this.signal = signal;
+	public void setSignal(Signal signal) {
+		this.signal = signal.signal;
 	}
 
-	public boolean bigger(Signal signal2)
-	{
-		if(this.signal>signal2.signal)return true;
-		else
-			return false;
-	}
 	
 	public double cast()
 	{

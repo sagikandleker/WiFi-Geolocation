@@ -16,6 +16,12 @@ public class Time {
 	public Time(Date time) {
 		this.time = time;
 	}
+	public Time(Time time) {
+		this.time = time.time;
+	}
+	public Time() {
+		this.time = new Date();
+	}
 
 	/**
 	 * @return the time
@@ -27,8 +33,8 @@ public class Time {
 	/**
 	 * @param time the time to set
 	 */
-	public void setTime(Date time) {
-		this.time = time;
+	public void setTime(Time time) {
+		this.time = time.time;
 	}
 	
 	/**
