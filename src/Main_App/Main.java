@@ -16,24 +16,32 @@ import java.util.Scanner;
 public class Main {
 	public static final String path = "C:\\Users\\sagik\\git\\OOP";
 	public static final String path_In = path+"\\Files read from";
-	public static final String path_Out= path+"\\Files create to";
+	public static final String path_Out = path+"\\Files create to";
 	public static final String file_Out = path_Out+"\\WigleWifi_Sorted.csv";
+	public static final String Algo1_Out = path_Out+"\\Algorithm1.csv";
+	public static final String Algo2_Out = path_Out+"\\Algorithm2.csv";
 
 	public static void main(String[] args) throws IOException, ParseException {
-		Files_2_CSV.getFiles();
-		Files_2_CSV.Hash_Add();
+		
+		Analayze_Files.getFiles();
+		
 		
 		Scanner sc = new Scanner(System.in);
 		String input_choice;
-		System.out.println("What do you want to do next? KML / Algo ?");
+		System.out.println("What do you want to do next? Filter / Algorithm ?");
 		input_choice=sc.nextLine();
-		if(input_choice.equalsIgnoreCase("KML")) Filter.Main_Filter.Choosefilter();
-		else if(input_choice.equalsIgnoreCase("Algo")) Algo_Search.Algo_Main.ChooseAlgo();
+		
+		if(input_choice.equalsIgnoreCase("Filter")) {
+			Filtering.Main_Filter.Choosefilter();
+		}
+		
+		else if(input_choice.equalsIgnoreCase("Algorithm")) {	
+			Mac_HM.Build_Hash();
+			Algorithms.Algo_Main.ChooseAlgo();
+		}
 		sc.close();	
 		
-		
 		System.out.println("Finish All");
-		
-				
+			
 	}
 }
