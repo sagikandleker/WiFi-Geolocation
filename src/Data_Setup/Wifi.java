@@ -6,85 +6,72 @@ package Data_Setup;
 
 public class Wifi {
 	
-	private String ssid;
-	private String mac;
-	private int signal;
-	private int frequency;
+	private SSID ssid;
+	private Mac mac;
+	private Signal signal;
+	private Frequency frequency;
 	
 	/**
 	 * Constructor build Wifi with - SSID, MAC, Frequency, Signal.
 	 */
+	
+	public Wifi(SSID ssid, Mac mac, Frequency frequency, Signal signal) {
+		this.signal = new Signal(signal);
+		this.mac = new Mac(mac);
+		this.ssid = new SSID(ssid);
+		this.frequency = new Frequency(frequency);
+	}
+	
 	public Wifi(String ssid, String mac, int frequency, int signal) {
-		this.signal = signal;
-		this.mac = mac;
-		this.ssid = ssid;
-		this.frequency = frequency;
+		this.signal = new Signal(signal);
+		this.mac = new Mac(mac);
+		this.ssid = new SSID(ssid);
+		this.frequency = new Frequency(frequency);
+	}
+	
+	public Wifi() {
+		this.signal = new Signal();
+		this.mac = new Mac();
+		this.ssid = new SSID();
+		this.frequency = new Frequency();
 	}
 
-	/**
-	 * @return the ssid
-	 */
-	public String getSsid() {
+
+	public SSID getSsid() {
 		return ssid;
 	}
 
-
-	/**
-	 * @param ssid the ssid to set
-	 */
-	public void setSsid(String ssid) {
+	public void setSsid(SSID ssid) {
 		this.ssid = ssid;
 	}
 
-
-	/**
-	 * @return the mac
-	 */
-	public String getMac() {
+	public Mac getMac() {
 		return mac;
 	}
 
-
-	/**
-	 * @param mac the mac to set
-	 */
-	public void setMac(String mac) {
+	public void setMac(Mac mac) {
 		this.mac = mac;
 	}
 
-
-	/**
-	 * @return the signal
-	 */
 	public int getSignal() {
-		return signal;
-	}
-
-
-	/**
-	 * @param signal the signal to set
-	 */
-	public void setSignal(int signal) {
-		this.signal = signal;
+		return signal.getSignal();
 	}
 	
-	/**
-	 * @return the frequency
-	 */
-	public int getFrequency() {
+	
+	public void setSignal(int signal) {
+		this.signal.signal = signal;
+	}
+
+	public Frequency getFrequency() {
 		return frequency;
 	}
 
-	/**
-	 * @param frequency the frequency to set
-	 */
-	public void setFrequency(int frequency) {
+	public void setFrequency(Frequency frequency) {
 		this.frequency = frequency;
 	}
 
 	@Override
 	public String toString() {
-		return ssid + "," + mac + "," + frequency + "," + signal;
+		return mac + "," + ssid + "," + frequency + "," + signal;
 	}
 }
-
