@@ -3,10 +3,10 @@ package Algorithms;
 public class Algo_Data {
 
 	double weight1,
-	weight2,weight3,weightsum,
-	wlat1,wlat2,wlat3,wlatsum,
-	wlon1,wlon2,wlon3,wlonsum,
-	walt1,walt2,walt3,waltsum;
+	weight2,weight3,weight4,weightsum,
+	wlat1,wlat2,wlat3,wlat4,wlatsum,
+	wlon1,wlon2,wlon3,wlon4,wlonsum,
+	walt1,walt2,walt3,walt4,waltsum;
 
 	
 	public Algo_Data() {
@@ -14,18 +14,22 @@ public class Algo_Data {
 		this.weight1 = 0;
 		this.weight2 = 0;
 		this.weight3 = 0;
+		this.weight4 = 0;
 		this.weightsum = 0;
 		this.wlat1 = 0;
 		this.wlat2 = 0;
 		this.wlat3 = 0;
+		this.wlat4 = 0;
 		this.wlatsum = 0;
 		this.wlon1 = 0;
 		this.wlon2 = 0;
 		this.wlon3 = 0;
+		this.wlon4 = 0;
 		this.wlonsum = 0;
 		this.walt1 = 0;
 		this.walt2 = 0;
 		this.walt3 = 0;
+		this.walt4 = 0;
 		this.waltsum = 0;
 
 	}
@@ -59,7 +63,14 @@ public class Algo_Data {
 	public void setWeight3(double weight3) {
 		this.weight3 = weight3;
 	}
+	
+	public void setWeight4(double weight4) {
+		this.weight4 = weight4;
+	}
 
+	public double getWeight4() {
+		return weight4;
+	}
 
 	public double getWeightsum() {
 		return weightsum;
@@ -100,6 +111,14 @@ public class Algo_Data {
 		this.wlat3 = wlat3;
 	}
 
+	public double getWlat4() {
+		return wlat4;
+	}
+
+
+	public void setWlat4(double wlat4) {
+		this.wlat4 = wlat4;
+	}
 
 	public double getWlatsum() {
 		return wlatsum;
@@ -138,6 +157,15 @@ public class Algo_Data {
 
 	public void setWlon3(double wlon3) {
 		this.wlon3 = wlon3;
+	}
+	
+	public double getWlon4() {
+		return wlon4;
+	}
+
+
+	public void setWlon4(double wlon4) {
+		this.wlon4 = wlon4;
 	}
 
 
@@ -178,6 +206,15 @@ public class Algo_Data {
 
 	public void setWalt3(double walt3) {
 		this.walt3 = walt3;
+	}
+	
+	public double getWalt4() {
+		return walt4;
+	}
+
+
+	public void setWalt4(double walt4) {
+		this.walt4 = walt4;
 	}
 
 
