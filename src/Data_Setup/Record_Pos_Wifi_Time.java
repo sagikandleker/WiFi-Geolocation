@@ -73,13 +73,13 @@ public class Record_Pos_Wifi_Time {
 			}
 			
 			if(pas.size() >= 4) {
-			ArrayList<Record_Pos_Wifi_Time> three_pos = new ArrayList<Record_Pos_Wifi_Time>();
+			ArrayList<Record_Pos_Wifi_Time> four_pos = new ArrayList<Record_Pos_Wifi_Time>();
 			
 			for (int k = 0; k < 4; k++)
 			{
-				three_pos.add(pas.get(k));
+				four_pos.add(pas.get(k));
 			}
-			return three_pos;
+			return four_pos;
 		}
 
 		else {

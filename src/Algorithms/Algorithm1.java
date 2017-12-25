@@ -25,11 +25,35 @@ public class Algorithm1 {
 		Write(rpwt);
 
 	}
-	//TODO For to all this Algo1.
-	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> three_pos) {
+	//spwt=sorted pos wifi time.
+	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> spwt) {
 		Algo_Data all_parameters = new Algo_Data();
 		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
-		System.out.println(three_pos);
+		
+		int size=0;
+		while(size<spwt.size()-1)
+		{
+			all_parameters.setWeight(((1/Math.pow((spwt.get(0).getWifi().getSignal()),2.0))));
+			all_parameters.setWeightsum(all_parameters.getWeight());
+			all_parameters.setWlatsum(spwt.get(size).getPosition().getLat()*(all_parameters.getWeight()));
+			all_parameters.setWlonsum(spwt.get(size).getPosition().getLon()*all_parameters.getWeight());
+			all_parameters.setWaltsum(spwt.get(size).getPosition().getAlt()*all_parameters.getWeight());
+			
+			pos.getPosition().setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
+			pos.getPosition().setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
+			pos.getPosition().setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
+			pos.getWifi().setSignal((spwt.get(size).getWifi().getSignal()));
+			pos.getWifi().setMac(spwt.get(size).getWifi().getMac());
+			pos.getWifi().setFrequency(spwt.get(size).getWifi().getFrequency());
+			pos.getWifi().setSsid(spwt.get(size).getWifi().getSsid());
+			pos.getTime().setTime(spwt.get(size).getTime());
+			
+			size++;
+		}
+		
+		
+		/*
+		
 		if(three_pos.size() == 1) {
 		
 			pos.getPosition().setLat(three_pos.get(0).getPosition().getLat());
@@ -140,7 +164,7 @@ public class Algorithm1 {
 			pos.getTime().setTime(three_pos.get(0).getTime());
 				
 		}
-		
+		*/
 		rpwt.add(pos);
 	}
 
