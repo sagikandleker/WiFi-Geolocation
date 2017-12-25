@@ -31,7 +31,7 @@ public class Algorithm1 {
 		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
 		
 		int size=0;
-		while(size<spwt.size()-1)
+		while(size<spwt.size())
 		{
 			all_parameters.setWeight(((1/Math.pow((spwt.get(0).getWifi().getSignal()),2.0))));
 			all_parameters.setWeightsum(all_parameters.getWeight());
