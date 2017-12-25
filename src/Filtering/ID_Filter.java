@@ -17,7 +17,7 @@ import Main_App.Main;;
 public class ID_Filter {
 
 
-	public static void idfilter(String ssid) throws IOException, ParseException {
+	public static void idFilter(String ssid) throws IOException, ParseException {
 
 		double lat,lon,alt;
 

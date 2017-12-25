@@ -1,4 +1,4 @@
-package Main_App;
+package Algorithms;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,8 +12,9 @@ import Data_Setup.SSID;
 import Data_Setup.Signal;
 import Data_Setup.Time;
 import Data_Setup.Wifi;
+import Main_App.Write_2_CSV;
 
-public class Mac_HM {
+public class Mac_Hashmap {
 
 	public static HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
 	static ArrayList<Record> All_Data_List = Write_2_CSV.All_Data_List;

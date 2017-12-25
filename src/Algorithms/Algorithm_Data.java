@@ -1,10 +1,10 @@
 package Algorithms;
 
-public class Algo_Data {
+public class Algorithm_Data {
 
 	double weightsum,wlatsum,wlonsum,waltsum,weight;
 
-	public Algo_Data() {
+	public Algorithm_Data() {
 		this.weight = 0;
 		this.weightsum = 0;
 		this.wlatsum = 0;

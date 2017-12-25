@@ -16,7 +16,7 @@ import Main_App.Main;
 
 public class Time_Filter {
 
-	public static void timefilter(String time_begin,String time_end) throws ParseException, IOException
+	public static void timeFilter(String time_begin,String time_end) throws ParseException, IOException
 	{
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date_start =  format.parse(time_begin);

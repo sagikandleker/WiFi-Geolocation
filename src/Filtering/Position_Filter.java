@@ -15,7 +15,7 @@ import Main_App.Main;
 
 public class Position_Filter {
 
-	public static void Positionfilter(double lat, double lon,double radius) throws IOException, ParseException
+	public static void positionFilter(double lat, double lon,double radius) throws IOException, ParseException
 	{
 		double latcsv,loncsv,altcsv;
 

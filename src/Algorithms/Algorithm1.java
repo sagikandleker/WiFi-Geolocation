@@ -27,7 +27,7 @@ public class Algorithm1 {
 	}
 	//spwt=sorted pos wifi time.
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> spwt) {
-		Algo_Data all_parameters = new Algo_Data();
+		Algorithm_Data all_parameters = new Algorithm_Data();
 		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
 		
 	

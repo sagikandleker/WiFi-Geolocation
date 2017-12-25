@@ -19,7 +19,7 @@ public class Filter {
 		if(Filter.equalsIgnoreCase("ID")) {
 			System.out.println("Enter the ID: ");
 			String ID = sc.nextLine();
-			ID_Filter.idfilter(ID);
+			ID_Filter.idFilter(ID);
 		}
 
 		else if(Filter.equalsIgnoreCase("Position"))
@@ -30,7 +30,7 @@ public class Filter {
 			double Lon = sc.nextDouble();
 			System.out.println("Enter the RADIUS: ");
 			double Radius = sc.nextDouble();
-			Position_Filter.Positionfilter(Lat, Lon, Radius);
+			Position_Filter.positionFilter(Lat, Lon, Radius);
 		}
 		else if(Filter.equalsIgnoreCase("Time")){
 			{
@@ -38,7 +38,7 @@ public class Filter {
 				String Time_begin = sc.nextLine();
 				System.out.println("Enter end Date and Time (For Example: yyyy-mm-dd hh:mm:ss like this way 2017-10-27 14:23:00)");
 				String Time_end = sc.nextLine();
-				Time_Filter.timefilter(Time_begin,Time_end);
+				Time_Filter.timeFilter(Time_begin,Time_end);
 
 			}
 		}
