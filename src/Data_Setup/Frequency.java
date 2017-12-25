@@ -29,8 +29,4 @@ public class Frequency {
 		return ""+frequency;
 	}
 	
-	
-	
-	
-	
 }

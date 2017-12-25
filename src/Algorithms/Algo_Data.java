@@ -4,16 +4,13 @@ public class Algo_Data {
 
 	double weightsum,wlatsum,wlonsum,waltsum,weight;
 
-	
 	public Algo_Data() {
-		this.weight=0;
+		this.weight = 0;
 		this.weightsum = 0;
 		this.wlatsum = 0;
 		this.wlonsum = 0;
 		this.waltsum = 0;
-
 	}
-
 
 	public double getWeight() {
 		return weight;
