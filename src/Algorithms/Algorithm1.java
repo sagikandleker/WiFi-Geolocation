@@ -25,7 +25,7 @@ public class Algorithm1 {
 		Write(rpwt);
 
 	}
-
+	//TODO For to all this Algo1.
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> three_pos) {
 		Algo_Data all_parameters = new Algo_Data();
 		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
