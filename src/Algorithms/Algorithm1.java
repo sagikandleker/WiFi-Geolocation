@@ -29,7 +29,7 @@ public class Algorithm1 {
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> three_pos) {
 		Algo_Data all_parameters = new Algo_Data();
 		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
-		//System.out.println(three_pos);
+		System.out.println(three_pos);
 		if(three_pos.size() == 1) {
 		
 			pos.getPosition().setLat(three_pos.get(0).getPosition().getLat());
@@ -86,6 +86,45 @@ public class Algorithm1 {
 			all_parameters.setWlon3((three_pos.get(2).getPosition().getLon())*(all_parameters.getWeight3()));
 			all_parameters.setWalt3((three_pos.get(2).getPosition().getAlt())*(all_parameters.getWeight3()));
 
+			all_parameters.setWeightsum();
+			all_parameters.setWlatsum();
+			all_parameters.setWlonsum();
+			all_parameters.setWaltsum();
+
+			pos.getPosition().setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
+			pos.getPosition().setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
+			pos.getPosition().setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
+			pos.getWifi().setSignal((three_pos.get(0).getWifi().getSignal()));
+			pos.getWifi().setMac(three_pos.get(0).getWifi().getMac());
+			pos.getWifi().setFrequency(three_pos.get(0).getWifi().getFrequency());
+			pos.getWifi().setSsid(three_pos.get(0).getWifi().getSsid());
+			pos.getTime().setTime(three_pos.get(0).getTime());
+				
+		}
+		
+		else if(three_pos.size() == 4) {
+
+			all_parameters.setWeight1(((1/Math.pow((three_pos.get(0).getWifi().getSignal()),2.0))));
+			all_parameters.setWlat1((three_pos.get(0).getPosition().getLat())*(all_parameters.getWeight1()));
+			all_parameters.setWlon1((three_pos.get(0).getPosition().getLon())*(all_parameters.getWeight1()));
+			all_parameters.setWalt1((three_pos.get(0).getPosition().getAlt())*(all_parameters.getWeight1()));
+
+			all_parameters.setWeight2(1/Math.pow((three_pos.get(1).getWifi().getSignal()),2.0));
+			all_parameters.setWlat2((three_pos.get(1).getPosition().getLat())*(all_parameters.getWeight2()));
+			all_parameters.setWlon2((three_pos.get(1).getPosition().getLon())*(all_parameters.getWeight2()));
+			all_parameters.setWalt2((three_pos.get(1).getPosition().getAlt())*(all_parameters.getWeight2()));
+
+			all_parameters.setWeight3(1/Math.pow((three_pos.get(2).getWifi().getSignal()),2.0));
+			all_parameters.setWlat3((three_pos.get(2).getPosition().getLat())*(all_parameters.getWeight3()));
+			all_parameters.setWlon3((three_pos.get(2).getPosition().getLon())*(all_parameters.getWeight3()));
+			all_parameters.setWalt3((three_pos.get(2).getPosition().getAlt())*(all_parameters.getWeight3()));
+
+			
+			all_parameters.setWeight4(1/Math.pow((three_pos.get(2).getWifi().getSignal()),2.0));
+			all_parameters.setWlat4((three_pos.get(2).getPosition().getLat())*(all_parameters.getWeight3()));
+			all_parameters.setWlon4((three_pos.get(2).getPosition().getLon())*(all_parameters.getWeight3()));
+			all_parameters.setWalt4((three_pos.get(2).getPosition().getAlt())*(all_parameters.getWeight3()));
+			
 			all_parameters.setWeightsum();
 			all_parameters.setWlatsum();
 			all_parameters.setWlonsum();
