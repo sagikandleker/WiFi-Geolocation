@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import Data_Setup.Record_Pos_Wifi_Time;
-import Main_App.Mac_HM;
 import Main_App.Main;
 
 public class Algorithm1 {
@@ -14,11 +13,11 @@ public class Algorithm1 {
 
 	public static void Better() throws IOException {
 
-		ArrayList<String> mac_names = new ArrayList<String>(Mac_HM.hash.keySet());
+		ArrayList<String> mac_names = new ArrayList<String>(Mac_Hashmap.hash.keySet());
 
 		for (int i = 0; i < mac_names.size(); i++) {
 			String mac1 = mac_names.get(i);
-			Algo1(Record_Pos_Wifi_Time.sort_Signal_Power(Mac_HM.hash.get(mac1)));
+			Algo1(Record_Pos_Wifi_Time.sort_Signal_Power(Mac_Hashmap.hash.get(mac1)));
 			
 		}
 		
