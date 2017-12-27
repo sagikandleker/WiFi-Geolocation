@@ -39,7 +39,6 @@ public class Main {
 		}
 		
 		else if(input_choice.equalsIgnoreCase("Algorithm")) {	
-			Mac_Hashmap.Build_Hash();
 			Algorithms.Algo_Main.ChooseAlgo();
 		}
 		sc.close();	
