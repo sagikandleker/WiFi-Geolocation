@@ -18,6 +18,14 @@ public class Signal {
 		this.signal = signal.signal;
 	}
 	
+	public Signal(String signal) {
+		
+	}
+
+	public Signal(double signal) {
+		this.signal = (int)signal;
+	}
+
 	public int getSignal() {
 		return signal;
 	}
