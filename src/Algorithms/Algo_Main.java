@@ -28,8 +28,7 @@ public class Algo_Main {
 
 		if(choice.equalsIgnoreCase("Algorithm2"))
 		{
-			Algorithm2.Algo2(((Mac_Hashmap.Build_Hash(Read_From.comb_File(path), "Algo2"))));
-			Algorithm2.Algo2_nogps(Read_From.nogps_File(path_nogps));
+			Algorithm2.Algo2((Read_From.comb_File(path)), (Read_From.nogps_File(path_nogps)));
 		
 		}
 		sc.close();

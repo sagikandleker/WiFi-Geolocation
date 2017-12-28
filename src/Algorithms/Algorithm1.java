@@ -13,11 +13,11 @@ public class Algorithm1 {
 
 	public static void Better() throws IOException {
 
-		ArrayList<String> mac_names = new ArrayList<String>(Mac_Hashmap.hash.keySet());
-
-		for (int i = 0; i < mac_names.size(); i++) {
-			String mac1 = mac_names.get(i);
-			Algo1(Record_Pos_Wifi_Time.sort_Signal_Power(Mac_Hashmap.hash.get(mac1)));
+		ArrayList<String> namesOfKeys = new ArrayList<String>(Mac_Hashmap.hash.keySet());
+		String key;
+		for (int i = 0; i < namesOfKeys.size(); i++) {
+			key = namesOfKeys.get(i);
+			Algo1(Record_Pos_Wifi_Time.sort_Signal_Power(Mac_Hashmap.hash.get(key)));
 			
 		}
 		

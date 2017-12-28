@@ -8,7 +8,7 @@ public class Signal {
 		this.signal = 0;
 	}
 	
-	public Signal(int signal) {
+	public Signal(double signal) {
 
 		this.signal = signal;
 	}
@@ -24,9 +24,6 @@ public class Signal {
 	}
 
 
-	public Signal(double signal) {
-		this.signal = (int)signal;
-	}
 
 	public double getSignal() {
 		return signal;

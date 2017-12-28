@@ -85,7 +85,6 @@ public class Read_From {
 
 		while(line!=null) {
 			String[] arr = (line.split(","));
-			System.out.println(Arrays.toString(arr));
 			if(arr[1].startsWith("model")) {
 
 				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
@@ -110,7 +109,7 @@ public class Read_From {
 
 			}
 		}
-		System.out.println(data);
+		
 		br.close();
 		return data;
 	}

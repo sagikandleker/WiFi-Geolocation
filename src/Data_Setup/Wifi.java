@@ -58,7 +58,7 @@ public class Wifi {
 	}
 	
 	
-	public void setSignal(int signal) {
+	public void setSignal(double signal) {
 		this.signal.signal = signal;
 	}
 
