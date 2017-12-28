@@ -20,8 +20,8 @@ public class Mac_Hashmap {
 	static ArrayList<Record> All_Data_List = Write_2_CSV.All_Data_List;
 	//static ArrayList<Record> data = Read_From.data;
 
-	public static void Build_Hash(ArrayList<Record> data, String nameOfHash) {
-		
+	public static HashMap<String, ArrayList<Record_Pos_Wifi_Time>> Build_Hash(ArrayList<Record> data, String nameOfHash) {
+
 		Record_Pos_Wifi_Time pos_wifi_time;
 		Mac mac;
 		Signal signal;
@@ -58,6 +58,16 @@ public class Mac_Hashmap {
 			}
 
 		}
-
+		if(nameOfHash.equals("Algo1")) {
+			HashMap<String,ArrayList<Record_Pos_Wifi_Time>> algo1_Hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
+			algo1_Hash.putAll(hash);
+			return algo1_Hash;
+		}
+		else if(nameOfHash.equals("Algo2")) {
+			HashMap<String,ArrayList<Record_Pos_Wifi_Time>> algo2_Hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
+			algo2_Hash.putAll(hash);
+			return algo2_Hash;
+		}
+		return hash;
 	}
 }
