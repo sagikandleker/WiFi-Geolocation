@@ -34,5 +34,12 @@ public class Record_Mac_Signal {
 	public void setMac(Mac mac) {
 		this.mac = mac;
 	}
+
+	@Override
+	public String toString() {
+		return mac + "," + signal;
+	}
+	
+	
 	
 }
