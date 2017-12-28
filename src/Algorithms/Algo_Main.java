@@ -28,7 +28,7 @@ public class Algo_Main {
 
 		if(choice.equalsIgnoreCase("Algorithm2"))
 		{
-			Algorithm2.Algo2((Read_From.comb_File(path)), (Read_From.nogps_File(path_nogps)));
+			Algorithm2.no_gps_lines((Read_From.comb_File(path)),(Read_From.nogps_File(path_nogps)));
 		
 		}
 		sc.close();

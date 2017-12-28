@@ -15,16 +15,14 @@ public class Algorithm2 {
 
 	static final double power=2, norm=10000, sigdiff=0.4, mindiff=3, nosignal=-120, diffnosignal=100;
 
-	public static void Algo2(ArrayList<Record> data, ArrayList<ArrayList<Record_Mac_Signal>> rms) {
+	public static void no_gps_lines(ArrayList<Record> data, ArrayList<ArrayList<Record_Mac_Signal>> rms) {
 
 		Mac mac;
 		Signal signal;
 		Record_Mac_Signal ms;
-		double diff;
-		double w;
-		Record_Pos_Pi pp;
-		ArrayList<Record_Pos_Pi> rpp = new ArrayList<Record_Pos_Pi>();
-		ArrayList<Record_Mac_Signal> three;
+
+
+		ArrayList<Record_Mac_Signal> three = null;
 
 		for (int i = 0; i < rms.size(); i++) {
 
@@ -39,54 +37,68 @@ public class Algorithm2 {
 					ms = new Record_Mac_Signal(mac, signal);
 					three.add(ms);
 				}
-
-
 			}
-			//Algo2 START!
-			//System.out.println(three);
+		}
+		Algo2(data, three);
+		System.out.println(three);
+	}
 
-			for (int j = 0; j < data.size(); j++) {
-				double pi = 1;
+	public static void Algo2(ArrayList<Record> data, ArrayList<Record_Mac_Signal> three) {
+		//Algo2 START!
+		//System.out.println(three);
 
-				for (int k = 0; k < data.get(j).getWifiList().size(); k++) {
+		double diff;
+		double w;
+		int counter = 0;
+		Record_Pos_Pi pp;
+		ArrayList<Record_Pos_Pi> array_pp = new ArrayList<Record_Pos_Pi>();
 
-					for (int z = 0; z < three.size(); z++) {
-
-						double sig = three.get(z).getSignal().signal;
-
-						System.out.println(sig);
-						if(three.get(z).getMac().equals(data.get(j).getWifiList().get(k).getMac()))
-						{
-
-							diff = Math.max(Math.abs(sig-data.get(j).getWifiList().get(k).getSignal()),mindiff);
-
-						}
-						else {
-							
-							diff = 120;
-						}
-
-						w = norm/(Math.pow(diff, power)*Math.pow(sig, power));
-						pi *= w;
-
+		for (int i = 0; i < data.size(); i++) {
+			double pi = 1;
+			System.out.println("I = "+i);
+			
+			for (int z = 0; z < three.size(); z++) {
+				System.out.println("Z = "+z);
+				System.out.println("MAC: "+three.get(z).getMac());
+			for (int j = 0; j < data.get(i).getWifiList().size(); j++) {
+				System.out.println("J = "+j);
+					double sig = three.get(z).getSignal().signal;
+					
+					System.out.println("WIFI MACS: "+(data.get(i).getWifiList().get(j).getMac()));
+					
+					if(three.get(z).getMac().equals(data.get(i).getWifiList().get(j).getMac()))
+					{
+						counter++;
+						diff = Math.max(Math.abs(sig-data.get(i).getWifiList().get(j).getSignal()),mindiff);
 
 					}
+					else {
+
+						diff = 120;
+					}
+
+					w = norm/(Math.pow(diff, power)*Math.pow(sig, power));
+					pi *= w;
 
 
 				}
 
-				pp = new Record_Pos_Pi(pi,data.get(i).getPosition());
-				rpp.add(pp);
+
 			}
 
-
-
+			pp = new Record_Pos_Pi(pi,data.get(i).getPosition());
+			array_pp.add(pp);
+			
 		}
-		//	System.out.println(rpp);
+		System.out.println(counter);
+		//System.out.println(array_pp);
+
 	}
 
-
 }
+
+
+
 
 // ARRAYLIST ARAYYLIST -> MAC SIGNAL MAC SIGNAL MAC SIGNAL MAC SIGNAL
 // HASHMAP -> MAC1 - 1 1 1
