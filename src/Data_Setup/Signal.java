@@ -2,7 +2,7 @@ package Data_Setup;
 
 public class Signal {
 
-	public int signal;
+	public double signal;
 
 	public Signal() {
 		this.signal = 0;
@@ -20,14 +20,15 @@ public class Signal {
 	
 	public Signal(String signal) {
 		
-		this.signal=Integer.parseInt(signal);
+		this.signal = Double.parseDouble(signal);
 	}
+
 
 	public Signal(double signal) {
 		this.signal = (int)signal;
 	}
 
-	public int getSignal() {
+	public double getSignal() {
 		return signal;
 	}
 

@@ -22,14 +22,60 @@ import Data_Setup.Wifi;
 public class Read_From {
 	//public static final ArrayList<Record> data = new ArrayList<Record>();
 
-	public static ArrayList<Record> comb_File(String file) throws IOException, ParseException {
+	private static Mac mac;
+	private static Signal signal;
+	private static SSID ssid;
+	private static Frequency frequency;
+	private static Position position;
+	private static Wifi wifi;
+	//TODO private static Time time;
+	
+	/**
+	 * wigle_File read from CSV file all the data and copy it to ArrayList.
+	 */
+	public static void wigle_File(String file)throws IOException, ParseException {
 
-		Mac mac;
-		Signal signal;
-		SSID ssid;
-		Frequency frequency;
-		Position position;
-		Wifi wifi;
+		ArrayList<Record> data_list = new ArrayList<Record>();
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		String line = br.readLine();
+		String [] getmodel = line.split(",");
+		String id = getmodel[2].substring(6);
+		line = br.readLine();
+		line = br.readLine();
+
+		while(line!=null) {
+			String[] arr = (line.split(","));
+
+			if(arr[10].equals("WIFI")) {
+				mac = new Mac(arr[0]);
+				ssid = new SSID(arr[1]);
+				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[3]);
+				Time time = new Time(date);
+				frequency = new Frequency(arr[4]);
+				signal = new Signal(arr[5]);
+				position = new Position(arr[6],arr[7],arr[8]);
+
+				Wifi wifi = new Wifi(ssid, mac, frequency, signal);
+				Record record = new Record(time, position);
+				record.addWifi(wifi);
+				record.setid(id);
+				data_list.add(record);
+
+				line = br.readLine();
+
+			}
+			else {
+				line = br.readLine();
+			}
+
+		}
+
+		br.close();
+		Write_2_CSV.Build_ArrayList(data_list);
+	}
+	
+	public static ArrayList<Record> comb_File(String file) throws IOException, ParseException {
 
 		ArrayList<Record> data = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
@@ -44,15 +90,15 @@ public class Read_From {
 
 				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
 				Time time = new Time(date);
-				position = new Position(Double.parseDouble(arr[2]),Double.parseDouble(arr[3]),Double.parseDouble(arr[4]));
+				position = new Position(arr[2],arr[3],arr[4]);
 				Record record = new Record(time, position);
 				//TODO id to record.
 				for (int i = 6; i < arr.length; i += 4) {
 					if(!(arr[i+1].equals(" "))) {
 						ssid = new SSID(arr[i]);
 						mac = new Mac(arr[i+1]);
-						frequency = new Frequency(Integer.parseInt(arr[i+2]));
-						signal = new Signal(Double.parseDouble(arr[i+3]));
+						frequency = new Frequency(arr[i+2]);
+						signal = new Signal(arr[i+3]);
 						wifi = new Wifi(ssid, mac, frequency, signal);
 						record.addWifi(wifi);
 					}
@@ -71,8 +117,6 @@ public class Read_From {
 
 	public static ArrayList<ArrayList<Record_Mac_Signal>> nogps_File(String file) throws IOException {
 
-		Mac mac;
-		Signal signal;
 		Record_Mac_Signal rms;
 		ArrayList<ArrayList<Record_Mac_Signal>> data = new ArrayList<ArrayList<Record_Mac_Signal>>();
 		

@@ -29,6 +29,12 @@ public class Position {
 		this.lon = lon;
 		this.lat = lat;
 	}
+	
+	public Position(String alt, String lon, String lat) {
+		this.alt = Double.parseDouble(alt);
+		this.lon = Double.parseDouble(lon);
+		this.lat = Double.parseDouble(lat);
+	}
 
 	/**
 	 * @return the alt

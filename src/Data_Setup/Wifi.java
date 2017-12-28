@@ -53,7 +53,7 @@ public class Wifi {
 		this.mac = mac;
 	}
 
-	public int getSignal() {
+	public double getSignal() {
 		return signal.getSignal();
 	}
 	

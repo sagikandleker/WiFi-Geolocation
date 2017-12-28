@@ -18,7 +18,6 @@ public class Mac_Hashmap {
 
 	public static HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
 	static ArrayList<Record> All_Data_List = Write_2_CSV.All_Data_List;
-	//static ArrayList<Record> data = Read_From.data;
 
 	public static HashMap<String, ArrayList<Record_Pos_Wifi_Time>> Build_Hash(ArrayList<Record> data, String nameOfHash) {
 

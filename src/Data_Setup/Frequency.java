@@ -11,6 +11,10 @@ public class Frequency {
 	public Frequency(Frequency frequency) {
 		this.frequency = frequency.frequency;
 	}
+	
+	public Frequency(String frequency) {
+		this.frequency = Integer.parseInt(frequency);
+	}
 
 	public Frequency() {
 		this.frequency = 0;
