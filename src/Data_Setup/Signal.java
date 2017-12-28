@@ -20,6 +20,7 @@ public class Signal {
 	
 	public Signal(String signal) {
 		
+		this.signal=Integer.parseInt(signal);
 	}
 
 	public Signal(double signal) {
