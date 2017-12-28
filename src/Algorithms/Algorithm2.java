@@ -56,16 +56,17 @@ public class Algorithm2 {
 		for (int i = 0; i < data.size(); i++) {
 			double pi = 1;
 			System.out.println("I = "+i);
-			
+
 			for (int z = 0; z < three.size(); z++) {
 				System.out.println("Z = "+z);
-				System.out.println("MAC: "+three.get(z).getMac());
-			for (int j = 0; j < data.get(i).getWifiList().size(); j++) {
-				System.out.println("J = "+j);
+				
+				for (int j = 0; j < data.get(i).getWifiList().size(); j++) {
+					System.out.println("J = "+j);
+					
 					double sig = three.get(z).getSignal().signal;
-					
+					System.out.println("MAC: "+three.get(z).getMac());
 					System.out.println("WIFI MACS: "+(data.get(i).getWifiList().get(j).getMac()));
-					
+
 					if(three.get(z).getMac().equals(data.get(i).getWifiList().get(j).getMac()))
 					{
 						counter++;
