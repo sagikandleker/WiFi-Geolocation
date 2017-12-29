@@ -48,7 +48,7 @@ public class Record {
 			
 			this.WifiList.add(wl.get(i));
 			sort_Signal_Power();
-			if(this.WifiList.size()==11)
+			if(this.WifiList.size() == 11)
 			{
 				this.WifiList.remove(10);
 			}
@@ -63,13 +63,13 @@ public class Record {
 		
 		for (int i = 0; i < this.WifiList.size(); i++)
 		{
-			for (int j = 0; j <this.WifiList.size(); j++)
+			for (int j = 0; j < this.WifiList.size(); j++)
 			{
-				if(this.WifiList.get(i).getSignal()>this.WifiList.get(j).getSignal())
+				if(this.WifiList.get(i).getSignal() > this.WifiList.get(j).getSignal())
 				{
 				
 					Wifi temp;
-					temp=this.WifiList.get(i);
+					temp = this.WifiList.get(i);
 					this.WifiList.set(i, this.WifiList.get(j));
 					this.WifiList.set(j, temp);
 				}

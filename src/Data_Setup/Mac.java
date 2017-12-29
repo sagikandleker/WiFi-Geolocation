@@ -23,6 +23,16 @@ public class Mac {
 	public void setMac(Mac mac) {
 		this.mac = mac.mac;
 	}
+	
+	public boolean compare(Mac m)
+	{
+		if((this.mac.equalsIgnoreCase(m.getMac())))
+		{
+			return true;
+		}
+		return false;
+	}
+	
 	@Override
 	public String toString() {
 		return mac;
