@@ -7,24 +7,19 @@ public class Record_Pos_Mac_Signal {
 	Signal signal;
 	int line;
 	
-	//MAC1 - 3, 9, 15
-	//MAC2 - 1, 3, 10
-	//MAC3 - 3, 15, 29
-	
-	//[3(3) + 9(1) + 15(2)]
-	
-	public Record_Pos_Mac_Signal(Position position, Mac mac, Signal signal, int line) {
+	public Record_Pos_Mac_Signal(int line, Position position, Mac mac, Signal signal) {
+		this.line = line;
 		this.position = position;
 		this.mac = mac;
 		this.signal = signal;
-		this.line = line;
+	
 	}
 	
 	public Record_Pos_Mac_Signal() {
+		this.line = -1;
 		this.position = new Position();
 		this.mac = new Mac();
 		this.signal = new Signal();
-		this.line = -1;
 		
 	}
 
@@ -62,8 +57,7 @@ public class Record_Pos_Mac_Signal {
 
 	@Override
 	public String toString() {
-		return "Record_Pos_Mac_Signal [position=" + position + ", mac=" + mac + ", signal=" + signal + ", line=" + line
-				+ "]";
+		return line + "," + position + "," + mac + "," + signal;
 	}
 	
 	

@@ -29,9 +29,11 @@ public class Mac_Hashmap {
 		Frequency frequency;
 		Position position;
 		Wifi wifi;
+		int line = 1;
 
 		for (int i = 0; i < data.size(); i++) {
 			position = data.get(i).getPosition();
+			
 			for (int k = 0; k < data.get(i).getWifiList().size(); k++) {
 				mac = new Mac(data.get(i).getWifiList().get(k).getMac());
 				signal = new Signal((data.get(i).getWifiList().get(k).getSignal()));
@@ -39,7 +41,7 @@ public class Mac_Hashmap {
 				time = new Time(data.get(i).getDate());
 				frequency =  new Frequency(data.get(i).getWifiList().get(k).getFrequency());
 				wifi = new Wifi(ssid, mac, frequency, signal);
-				pos_wifi_time = new Record_Pos_Wifi_Time(position, wifi, time);
+				pos_wifi_time = new Record_Pos_Wifi_Time(line, position, wifi, time);
 
 
 				ArrayList<Record_Pos_Wifi_Time> rps = new ArrayList<Record_Pos_Wifi_Time>();
@@ -56,16 +58,19 @@ public class Mac_Hashmap {
 
 			}
 
+			line++;
 		}
 		if(nameOfHash.equals("Algo1")) {
 			HashMap<String,ArrayList<Record_Pos_Wifi_Time>> algo1_Hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
 			algo1_Hash.putAll(hash);
+			System.out.println(hash);
 			return algo1_Hash;
 		}
 		else if(nameOfHash.equals("Algo2")) {
 			HashMap<String,ArrayList<Record_Pos_Wifi_Time>> algo2_Hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
 			algo2_Hash.putAll(hash);
 			return algo2_Hash;
+			
 		}
 		return hash;
 	}

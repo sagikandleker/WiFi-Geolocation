@@ -1,38 +1,34 @@
 package Algorithms;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import Data_Setup.Frequency;
 import Data_Setup.Mac;
 import Data_Setup.Position;
-import Data_Setup.Record;
 import Data_Setup.Record_Mac_Signal;
+import Data_Setup.Record_Pos_Mac_Signal;
 import Data_Setup.Record_Pos_Wifi_Time;
-import Data_Setup.SSID;
 import Data_Setup.Signal;
-import Data_Setup.Time;
-import Data_Setup.Wifi;
+import Main_App.Main;
 
-
-// ArrayList<ArrayList> = nogps file.
-// ArrayList<Record> = comb file.
 
 public class Algorithm2 {
-	
-	public static HashMap<String,ArrayList<ArrayList<Record_Pos_Wifi_Time>>> hash2 = new HashMap<String,ArrayList<ArrayList<Record_Pos_Wifi_Time>>>();
-	
-/*
-	static final double power=2, norm=10000, sigdiff=0.4, mindiff=3, nosignal=-120, diffnosignal=100;
 
-	public static void no_gps_lines(ArrayList<Record> data, ArrayList<ArrayList<Record_Mac_Signal>> rms) {
+	static final double power=2,
+			norm=10000, sigdiff=0.4, 
+			mindiff=3, nosignal=0.32344759,
+			diffnosignal=100;
+
+	static final ArrayList<Position> pos_array = new ArrayList<Position>();
+
+	public static void no_gps_lines(HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash2, ArrayList<ArrayList<Record_Mac_Signal>> rms) throws IOException {
 
 		Mac mac;
 		Signal signal;
 		Record_Mac_Signal ms;
 
-
-		ArrayList<Record_Mac_Signal> three = null;
+		ArrayList<Record_Mac_Signal> three;
 
 		for (int i = 0; i < rms.size(); i++) {
 
@@ -42,154 +38,208 @@ public class Algorithm2 {
 
 				if(j<3)
 				{
-					mac = rms.get(i).get(j).getMac();
-					signal = rms.get(i).get(j).getSignal();
+					mac = new Mac(rms.get(i).get(j).getMac());
+					signal = new Signal(rms.get(i).get(j).getSignal());
 					ms = new Record_Mac_Signal(mac, signal);
 					three.add(ms);
 				}
 			}
-			Algo2(data, three);
+			System.out.println(three);
+			Algo2(hash2, three);
 		}
+
+		Write(pos_array);
+
 	}
 
-	public static void Algo2(ArrayList<Record> data, ArrayList<Record_Mac_Signal> three) {
-		//Algo2 START!
-		//System.out.println(three);
+
+	public static void Algo2(HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash2, ArrayList<Record_Mac_Signal> three) {
+
+		Mac mac;
+		Signal nogps_signal;
+		Position position;
+		Signal comb_signal;
+		int line = 0;
+
+		HashMap<String, Signal> ms = new HashMap<String, Signal>();
+
+		Record_Pos_Mac_Signal rpms;
+
+		ArrayList<Record_Pos_Mac_Signal> arrays = new ArrayList<Record_Pos_Mac_Signal>();
+
+		for (int i = 0; i < three.size(); i++) {
+			mac = new Mac(three.get(i).getMac());
+			nogps_signal = new Signal(three.get(i).getSignal());
+
+			if(hash2.get(mac.getMac())!=null) {
+				for (int j = 0; j < (hash2.get(mac.getMac()).size()); j++) {
+
+					line = hash2.get(mac.getMac()).get(j).getLine();
+					position = new Position(hash2.get(mac.getMac()).get(j).getPosition());
+					comb_signal = new Signal(hash2.get(mac.getMac()).get(j).getWifi().getSignal());
+					rpms = new Record_Pos_Mac_Signal(line,position, mac, comb_signal);
+					arrays.add(rpms);
+				}
+
+			}
+		}
+
+		sortline(arrays);
+
+		for (int i = 0; i < three.size(); i++) {
+
+			ms.put(three.get(i).getStringMac(), three.get(i).getSignal());
+		}
 
 		double diff;
 		double w;
-		int counter = 0;
-		Record_Pos_Pi pp;
-		ArrayList<Record_Pos_Pi> array_pp = new ArrayList<Record_Pos_Pi>();
-		
-		for (int i = 0; i < data.size(); i++) {
+		Record_Pos_Pi rpp;
+		ArrayList<Record_Pos_Pi> array_rpp = new ArrayList<Record_Pos_Pi>();
+		int size = arrays.size();
+		for (int j = 0; j < arrays.size(); j++) {
+
 			double pi = 1;
+			position = new Position(arrays.get(j).getPosition());
+			mac = new Mac(arrays.get(j).getMac().getMac());
+			if(arrays.size() == 1) {
+				pos_array.add(position);
+				
+			}
+			
+			else{
+				
+				
+				if(mac!=null) {
+					nogps_signal = new Signal(ms.get(mac.getMac()).getSignal());
+					comb_signal = new Signal(arrays.get(j).getSignal());
 
-			for (int z = 0; z < three.size(); z++) {
-
-				for (int j = 0; j < data.get(i).getWifiList().size(); j++) {
-
-					double sig = three.get(z).getSignal().signal;
-
-					if((three.get(z).getMac().compare((data.get(i).getWifiList().get(j).getMac()))))
-					{
-						
-						counter++;
-						diff = Math.max(Math.abs(sig-data.get(i).getWifiList().get(j).getSignal()),mindiff);
-
-					}
-					else {
-
-						diff = diffnosignal;
-					}
-
-					w = norm/(Math.pow(diff, power)*Math.pow(sig, power));
+					diff = Math.max(Math.abs((nogps_signal.getSignal())-(comb_signal.getSignal())),mindiff);
+					w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
 					pi *= w;
 
-				}
+					if(j != size-1) {
+						if((arrays.get(j).getLine() != arrays.get(j+1).getLine())) {
+							pi = pi * Math.pow(nosignal, 2);
+						}
 
-			}
+						else if((arrays.get(j).getLine() == arrays.get(j+1).getLine())) {
+							mac = new Mac(arrays.get(j+1).getMac());
+							nogps_signal = new Signal(ms.get(mac.getMac()).getSignal());
+							diff = Math.max(Math.abs((nogps_signal.getSignal())-(comb_signal.getSignal())),mindiff);
+							w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
+							pi = pi *w;
+							arrays.remove(j+1);
 
-			
-			pp = new Record_Pos_Pi(pi,data.get(i).getPosition());
-			array_pp.add(pp);
-			sort(array_pp);
-			System.out.println(array_pp);
-			
-			
-			//all function algo 
-			//take 3 pos
-			//send to hishov
-			
-			
-			
-			
-			//sort 3 pi strong take pos 3 strong pi and send to algo1 hishov
-			
-		}	
-		array_pp.clear();
-	}
-	
-	public static void sort(ArrayList<Record_Pos_Pi> pp) {
-		
-		for (int i = 0; i < pp.size(); i++)
-		{
-			for (int j = 0; j <pp.size(); j++)
-			{
-				if(pp.get(i).getPi() > pp.get(j).getPi())
-				{
+							if(j != size-2) {
+								if((arrays.get(j).getLine() == arrays.get(j+2).getLine())) {
+									mac = new Mac(arrays.get(j+2).getMac());
+									nogps_signal = new Signal(ms.get(mac.getMac()).getSignal());
+									diff = Math.max(Math.abs((nogps_signal.getSignal())-(comb_signal.getSignal())),mindiff);
+									w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
+									pi = pi *w;
+
+									arrays.remove(j+2);
+								}
+							}
+
+						}
+					}
+
+					rpp = new Record_Pos_Pi(position, pi);
+					array_rpp.add(rpp);
 				
-					Record_Pos_Pi temp;
-					temp=pp.get(i);
-					pp.set(i, pp.get(j));
-					pp.set(j, temp);
 				}
+				//System.out.println(array_rpp);
+				Algo2_final(sortPi(array_rpp));
 			}
-		}
-
-	}
-
-*/
-	
-	
-	
-	public static HashMap<String, ArrayList<ArrayList<Record_Pos_Wifi_Time>>> Build_Hash2(ArrayList<Record> data) {
-
-		Record_Pos_Wifi_Time pos_wifi_time;
-		Mac mac;
-		Signal signal;
-		Time time;
-		Position position;
-
-		for (int i = 0; i < data.size(); i++) {
-			position = data.get(i).getPosition();
-			for (int k = 0; k < data.get(i).getWifiList().size(); k++) {
-				mac = new Mac(data.get(i).getWifiList().get(k).getMac());
-				signal = new Signal((data.get(i).getWifiList().get(k).getSignal()));
-				ssid = new SSID(data.get(i).getWifiList().get(k).getSsid());
-				time = new Time(data.get(i).getDate());
-				frequency =  new Frequency(data.get(i).getWifiList().get(k).getFrequency());
-				wifi = new Wifi(ssid, mac, frequency, signal);
-				pos_wifi_time = new Record_Pos_Wifi_Time(position, wifi, time);
-
-
-				ArrayList<Record_Pos_Wifi_Time> rps = new ArrayList<Record_Pos_Wifi_Time>();
-
-				if(hash2.containsKey(mac.getMac()) && !hash2.get(mac.getMac()).contains(pos_wifi_time)) {
-					hash2.get(mac.getMac()).add(pos_wifi_time);
-				}
-
-				else
-				{
-					rps.add(pos_wifi_time);
-					hash2.put(mac.getMac(), rps);
-				}
-
-			}
-
 		}
 		
-		return hash;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+	private static void sortline(ArrayList<Record_Pos_Mac_Signal> arrays) {
+
+		for (int i = 0; i < arrays.size(); i++)
+		{
+			for (int j = 0; j <arrays.size(); j++)
+			{
+				if(arrays.get(i).getLine() < arrays.get(j).getLine())
+				{
+
+					Record_Pos_Mac_Signal temp;
+					temp = arrays.get(i);
+					arrays.set(i, arrays.get(j));
+					arrays.set(j, temp);
+				}
+			}
+		}
+
+	}
+
+	private static ArrayList<Record_Pos_Pi> sortPi(ArrayList<Record_Pos_Pi> arrays) {
+
+		ArrayList<Record_Pos_Pi> strongerpi=new ArrayList<Record_Pos_Pi>();
+		if(arrays.size() <= 3) return arrays;
+		
+		for (int i = 0; i < 3; i++)
+		{
+			double maxpi=arrays.get(0).pi;
+			int place=0;
+			for (int j = 0; j <arrays.size(); j++)
+			{
+				if(arrays.get(j).pi > maxpi)
+				{
+					maxpi=arrays.get(j).pi;
+					place=j;
+				}
+			}
+			strongerpi.add(arrays.get(place));
+			arrays.remove(place);
+
+		}
+		return strongerpi;
+
+	}
+
+	public static void Write(ArrayList<Position> rpp) throws IOException {
+
+		StringBuilder stringBuilder = new StringBuilder();
+		FileWriter fw = new FileWriter(Main.Algo2_Out);
+		for (int i = 0; i < rpp.size(); i++) {
+			stringBuilder.append("\n");
+			stringBuilder.append((rpp.get(i).toString().replace("[", "").replace("]", "")));	
+		}
+
+		fw.write(stringBuilder.toString());
+		System.out.println("Algo2 Write file to ["+Main.Algo2_Out+"]");
+		fw.close();
+
+	}
+
+
+	public static void Algo2_final(ArrayList<Record_Pos_Pi> rpp) {
+		Algorithm_Data all_parameters = new Algorithm_Data();
+		Position pos=new Position();
+
+		//System.out.println(rpp);
+		int size = 0;
+		while(size < rpp.size())
+		{
+			all_parameters.setWeight((rpp.get(size).getPi()));
+			all_parameters.setWeightsum(all_parameters.getWeight());
+			all_parameters.setWlatsum(rpp.get(size).getP().getLat()*(all_parameters.getWeight()));
+			all_parameters.setWlonsum(rpp.get(size).getP().getLon()*all_parameters.getWeight());
+			all_parameters.setWaltsum(rpp.get(size).getP().getAlt()*all_parameters.getWeight());
+
+			pos.setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
+			pos.setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
+			pos.setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
+
+
+			size++;
+		}
+		//System.out.println(pos);
+		pos_array.add(pos);
+	}
+
 }
-
-
-
-
-
-
-
-
-

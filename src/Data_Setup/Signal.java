@@ -28,6 +28,7 @@ public class Signal {
 	public double getSignal() {
 		return signal;
 	}
+	
 
 	public void setSignal(Signal signal) {
 		this.signal = signal.signal;

@@ -13,7 +13,7 @@ public class Record_Pos_Pi {
 		this.p = new Position();
 	}
 	
-	public Record_Pos_Pi(double pi, Position p)
+	public Record_Pos_Pi(Position p, double pi)
 	{
 		this.pi = pi;
 		this.p = p;
@@ -39,7 +39,5 @@ public class Record_Pos_Pi {
 	public String toString() {
 		return pi + "," + p;
 	}
-	
-	
 	
 }

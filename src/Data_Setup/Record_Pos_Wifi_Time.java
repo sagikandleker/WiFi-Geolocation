@@ -8,21 +8,33 @@ public class Record_Pos_Wifi_Time {
 	private Position position;
 	private Wifi wifi;
 	private Time time;
+	private int line;
 	
 	
 	public Record_Pos_Wifi_Time() {
+		this.line = -1;
 		this.position = new Position();
 		this.wifi = new Wifi();
 		this.time = new Time();
+		
 	}
 	
-	public Record_Pos_Wifi_Time(Position position, Wifi wifi, Time time) {
+	public Record_Pos_Wifi_Time(int line, Position position, Wifi wifi, Time time) {
+		this.line = line;
 		this.position = position;
 		this.wifi = wifi;
 		this.time = time;
 	}
 	
 	
+	public int getLine() {
+		return line;
+	}
+
+	public void setLine(int line) {
+		this.line = line;
+	}
+
 	public Position getPosition() {
 		return position;
 	}
@@ -49,7 +61,7 @@ public class Record_Pos_Wifi_Time {
 
 	@Override
 	public String toString() {
-		return wifi + "," + position + "," + time;
+		return line + "," + wifi + "," + position + "," + time;
 	}
 	
 	/**

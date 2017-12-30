@@ -19,18 +19,26 @@ public class Record_Mac_Signal {
 		this.mac.mac = mac;
 	}
 	
+	public double getDoubleSignal() {
+		return signal.getSignal();
+	}
+	
 	public Signal getSignal() {
 		return signal;
 	}
-
+	
 	public void setSignal(Signal signal) {
 		this.signal = signal;
+	}
+
+	public String getStringMac() {
+		return mac.getMac();
 	}
 
 	public Mac getMac() {
 		return mac;
 	}
-
+	
 	public void setMac(Mac mac) {
 		this.mac = mac;
 	}
