@@ -70,8 +70,8 @@ public class Mac_Hashmap {
 			HashMap<String,ArrayList<Record_Pos_Wifi_Time>> algo2_Hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
 			algo2_Hash.putAll(hash);
 			return algo2_Hash;
-			
 		}
+		
 		return hash;
 	}
 }
