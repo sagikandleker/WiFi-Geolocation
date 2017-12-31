@@ -2,9 +2,9 @@ package Tests;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import Data_sets.Position;
+import Data_Setup.Position;
 
-public class PositionTest {
+public class Position_Test {
 	
 	public static final double alt1 = 39.01806582;
 	public static final double lon1 = 34.80988156;

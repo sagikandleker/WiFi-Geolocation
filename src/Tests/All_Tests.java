@@ -9,9 +9,9 @@ import org.junit.runners.Suite.SuiteClasses;
  */
 
 	@RunWith(Suite.class)
-	@SuiteClasses({ PositionTest.class, TimeTest.class, WifiTest.class })
+	@SuiteClasses({ Position_Test.class, Time_Test.class, Wifi_Test.class })
 	
-	public class AllTests {
+	public class All_Tests {
 		
 		
 	}

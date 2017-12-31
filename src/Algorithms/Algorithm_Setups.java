@@ -1,12 +1,12 @@
 package Algorithms;
 
-public class Algorithm_Data {
+public class Algorithm_Setups {
 
 	double weightsum,wlatsum,wlonsum,waltsum,weight;
 	
 	double sig, diff, w, pi;
 	
-	public Algorithm_Data() {
+	public Algorithm_Setups() {
 		this.weight = 0;
 		this.weightsum = 0;
 		this.wlatsum = 0;

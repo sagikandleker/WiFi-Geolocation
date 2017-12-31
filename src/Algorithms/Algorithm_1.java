@@ -18,16 +18,14 @@ public class Algorithm_1 {
 		for (int i = 0; i < namesOfKeys.size(); i++) {
 			key = namesOfKeys.get(i);
 			Algo1(Record_Pos_Wifi_Time.sort_Signal_Power(Mac_Hashmap.hash.get(key)));
-			
 		}
 		
 		Write(rpwt);
-
 	}
-	//spwt=sorted pos wifi time.
+
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> spwt) {
-		Algorithm_Data all_parameters = new Algorithm_Data();
-		Record_Pos_Wifi_Time pos = new Record_Pos_Wifi_Time();
+		Algorithm_Setups all_parameters = new Algorithm_Setups();
+		Record_Pos_Wifi_Time position = new Record_Pos_Wifi_Time();
 		
 	
 		int size = 0;
@@ -39,18 +37,18 @@ public class Algorithm_1 {
 			all_parameters.setWlonsum(spwt.get(size).getPosition().getLon()*all_parameters.getWeight());
 			all_parameters.setWaltsum(spwt.get(size).getPosition().getAlt()*all_parameters.getWeight());
 			
-			pos.getPosition().setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
-			pos.getPosition().setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
-			pos.getPosition().setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
-			pos.getWifi().setSignal((spwt.get(0).getWifi().getSignal()));
-			pos.getWifi().setMac(spwt.get(size).getWifi().getMac());
-			pos.getWifi().setFrequency(spwt.get(size).getWifi().getFrequency());
-			pos.getWifi().setSsid(spwt.get(size).getWifi().getSsid());
-			pos.getTime().setTime(spwt.get(size).getTime());
+			position.getPosition().setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
+			position.getPosition().setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
+			position.getPosition().setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
+			position.getWifi().setSignal((spwt.get(0).getWifi().getSignal()));
+			position.getWifi().setMac(spwt.get(size).getWifi().getMac());
+			position.getWifi().setFrequency(spwt.get(size).getWifi().getFrequency());
+			position.getWifi().setSsid(spwt.get(size).getWifi().getSsid());
+			position.getTime().setTime(spwt.get(size).getTime());
 			
 			size++;
 		}
-		rpwt.add(pos);
+		rpwt.add(position);
 	}
 
 	public static void Write(ArrayList<Record_Pos_Wifi_Time> rpwt) throws IOException {

@@ -9,10 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.junit.Test;
+import Data_Setup.Time;
 
-import Data_sets.Time;
-
-public class TimeTest {
+public class Time_Test {
 
 	public final static String time1 = "27/10/17 20:00";
 	public final static String time2 = "27/10/17 20:00";

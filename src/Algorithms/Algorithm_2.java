@@ -235,8 +235,8 @@ public class Algorithm_2 {
 
 
 	public static void Algo2_final(ArrayList<Record_Pos_Pi> rpp) {
-		Algorithm_Data all_parameters = new Algorithm_Data();
-		Position pos = new Position();
+		Algorithm_Setups all_parameters = new Algorithm_Setups();
+		Position position = new Position();
 
 
 		int size = 0;
@@ -248,14 +248,13 @@ public class Algorithm_2 {
 			all_parameters.setWlonsum(rpp.get(size).getP().getLon()*all_parameters.getWeight());
 			all_parameters.setWaltsum(rpp.get(size).getP().getAlt()*all_parameters.getWeight());
 
-			pos.setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
-			pos.setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
-			pos.setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
+			position.setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
+			position.setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
+			position.setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
 
 			size++;
 		}
 
-		pos_array.add(pos);
+		pos_array.add(position);
 	}
-
 }

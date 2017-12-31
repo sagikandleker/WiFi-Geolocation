@@ -3,10 +3,9 @@ package Tests;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import Data_Setup.Wifi;
 
-import Data_sets.Wifi;
-
-public class WifiTest {
+public class Wifi_Test {
 		
 	public final static String ssid = "Bezeq";
 	public final static String mac = "6a:12:f5:f9:5e:71";
