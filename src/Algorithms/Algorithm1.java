@@ -56,14 +56,14 @@ public class Algorithm1 {
 	public static void Write(ArrayList<Record_Pos_Wifi_Time> rpwt) throws IOException {
 
 		StringBuilder stringBuilder = new StringBuilder();
-		FileWriter fw = new FileWriter(Main.Algo1_Out);
+		FileWriter fw = new FileWriter(Main.Algo1_File_Out);
 		for (int i = 0; i < rpwt.size(); i++) {
 			stringBuilder.append("\n");
 			stringBuilder.append((rpwt.get(i).toString().replace("[", "").replace("]", "")));	
 		}
 
 		fw.write(stringBuilder.toString());
-		System.out.println("Algo1 Write file to ["+Main.Algo1_Out+"]");
+		System.out.println("Algo1 Write file to ["+Main.Algo1_File_Out+"]");
 		fw.close();
 
 	}

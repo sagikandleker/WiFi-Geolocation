@@ -227,14 +227,14 @@ private static ArrayList<Record_Pos_Pi> sortPi(ArrayList<Record_Pos_Pi> arrays) 
 public static void Write(ArrayList<Position> rpp) throws IOException {
 
 	StringBuilder stringBuilder = new StringBuilder();
-	FileWriter fw = new FileWriter(Main.Algo2_Out);
+	FileWriter fw = new FileWriter(Main.Algo2_File_Out);
 	for (int i = 0; i < rpp.size(); i++) {
 		stringBuilder.append("\n");
 		stringBuilder.append((rpp.get(i).toString().replace("[", "").replace("]", "")));	
 	}
 
 	fw.write(stringBuilder.toString());
-	System.out.println("Algo2 Write file to ["+Main.Algo2_Out+"]");
+	System.out.println("Algo2 Write file to ["+Main.Algo2_File_Out+"]");
 	fw.close();
 
 }
