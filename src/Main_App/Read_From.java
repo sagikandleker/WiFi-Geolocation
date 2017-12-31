@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import Data_Setup.Frequency;
+import Data_Setup.ID;
 import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record;
@@ -19,13 +20,13 @@ import Data_Setup.Time;
 import Data_Setup.Wifi;
 
 public class Read_From {
-	//public static final ArrayList<Record> data = new ArrayList<Record>();
 
 	private static Mac mac;
 	private static Signal signal;
 	private static SSID ssid;
 	private static Frequency frequency;
 	private static Position position;
+	private static ID id;
 	private static Wifi wifi;
 	//TODO private static Time time;
 
@@ -34,12 +35,13 @@ public class Read_From {
 	 */
 	public static void wigle_File(String file)throws IOException, ParseException {
 
-		ArrayList<Record> data_list = new ArrayList<Record>();
+		ArrayList<Record> wigle_data = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
 		String line = br.readLine();
 		String [] getmodel = line.split(",");
-		String id = getmodel[2].substring(6);
+		id = new ID(getmodel[2].substring(6));
+		
 		line = br.readLine();
 		line = br.readLine();
 
@@ -59,7 +61,7 @@ public class Read_From {
 				Record record = new Record(time, position);
 				record.addWifi(wifi);
 				record.setid(id);
-				data_list.add(record);
+				wigle_data.add(record);
 
 				line = br.readLine();
 
@@ -71,12 +73,12 @@ public class Read_From {
 		}
 
 		br.close();
-		Write_2_CSV.Build_ArrayList(data_list);
+		Write_2_CSV.Build_ArrayList(wigle_data);
 	}
 
 	public static ArrayList<Record> comb_File(String file) throws IOException, ParseException {
 
-		ArrayList<Record> data = new ArrayList<Record>();
+		ArrayList<Record> comb_data = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
 		String line = br.readLine();
@@ -84,36 +86,37 @@ public class Read_From {
 
 		while(!line.isEmpty()) {
 			String[] arr = (line.split(","));
-			
-				Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
-				Time time = new Time(date);
-				position = new Position(arr[2],arr[3],arr[4]);
-				Record record = new Record(time, position);
-				//TODO id to record.
-				for (int i = 6; i < arr.length; i += 4) {
-					if(!(arr[i+1].equals(" "))) {
-						ssid = new SSID(arr[i]);
-						mac = new Mac(arr[i+1]);
-						frequency = new Frequency(arr[i+2]);
-						signal = new Signal(arr[i+3]);
-						wifi = new Wifi(ssid, mac, frequency, signal);
-						record.addWifi(wifi);
 
-					}
-				}
-				data.add(record);
-				line = br.readLine();
+			Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
+			Time time = new Time(date);
+			position = new Position(arr[2],arr[3],arr[4]);
+			Record record = new Record(time, position);
+			//TODO id to record.
 			
+			for (int i = 6; i < arr.length; i += 4) {
+				if(!(arr[i+1].equals(" "))) {
+					ssid = new SSID(arr[i]);
+					mac = new Mac(arr[i+1]);
+					frequency = new Frequency(arr[i+2]);
+					signal = new Signal(arr[i+3]);
+					wifi = new Wifi(ssid, mac, frequency, signal);
+					record.addWifi(wifi);
+
+				}
+			}
+			
+			comb_data.add(record);
+			line = br.readLine();
 		}
 
 		br.close();
-		return data;
+		return comb_data;
 	}
 
 	public static ArrayList<ArrayList<Record_Mac_Signal>> nogps_File(String file) throws IOException {
 
 		Record_Mac_Signal rms;
-		ArrayList<ArrayList<Record_Mac_Signal>> data = new ArrayList<ArrayList<Record_Mac_Signal>>();
+		ArrayList<ArrayList<Record_Mac_Signal>> nogps_data = new ArrayList<ArrayList<Record_Mac_Signal>>();
 
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);
@@ -122,22 +125,23 @@ public class Read_From {
 		while(line!=null) {
 
 			String[] arr = (line.split(","));
-			ArrayList<Record_Mac_Signal> line_data = new ArrayList<Record_Mac_Signal>();
+			ArrayList<Record_Mac_Signal> row_data = new ArrayList<Record_Mac_Signal>();
+			
 			for (int m = 7; m < arr.length; m+=4) {
 
 				mac = new Mac(arr[m]);
 				signal = new Signal(arr[m+2]);
 				rms = new Record_Mac_Signal(mac, signal);
-				line_data.add(rms);
+				row_data.add(rms);
 
 			}
 
-			data.add(line_data);
+			nogps_data.add(row_data);
 			line = br.readLine();
 
 		}
+		
 		br.close();
-		return data;
-
+		return nogps_data;
 	}
 }

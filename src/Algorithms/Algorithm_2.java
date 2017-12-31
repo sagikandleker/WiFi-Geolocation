@@ -13,7 +13,7 @@ import Data_Setup.Signal;
 import Main_App.Main;
 
 
-public class Algorithm2 {
+public class Algorithm_2 {
 
 	static final double power=2,
 			norm=10000, sigdiff=0.4, 
@@ -44,7 +44,8 @@ public class Algorithm2 {
 					three.add(ms);
 				}
 			}
-			System.out.println(three);
+
+			//System.out.println(three);
 			Algo2(hash2, three);
 		}
 
@@ -92,7 +93,7 @@ public class Algorithm2 {
 			ms.put(three.get(i).getStringMac(), three.get(i).getSignal());
 		}
 
-		System.out.println(arrays);
+		//System.out.println(arrays);
 		double diff;
 		double w;
 		Record_Pos_Pi rpp;
@@ -135,8 +136,8 @@ public class Algorithm2 {
 						w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
 						pi = pi *w;
 						arrays.remove(j+1);
-						System.out.println(j);
-						System.out.println((arrays.size()-2));
+						//System.out.println(j);
+						//System.out.println((arrays.size()-2));
 						if(j != (arrays.size()-2))
 						{
 							if((arrays.get(j).getLine() == arrays.get(j+2).getLine())) 
@@ -155,7 +156,7 @@ public class Algorithm2 {
 						}
 						else
 						{
-							
+
 							break;
 						}
 
@@ -164,9 +165,9 @@ public class Algorithm2 {
 				}
 				else
 				{
-					
+
 					break;
-					
+
 				}
 			}
 
@@ -179,90 +180,82 @@ public class Algorithm2 {
 	}
 
 
+	private static void sortline(ArrayList<Record_Pos_Mac_Signal> arrays) {
 
-private static void sortline(ArrayList<Record_Pos_Mac_Signal> arrays) {
+		for (int i = 0; i < arrays.size(); i++) {
+			for (int j = 0; j < arrays.size(); j++) {
+				if(arrays.get(i).getLine() < arrays.get(j).getLine()) {
 
-	for (int i = 0; i < arrays.size(); i++)
-	{
-		for (int j = 0; j < arrays.size(); j++)
-		{
-			if(arrays.get(i).getLine() < arrays.get(j).getLine())
-			{
-
-				Record_Pos_Mac_Signal temp;
-				temp = arrays.get(i);
-				arrays.set(i, arrays.get(j));
-				arrays.set(j, temp);
+					Record_Pos_Mac_Signal temp;
+					temp = arrays.get(i);
+					arrays.set(i, arrays.get(j));
+					arrays.set(j, temp);
+				}
 			}
 		}
+
 	}
 
-}
+	private static ArrayList<Record_Pos_Pi> sortPi(ArrayList<Record_Pos_Pi> arrays) {
 
-private static ArrayList<Record_Pos_Pi> sortPi(ArrayList<Record_Pos_Pi> arrays) {
+		ArrayList<Record_Pos_Pi> strongerpi=new ArrayList<Record_Pos_Pi>();
+		if(arrays.size() <= 3) return arrays;
 
-	ArrayList<Record_Pos_Pi> strongerpi=new ArrayList<Record_Pos_Pi>();
-	if(arrays.size() <= 3) return arrays;
-
-	for (int i = 0; i < 3; i++)
-	{
-		double maxpi=arrays.get(0).pi;
-		int place=0;
-		for (int j = 0; j <arrays.size(); j++)
-		{
-			if(arrays.get(j).pi > maxpi)
-			{
-				maxpi=arrays.get(j).pi;
-				place=j;
+		for (int i = 0; i < 3; i++) {
+			double maxpi=arrays.get(0).pi;
+			int place=0;
+			for (int j = 0; j <arrays.size(); j++) {
+				if(arrays.get(j).pi > maxpi) {
+					maxpi=arrays.get(j).pi;
+					place=j;
+				}
 			}
+			strongerpi.add(arrays.get(place));
+			arrays.remove(place);
+
 		}
-		strongerpi.add(arrays.get(place));
-		arrays.remove(place);
+		return strongerpi;
 
 	}
-	return strongerpi;
 
-}
+	public static void Write(ArrayList<Position> rpp) throws IOException {
 
-public static void Write(ArrayList<Position> rpp) throws IOException {
+		StringBuilder stringBuilder = new StringBuilder();
+		FileWriter fw = new FileWriter(Main.Algo2_File_Out);
+		for (int i = 0; i < rpp.size(); i++) {
+			stringBuilder.append("\n");
+			stringBuilder.append((rpp.get(i).toString().replace("[", "").replace("]", "")));	
+		}
 
-	StringBuilder stringBuilder = new StringBuilder();
-	FileWriter fw = new FileWriter(Main.Algo2_File_Out);
-	for (int i = 0; i < rpp.size(); i++) {
-		stringBuilder.append("\n");
-		stringBuilder.append((rpp.get(i).toString().replace("[", "").replace("]", "")));	
+		fw.write(stringBuilder.toString());
+		System.out.println("Algo2 Write file to ["+Main.Algo2_File_Out+"]");
+		fw.close();
+
 	}
 
-	fw.write(stringBuilder.toString());
-	System.out.println("Algo2 Write file to ["+Main.Algo2_File_Out+"]");
-	fw.close();
 
-}
-
-
-public static void Algo2_final(ArrayList<Record_Pos_Pi> rpp) {
-	Algorithm_Data all_parameters = new Algorithm_Data();
-	Position pos=new Position();
+	public static void Algo2_final(ArrayList<Record_Pos_Pi> rpp) {
+		Algorithm_Data all_parameters = new Algorithm_Data();
+		Position pos = new Position();
 
 
-	int size = 0;
-	while(size < rpp.size())
-	{
-		all_parameters.setWeight((rpp.get(size).getPi()));
-		all_parameters.setWeightsum(all_parameters.getWeight());
-		all_parameters.setWlatsum(rpp.get(size).getP().getLat()*(all_parameters.getWeight()));
-		all_parameters.setWlonsum(rpp.get(size).getP().getLon()*all_parameters.getWeight());
-		all_parameters.setWaltsum(rpp.get(size).getP().getAlt()*all_parameters.getWeight());
+		int size = 0;
+		while(size < rpp.size()) {
+			
+			all_parameters.setWeight((rpp.get(size).getPi()));
+			all_parameters.setWeightsum(all_parameters.getWeight());
+			all_parameters.setWlatsum(rpp.get(size).getP().getLat()*(all_parameters.getWeight()));
+			all_parameters.setWlonsum(rpp.get(size).getP().getLon()*all_parameters.getWeight());
+			all_parameters.setWaltsum(rpp.get(size).getP().getAlt()*all_parameters.getWeight());
 
-		pos.setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
-		pos.setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
-		pos.setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
+			pos.setLat((all_parameters.getWlatsum())/(all_parameters.getWeightsum()));
+			pos.setLon((all_parameters.getWlonsum())/(all_parameters.getWeightsum()));
+			pos.setAlt((all_parameters.getWaltsum())/(all_parameters.getWeightsum()));
 
+			size++;
+		}
 
-		size++;
+		pos_array.add(pos);
 	}
-
-	pos_array.add(pos);
-}
 
 }

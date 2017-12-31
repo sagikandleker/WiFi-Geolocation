@@ -21,10 +21,12 @@ public class Analayze_Files {
 			if(files_Names[i].startsWith("WigleWifi") && files_Names[i].endsWith(".csv")) {
 				Read_From.wigle_File(Main.path_In_WigleWifi+"/"+files_Names[i]);
 				counter++;
-			}	
-		}	
+			}
+		}
+		
 		Write_2_CSV.Write();
 		System.out.println(counter + " CSV files founded ["+Main.path_In+"]");
+		
 		if(counter != 0) {
 			System.out.println("1 CSV has been created ["+Main.path_Out_WigleWifi+"]\n");
 

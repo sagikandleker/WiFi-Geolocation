@@ -21,9 +21,10 @@ public class ID {
 		return id;
 	}
 
-	public void setID(String ID) {
-		ID = id;
+	public void setID(ID id) {
+		this.id = id.id;
 	}
+	
 
 	@Override
 	public String toString() {

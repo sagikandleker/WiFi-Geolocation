@@ -132,12 +132,6 @@ public class Record {
 		return false;
 	}
 
-	
-	@Override
-	public String toString() {
-		return date + "," + id + "," + position + "," + wifinetworks + "," + WifiList ;
-	}
-
 	public int getWifinetworks() {
 		return wifinetworks;
 	}
@@ -150,8 +144,13 @@ public class Record {
 		return id.getID();
 	}
 
-	public void setid(String id) {
-		this.id = new ID(id);
+	public void setid(ID id) {
+		this.id = id;
+	}
+	
+	@Override
+	public String toString() {
+		return date + "," + id + "," + position + "," + wifinetworks + "," + WifiList ;
 	}
 	
 }

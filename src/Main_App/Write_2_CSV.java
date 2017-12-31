@@ -40,9 +40,9 @@ public class Write_2_CSV {
 	 */
 	public static void Build_ArrayList(ArrayList<Record> data_list) throws IOException{
 
-		
+
 		ArrayList<Record> sorted_data_list = new ArrayList<Record>();
-		
+
 
 		for(int i = 0; i < data_list.size()-1; i++) {
 
@@ -68,7 +68,7 @@ public class Write_2_CSV {
 	}
 
 	public static void Write() throws IOException {
-		
+
 		StringBuilder stringBuilder = new StringBuilder();
 		FileWriter fw = new FileWriter(Main.WigleWifi_file_Out, true);
 		for (int i = 0; i < All_Data_List.size(); i++) {
@@ -78,6 +78,6 @@ public class Write_2_CSV {
 
 		fw.write(stringBuilder.toString());
 		fw.close();
-	
+
 	}
 }

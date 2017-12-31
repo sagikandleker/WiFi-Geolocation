@@ -16,45 +16,41 @@ import Main_App.Main;;
 
 public class ID_Filter {
 
-
 	public static void idFilter(String ssid) throws IOException, ParseException {
 
-		double lat,lon,alt;
-
-		ArrayList<Record_Filter> data_list = new ArrayList<Record_Filter>();
+		ArrayList<Record_Filter> data = new ArrayList<Record_Filter>();
 		FileReader fr = new FileReader(Main.WigleWifi_file_Out);
 		BufferedReader br = new BufferedReader(fr);
-		String Line = br.readLine();
-		Line = br.readLine();
-		int count=0;
-		while(Line != null) 
-		{
-			String[] arr = (Line.split(","));
-			if(arr[1].equalsIgnoreCase(ssid))
-			{
-				count++;
-				for (int i = 6; i < arr.length; i=i+4) 
-				{
+		String line = br.readLine();
+		line = br.readLine();
+		
+		while(line != null) {
+
+			String[] arr = (line.split(","));
+			if(arr[1].equalsIgnoreCase(ssid)) {
+				for (int i = 6; i < arr.length; i=i+4) {
+					
 					Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
-					lat = Double.parseDouble(arr[2]);
-					lon = Double.parseDouble(arr[3]);
-					alt = Double.parseDouble(arr[4]);
-					Position pos = new Position(alt, lon, lat);
+					Position position = new Position(arr[4], arr[3], arr[2]);
 					Time time = new Time(date);
-					ID id=new ID(arr[i]);
-					Record_Filter record = new Record_Filter(time, pos,id);
-					data_list.add(record);
+					ID id = new ID(arr[i]);
+					Record_Filter record = new Record_Filter(time, position, id);
+					data.add(record);
 				}
 			}
 
-			Line = br.readLine();
+			line = br.readLine();
 		}
 
 		br.close();
-		if(count==0)System.out.println("id not found");
-		else
-		{
-			Filter_2_KML.KML(data_list,"ID");	
+
+		if(data.size() == 0) {
+
+			System.out.println("id not found");
+		}
+		else {
+
+			Filter_2_KML.KML(data,"ID");
 		}
 	}
 

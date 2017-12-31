@@ -1,10 +1,12 @@
 package Filtering;
 
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
 public class Filter {
+
 	private static final Scanner sc = new Scanner(System.in);
 	String Filter;
 
@@ -42,7 +44,7 @@ public class Filter {
 
 			}
 		}
+		
 		sc.close();
 	}
-
 }

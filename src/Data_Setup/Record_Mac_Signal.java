@@ -4,7 +4,7 @@ public class Record_Mac_Signal {
 
 	private Signal signal;
 	private Mac mac;
-	
+
 	public Record_Mac_Signal() {
 		this.signal = new Signal();
 		this.mac = new Mac("");
@@ -18,15 +18,15 @@ public class Record_Mac_Signal {
 		this.signal.signal = signal;
 		this.mac.mac = mac;
 	}
-	
+
 	public double getDoubleSignal() {
 		return signal.getSignal();
 	}
-	
+
 	public Signal getSignal() {
 		return signal;
 	}
-	
+
 	public void setSignal(Signal signal) {
 		this.signal = signal;
 	}
@@ -38,7 +38,7 @@ public class Record_Mac_Signal {
 	public Mac getMac() {
 		return mac;
 	}
-	
+
 	public void setMac(Mac mac) {
 		this.mac = mac;
 	}
@@ -47,7 +47,4 @@ public class Record_Mac_Signal {
 	public String toString() {
 		return mac + "," + signal;
 	}
-	
-	
-	
 }

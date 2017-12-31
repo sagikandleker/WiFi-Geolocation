@@ -26,6 +26,4 @@ public class Filter_2_KML {
 		kml.marshal(new File(Main.path_Out_Filters+"\\Filter_"+type+".kml"));
 		System.out.println("Finish to create KML File");
 	}
-
-
 }

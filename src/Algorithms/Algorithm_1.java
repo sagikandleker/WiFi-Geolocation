@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import Data_Setup.Record_Pos_Wifi_Time;
 import Main_App.Main;
 
-public class Algorithm1 {
+public class Algorithm_1 {
 	
 	public static ArrayList<Record_Pos_Wifi_Time> rpwt = new ArrayList<Record_Pos_Wifi_Time>();
 

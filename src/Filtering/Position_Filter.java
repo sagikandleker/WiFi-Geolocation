@@ -17,7 +17,6 @@ public class Position_Filter {
 
 	public static void positionFilter(double lat, double lon,double radius) throws IOException, ParseException
 	{
-		double latcsv,loncsv,altcsv;
 
 		ArrayList<Record_Filter> data_list = new ArrayList<Record_Filter>();
 		FileReader fr = new FileReader(Main.WigleWifi_file_Out);
@@ -25,23 +24,19 @@ public class Position_Filter {
 		String Line = br.readLine();
 		Line = br.readLine();
 
-		while(Line != null) 
-		{
+		while(Line != null) {
+			
 			String[] arr = (Line.split(","));
-			double templat=Double.parseDouble(arr[2]);
-			double templon=	Double.parseDouble(arr[3]);	
-			if(distance(lat,lon,templat,templon)<=radius)
-			{
-
-				for (int i = 6; i < arr.length; i=i+4) 
-				{
+			double templat = Double.parseDouble(arr[2]);
+			double templon = Double.parseDouble(arr[3]);
+			
+			if(distance(lat,lon,templat,templon) <= radius) {
+				for (int i = 6; i < arr.length; i=i+4) {
+					
 					Date date  = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
-					latcsv = Double.parseDouble(arr[2]);
-					loncsv = Double.parseDouble(arr[3]);
-					altcsv = Double.parseDouble(arr[4]);
-					Position pos = new Position(altcsv, loncsv, latcsv);
+					Position pos = new Position(arr[4], arr[3], arr[2]);
 					Time time = new Time(date);
-					ID id=new ID(arr[i]);
+					ID id = new ID(arr[i]);
 					Record_Filter record = new Record_Filter(time, pos,id);
 					data_list.add(record);
 				}
@@ -68,18 +63,21 @@ public class Position_Filter {
 		return (dist)/100;
 	}
 
-	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-	/*::	This function converts decimal degrees to radians		@				 :*/
-	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	/**
+	 * This function converts decimal degrees to radians.
+	 * @param deg
+	 * @return
+	 */
 	private static double deg2rad(double deg) {
 		return (deg * Math.PI / 180.0);
 	}
 
-	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-	/*::	This function converts radians to @decimal degrees						 :*/
-	/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	/**
+	 * This function converts radians to @decimal degrees.
+	 * @param rad
+	 * @return
+	 */
 	private static double rad2deg(double rad) {
 		return (rad * 180 / Math.PI);
 	}
-
 }

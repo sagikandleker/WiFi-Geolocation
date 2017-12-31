@@ -21,7 +21,7 @@ public class Algo_Main {
 		if(choice.equalsIgnoreCase("Algorithm1"))
 		{
 			Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
-			Algorithm1.Better();
+			Algorithm_1.Better();
 
 		}
 		sc.close();
@@ -29,7 +29,7 @@ public class Algo_Main {
 		if(choice.equalsIgnoreCase("Algorithm2"))
 		{
 	
-			Algorithm2.no_gps_lines(Mac_Hashmap.Build_Hash((Read_From.comb_File(path_comb)), "Algo2"),Read_From.nogps_File(path_nogps));
+			Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Read_From.comb_File(path_comb)), "Algo2"),Read_From.nogps_File(path_nogps));
 		
 		}
 		sc.close();
