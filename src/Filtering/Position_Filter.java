@@ -20,7 +20,7 @@ public class Position_Filter {
 		double latcsv,loncsv,altcsv;
 
 		ArrayList<Record_Filter> data_list = new ArrayList<Record_Filter>();
-		FileReader fr = new FileReader(Main.file_Out);
+		FileReader fr = new FileReader(Main.WigleWifi_file_Out);
 		BufferedReader br = new BufferedReader(fr);
 		String Line = br.readLine();
 		Line = br.readLine();

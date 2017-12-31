@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
-import Algorithms.Mac_Hashmap;
 
 /**
  * @author Itay, Sagi & Guy.
@@ -17,17 +16,25 @@ import Algorithms.Mac_Hashmap;
 
 public class Main {
 	
-	public static final String path = "C:\\Users\\sagik\\git\\OOP";
-	public static final String path_In = path+"\\Files read from";
-	public static final String path_Out = path+"\\Files create to";
-	public static final String file_Out = path_Out+"\\WigleWifi_Sorted.csv";
-	public static final String Algo1_Out = path_Out+"\\Algorithm1.csv";
-	public static final String Algo2_Out = path_Out+"\\Algorithm2.csv";
+	public static final String path = "C:\\Users\\sagik\\git\\OOP\\";
+	public static final String path_In = path+"Input_data\\";
+	public static final String path_Out = path+"Output_data\\";
+	
+	public static final String path_In_Algorithms = path_In+"Algorithms\\";
+	public static final String path_Out_Algorithms = path_Out+"Algorithms\\";
+	
+	public static final String path_In_WigleWifi = path_In+"WigleWifi";
+	public static final String path_Out_WigleWifi = path_Out+"WigleWifi United\\";
+	
+	public static final String path_Out_Filters = path_Out+"Filters";
+	
+	public static final String WigleWifi_file_Out = path_Out_WigleWifi+"WigleWifi_Sorted.csv";
+	public static final String Algo1_File_Out = path_Out_Algorithms+"Algorithm_1.csv";
+	public static final String Algo2_File_Out = path_Out_Algorithms+"Algorithm_2.csv";
 
 	public static void main(String[] args) throws IOException, ParseException {
 		
 		Analayze_Files.getFiles();
-		
 		
 		Scanner sc = new Scanner(System.in);
 		String input_choice;

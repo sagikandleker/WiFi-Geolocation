@@ -23,7 +23,7 @@ public class Filter_2_KML {
 			date = date.replace(' ', 'T')+'Z';
 			place.createAndSetTimeStamp().setWhen(date);
 		}
-		kml.marshal(new File(Main.path_Out+"\\Filter_"+type+".kml"));
+		kml.marshal(new File(Main.path_Out_Filters+"\\Filter_"+type+".kml"));
 		System.out.println("Finish to create KML File");
 	}
 

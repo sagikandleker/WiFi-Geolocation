@@ -19,7 +19,7 @@ public class Write_2_CSV {
 	 */
 	public static void Write_Headers() throws IOException{
 		String[] titles_List = {"Time","ID","Lat","Lon","Alt","#WiFi networks","SSID","MAC","Frequency","Signal"};
-		FileWriter file = new FileWriter(Main.file_Out);
+		FileWriter file = new FileWriter(Main.WigleWifi_file_Out);
 
 		for (int i = 0; i <= 5; i++) {
 			file.write(titles_List[i]+",");
@@ -70,7 +70,7 @@ public class Write_2_CSV {
 	public static void Write() throws IOException {
 		
 		StringBuilder stringBuilder = new StringBuilder();
-		FileWriter fw = new FileWriter(Main.file_Out, true);
+		FileWriter fw = new FileWriter(Main.WigleWifi_file_Out, true);
 		for (int i = 0; i < All_Data_List.size(); i++) {
 			stringBuilder.append("\n");
 			stringBuilder.append((All_Data_List.get(i).toString().replace("[", "").replace("]", "")));	
