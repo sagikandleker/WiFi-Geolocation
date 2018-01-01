@@ -13,31 +13,44 @@ import javax.swing.JTextField;
 import javax.swing.JSeparator;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import Main_App.Main;
+
 import java.awt.Font;
 import java.awt.event.MouseMotionAdapter;
+import java.io.IOException;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
+import javax.swing.JToggleButton;
+import java.awt.Window.Type;
+import java.awt.Dialog.ModalExclusionType;
 
 public class Home {
 
-	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JFrame frmOop;
 	
 	int xx, xy;
-	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
+	 * @throws UnsupportedLookAndFeelException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 * @throws ClassNotFoundException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+		UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Home window = new Home();
-					window.frame.setUndecorated(true);
-					window.frame.setVisible(true);
+					window.frmOop.setUndecorated(true);
+					window.frmOop.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -56,94 +69,37 @@ public class Home {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.WHITE);
-		frame.getContentPane().setLayout(null);
+		frmOop = new JFrame();
+		frmOop.setTitle("OOP");
+		frmOop.getContentPane().setBackground(Color.DARK_GRAY);
+		frmOop.getContentPane().setLayout(null);
 		
-		Button button = new Button("SignUp");
-		button.setFont(new Font("Century Gothic", Font.PLAIN, 18));
-		button.setForeground(Color.WHITE);
-		button.setBackground(new Color(241, 57, 83));
-		button.setBounds(178, 227, 207, 35);
-		frame.getContentPane().add(button);
-		
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.DARK_GRAY);
-		panel.setBounds(0, 0, 564, 306);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
-		
-		Button button_1 = new Button("X");
-		button_1.setBounds(515, 10, 25, 24);
-		panel.add(button_1);
-		button_1.addMouseListener(new MouseAdapter() {
+		JButton btnBrowse = new JButton("browse");
+		btnBrowse.setIcon(new ImageIcon(Home.class.getResource("/img/if_Application-Map_379570.png")));
+		btnBrowse.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				System.exit(0);
+			public void mouseClicked(MouseEvent arg0) {
+				
+				// Browse button to select directory
+				JFileChooser chooser = new JFileChooser();
+			    chooser.setCurrentDirectory(new java.io.File("."));
+			    chooser.setDialogTitle("Browse the folder to process");
+			    chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+			    chooser.setAcceptAllFileFilterUsed(false);
+
+			    if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+			        System.out.println("getCurrentDirectory(): "+ chooser.getCurrentDirectory());
+			        System.out.println("getSelectedFile() : "+ chooser.getSelectedFile());
+			    } else {
+			        System.out.println("No Selection ");
+			    }
+			
 			}
 		});
-		button_1.setForeground(Color.WHITE);
-		button_1.setBackground(new Color(241, 57, 83));
-		
-		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(140, 114, 123, 37);
-		panel.add(lblPassword);
-		lblPassword.setForeground(Color.WHITE);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(140, 53, 284, 35);
-		panel.add(textField_1);
-		
-		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(140, 85, 284, 2);
-		panel.add(separator_1);
-		
-		JLabel lblNewLabel = new JLabel("Email");
-		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setBounds(140, 16, 123, 37);
-		panel.add(lblNewLabel);
-		
-		textField = new JTextField();
-		textField.setBounds(140, 154, 284, 35);
-		panel.add(textField);
-		textField.setColumns(10);
-		
-		JSeparator separator = new JSeparator();
-		separator.setBounds(140, 186, 284, 2);
-		panel.add(separator);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(15, 207, 153, 37);
-		panel.add(textField_2);
-		textField_2.setColumns(10);
-		
-		JLabel label = new JLabel("");
-		label.setBounds(0, 0, 564, 290);
-		panel.add(label);
-		label.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mousePressed(MouseEvent e) {
-				
-				xx = e.getX();
-				xy = e.getY();
-			}
-		});
-		label.addMouseMotionListener(new MouseMotionAdapter() {
-			@Override
-			public void mouseDragged(MouseEvent arg0) {
-				
-				int x = arg0.getXOnScreen();
-				int y = arg0.getYOnScreen();
-				
-				//Home.this.setLocation((x - xx), (y - xy));
-				
-			}
-		});
-		
-		label.setIcon(new ImageIcon(Home.class.getResource("/img/Background.jpg")));
-		frame.setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 576, 342);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		btnBrowse.setBounds(45, 39, 86, 110);
+		frmOop.getContentPane().add(btnBrowse);
+		frmOop.setBackground(Color.WHITE);
+		frmOop.setBounds(100, 100, 1022, 800);
+		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
