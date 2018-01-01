@@ -9,9 +9,20 @@ import Main_App.Read_From;
 import Main_App.Write_2_CSV;
 
 public class Algo_Main {
+	/**
+	 * Choose between algo1 to algo2 and call function.
+	 * 
+	 * 
+	 * @since 2018
+	 */
+	
 	public static final String path_comb = Main.path_In_Algorithms+"BM2\\Comb\\_comb_all_BM2_.csv";
 	public static final String path_nogps = Main.path_In_Algorithms+"BM2\\Comb\\_comb_no_gps_ts1.csv";
-	
+	/**
+	 * write string input and check which algo to call 1 or 2.
+	 *
+	 * @param string input choice 
+	 */
 	public static void ChooseAlgo() throws IOException, ParseException {
 		Scanner sc = new Scanner(System.in);
 		String choice;

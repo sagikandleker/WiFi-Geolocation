@@ -1,4 +1,10 @@
 package Algorithms;
+/**
+ * class with parameters needed for algorithm 1 and 2. 
+ *  
+ * @version 1
+ *
+ */
 
 public class Algorithm_Tools {
 

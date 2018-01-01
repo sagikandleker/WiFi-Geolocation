@@ -23,7 +23,13 @@ public class Mac_Hashmap {
 	private static Wifi wifi;
 
 	public static HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash = new HashMap<String,ArrayList<Record_Pos_Wifi_Time>>();
-
+/**
+ * function get array list with data from csv file and build hash map
+ * 
+ * @param data array list of a file data
+ * @param nameOfHash will be algo1 or algo2 for the name of the hash 
+ * @return hash map of class record_pos_wifi_time 
+ */
 	public static HashMap<String, ArrayList<Record_Pos_Wifi_Time>> Build_Hash(ArrayList<Record> data, String nameOfHash) {
 
 		Record_Pos_Wifi_Time record;

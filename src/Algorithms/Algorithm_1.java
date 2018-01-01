@@ -10,9 +10,12 @@ import Main_App.Main;
 public class Algorithm_1 {
 	
 	public static ArrayList<Record_Pos_Wifi_Time> rpwt = new ArrayList<Record_Pos_Wifi_Time>();
-
+/**
+ * 
+ *  @param namesOfKeys array list with all the hash map keys (mac).
+ */
 	public static void Better() throws IOException {
-
+		
 		ArrayList<String> namesOfKeys = new ArrayList<String>(Mac_Hashmap.hash.keySet());
 		String key;
 		for (int i = 0; i < namesOfKeys.size(); i++) {
