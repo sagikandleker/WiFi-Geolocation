@@ -24,7 +24,7 @@ public class Algorithm_1 {
 	}
 
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> spwt) {
-		Algorithm_Setups all_parameters = new Algorithm_Setups();
+		Algorithm_Tools all_parameters = new Algorithm_Tools();
 		Record_Pos_Wifi_Time position = new Record_Pos_Wifi_Time();
 		
 	

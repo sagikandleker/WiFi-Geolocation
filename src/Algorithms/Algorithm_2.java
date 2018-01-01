@@ -20,7 +20,7 @@ public class Algorithm_2 {
 			mindiff=3, nosignal=0.32344759,
 			diffnosignal=100;
 
-	static final ArrayList<Position> pos_array = new ArrayList<Position>();
+	static final ArrayList<Position> final_pos_array  = new ArrayList<Position>();
 
 	public static void no_gps_lines(HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash2, ArrayList<ArrayList<Record_Mac_Signal>> rms) throws IOException {
 
@@ -45,11 +45,10 @@ public class Algorithm_2 {
 				}
 			}
 
-			//System.out.println(three);
 			Algo2(hash2, three);
 		}
 
-		Write(pos_array);
+		Write();
 
 	}
 
@@ -66,7 +65,7 @@ public class Algorithm_2 {
 
 		Record_Pos_Mac_Signal rpms;
 
-		ArrayList<Record_Pos_Mac_Signal> arrays = new ArrayList<Record_Pos_Mac_Signal>();
+		ArrayList<Record_Pos_Mac_Signal> comb_data = new ArrayList<Record_Pos_Mac_Signal>();
 
 		for (int i = 0; i < three.size(); i++) {
 			mac = new Mac(three.get(i).getMac());
@@ -79,13 +78,13 @@ public class Algorithm_2 {
 					position = new Position(hash2.get(mac.getMac()).get(j).getPosition());
 					comb_signal = new Signal(hash2.get(mac.getMac()).get(j).getWifi().getSignal());
 					rpms = new Record_Pos_Mac_Signal(line,position, mac, comb_signal);
-					arrays.add(rpms);
+					comb_data.add(rpms);
 				}
 
 			}
 		}
 
-		sortline(arrays);
+		sortline(comb_data);
 
 		for (int i = 0; i < three.size(); i++) 
 		{
@@ -93,138 +92,122 @@ public class Algorithm_2 {
 			ms.put(three.get(i).getStringMac(), three.get(i).getSignal());
 		}
 
-		//System.out.println(arrays);
 		double diff;
 		double w;
+		double pi = 1;
 		Record_Pos_Pi rpp;
 		ArrayList<Record_Pos_Pi> array_rpp = new ArrayList<Record_Pos_Pi>();
 
-		for (int j = 0; j < arrays.size(); j++) 
-		{
+		int size = 0;
+		
+		if(comb_data.size() == 1) {
+			position = new Position(comb_data.get(size).getPosition());
+			final_pos_array.add(position);
 
-			double pi = 1;
-			position = new Position(arrays.get(j).getPosition());
-			mac = new Mac(arrays.get(j).getMac().getMac());
+		}
+		else {
 
-			if(arrays.size() == 1)
-			{
-				pos_array.add(position);
-			}
+			while(size < comb_data.size()-1) {
 
-			else
-			{
+				pi = 1;
+				position = new Position(comb_data.get(size).getPosition());
+				mac = new Mac(comb_data.get(size).getMac().getMac());
+
 
 				nogps_signal = new Signal(ms.get(mac.getMac()).getSignal());
-				comb_signal = new Signal(arrays.get(j).getSignal());
+				comb_signal = new Signal(comb_data.get(size).getSignal());
 
 				diff = Math.max(Math.abs((nogps_signal.getSignal())-(comb_signal.getSignal())),mindiff);
 				w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
 				pi *= w;
 
-				if(j != (arrays.size()-1)) 
-				{
-					if((arrays.get(j).getLine() != arrays.get(j+1).getLine()))
-					{
+				if(comb_data.get(size+1) != null) {
+					if((comb_data.get(size).getLine() != comb_data.get(size+1).getLine())) {
 						pi = pi * Math.pow(nosignal, 2);
+						size++;
 					}
 
-					else if((arrays.get(j).getLine() == arrays.get(j+1).getLine()))
-					{
-						mac = new Mac(arrays.get(j+1).getMac());
+					else if((comb_data.get(size).getLine() == comb_data.get(size+1).getLine())) {
+
+						mac = new Mac(comb_data.get(size+1).getMac());
 						nogps_signal = new Signal(ms.get(mac.getMac()).getSignal());
 						diff = Math.max(Math.abs((nogps_signal.getSignal())-(comb_signal.getSignal())),mindiff);
 						w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
 						pi = pi *w;
-						arrays.remove(j+1);
-						//System.out.println(j);
-						//System.out.println((arrays.size()-2));
-						if(j != (arrays.size()-2))
+						comb_data.remove(size+1);
+
+
+						if(comb_data.get(size+1) != null)
 						{
-							if((arrays.get(j).getLine() == arrays.get(j+2).getLine())) 
+							if((comb_data.get(size).getLine() == comb_data.get(size+1).getLine())) 
 							{
-								mac = new Mac(arrays.get(j+2).getMac());
+								mac = new Mac(comb_data.get(size+1).getMac());
 								nogps_signal = new Signal(ms.get(mac.getMac()).getSignal());
 								diff = Math.max(Math.abs((nogps_signal.getSignal())-(comb_signal.getSignal())),mindiff);
 								w = norm/(Math.pow(diff, power)*Math.pow(nogps_signal.getSignal(), power));
 								pi = pi *w;
-
-								arrays.remove(j+2);
+								size++;
 							}
-							else {
-								break;
-							}
-						}
-						else
-						{
 
-							break;
 						}
 
 					}
 
 				}
-				else
-				{
 
-					break;
-
-				}
+				rpp = new Record_Pos_Pi(position, pi);
+				array_rpp.add(rpp);
 			}
-
-			rpp = new Record_Pos_Pi(position, pi);
-			array_rpp.add(rpp);
-
-		}
-
-		Algo2_final(sortPi(array_rpp));
+			Algo2_final(sortPi(array_rpp));
+		}	
 	}
 
 
-	private static void sortline(ArrayList<Record_Pos_Mac_Signal> arrays) {
+	private static void sortline(ArrayList<Record_Pos_Mac_Signal> comb_data) {
 
-		for (int i = 0; i < arrays.size(); i++) {
-			for (int j = 0; j < arrays.size(); j++) {
-				if(arrays.get(i).getLine() < arrays.get(j).getLine()) {
+		for (int i = 0; i < comb_data.size(); i++) {
+			for (int j = 0; j < comb_data.size(); j++) {
+				if(comb_data.get(i).getLine() < comb_data.get(j).getLine()) {
 
 					Record_Pos_Mac_Signal temp;
-					temp = arrays.get(i);
-					arrays.set(i, arrays.get(j));
-					arrays.set(j, temp);
+					temp = comb_data.get(i);
+					comb_data.set(i, comb_data.get(j));
+					comb_data.set(j, temp);
 				}
 			}
 		}
 
 	}
 
-	private static ArrayList<Record_Pos_Pi> sortPi(ArrayList<Record_Pos_Pi> arrays) {
+	private static ArrayList<Record_Pos_Pi> sortPi(ArrayList<Record_Pos_Pi> comb_data) {
 
 		ArrayList<Record_Pos_Pi> strongerpi=new ArrayList<Record_Pos_Pi>();
-		if(arrays.size() <= 3) return arrays;
+		if(comb_data.size() <= 3) return comb_data;
 
 		for (int i = 0; i < 3; i++) {
-			double maxpi=arrays.get(0).pi;
+			double maxpi=comb_data.get(0).pi;
 			int place=0;
-			for (int j = 0; j <arrays.size(); j++) {
-				if(arrays.get(j).pi > maxpi) {
-					maxpi=arrays.get(j).pi;
+			for (int j = 0; j <comb_data.size(); j++) {
+				if(comb_data.get(j).pi > maxpi) {
+					maxpi=comb_data.get(j).pi;
 					place=j;
 				}
 			}
-			strongerpi.add(arrays.get(place));
-			arrays.remove(place);
+			strongerpi.add(comb_data.get(place));
+			comb_data.remove(place);
 
 		}
 		return strongerpi;
 
 	}
 
-	public static void Write(ArrayList<Position> rpp) throws IOException {
+	public static void Write() throws IOException {
 
 		StringBuilder stringBuilder = new StringBuilder();
 		FileWriter fw = new FileWriter(Main.Algo2_File_Out);
-		for (int i = 0; i < rpp.size(); i++) {
+		for (int i = 0; i < final_pos_array.size(); i++) {
 			stringBuilder.append("\n");
-			stringBuilder.append((rpp.get(i).toString().replace("[", "").replace("]", "")));	
+			stringBuilder.append((final_pos_array.get(i).toString().replace("[", "").replace("]", "")));	
 		}
 
 		fw.write(stringBuilder.toString());
@@ -235,13 +218,13 @@ public class Algorithm_2 {
 
 
 	public static void Algo2_final(ArrayList<Record_Pos_Pi> rpp) {
-		Algorithm_Setups all_parameters = new Algorithm_Setups();
+		Algorithm_Tools all_parameters = new Algorithm_Tools();
 		Position position = new Position();
 
 
 		int size = 0;
 		while(size < rpp.size()) {
-			
+
 			all_parameters.setWeight((rpp.get(size).getPi()));
 			all_parameters.setWeightsum(all_parameters.getWeight());
 			all_parameters.setWlatsum(rpp.get(size).getP().getLat()*(all_parameters.getWeight()));
@@ -254,7 +237,8 @@ public class Algorithm_2 {
 
 			size++;
 		}
-
-		pos_array.add(position);
+		System.out.println(position);
+		System.out.println(all_parameters.getWeight());
+		final_pos_array.add(position);
 	}
 }

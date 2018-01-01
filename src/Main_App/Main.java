@@ -22,7 +22,7 @@ public class Main {
 	public static final String path_In_Algorithms = path_In+"Algorithms\\";
 	public static final String path_Out_Algorithms = path_Out+"Algorithms\\";
 	public static final String path_In_WigleWifi = path_In+"WigleWifi";
-	public static final String path_Out_WigleWifi = path_Out+"WigleWifi United\\";
+	public static final String path_Out_WigleWifi = path_Out+"WigleWifi Merged\\";
 	public static final String path_Out_Filters = path_Out+"Filters";
 	public static final String WigleWifi_file_Out = path_Out_WigleWifi+"WigleWifi_Sorted.csv";
 	public static final String Algo1_File_Out = path_Out_Algorithms+"Algorithm_1.csv";

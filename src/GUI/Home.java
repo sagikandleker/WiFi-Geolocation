@@ -19,13 +19,14 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 
-public class Home extends JFrame{
+public class Home {
 
 	private JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
 	
 	int xx, xy;
+	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -112,6 +113,11 @@ public class Home extends JFrame{
 		separator.setBounds(140, 186, 284, 2);
 		panel.add(separator);
 		
+		textField_2 = new JTextField();
+		textField_2.setBounds(15, 207, 153, 37);
+		panel.add(textField_2);
+		textField_2.setColumns(10);
+		
 		JLabel label = new JLabel("");
 		label.setBounds(0, 0, 564, 290);
 		panel.add(label);
@@ -130,7 +136,7 @@ public class Home extends JFrame{
 				int x = arg0.getXOnScreen();
 				int y = arg0.getYOnScreen();
 				
-				Home.this.setLocation((x - xx), (y - xy));
+				//Home.this.setLocation((x - xx), (y - xy));
 				
 			}
 		});
