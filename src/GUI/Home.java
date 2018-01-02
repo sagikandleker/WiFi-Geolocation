@@ -1,40 +1,36 @@
 package GUI;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import java.awt.Color;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.Button;
-import java.awt.SystemColor;
-import javax.swing.JTextField;
-import javax.swing.JSeparator;
-import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
-import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-
-import Main_App.Main;
-
-import java.awt.Font;
-import java.awt.event.MouseMotionAdapter;
-import java.io.IOException;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
+import java.text.ParseException;
 import java.awt.event.MouseAdapter;
-import javax.swing.JToggleButton;
-import java.awt.Window.Type;
-import java.awt.Dialog.ModalExclusionType;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+import javax.swing.JTextField;
+import java.awt.TextField;
+import java.awt.Choice;
+import java.awt.TextArea;
+import java.awt.Label;
+
 
 public class Home {
-
+	
 	private JFrame frmOop;
 	
 	int xx, xy;
+	private JTextField txtMac;
 
 	/**
 	 * Launch the application.
@@ -74,30 +70,89 @@ public class Home {
 		frmOop.getContentPane().setBackground(Color.DARK_GRAY);
 		frmOop.getContentPane().setLayout(null);
 		
-		JButton btnBrowse = new JButton("browse");
-		btnBrowse.setIcon(new ImageIcon(Home.class.getResource("/img/if_Application-Map_379570.png")));
+		JButton btnBrowse = new JButton("Add Folder");
+		btnBrowse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnBrowse.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				
+				try {
+					GUI_Wrapper.choosefolder();
+				} catch (IOException | ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				// Browse button to select directory
-				JFileChooser chooser = new JFileChooser();
-			    chooser.setCurrentDirectory(new java.io.File("."));
-			    chooser.setDialogTitle("Browse the folder to process");
-			    chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-			    chooser.setAcceptAllFileFilterUsed(false);
-
-			    if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-			        System.out.println("getCurrentDirectory(): "+ chooser.getCurrentDirectory());
-			        System.out.println("getSelectedFile() : "+ chooser.getSelectedFile());
-			    } else {
-			        System.out.println("No Selection ");
-			    }
-			
 			}
 		});
-		btnBrowse.setBounds(45, 39, 86, 110);
+		btnBrowse.setBounds(35, 36, 183, 27);
 		frmOop.getContentPane().add(btnBrowse);
+		
+		JButton btnBrowse_1 = new JButton("Add CSV File");
+		btnBrowse_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				try {
+					GUI_Wrapper.chooseCSVFile();
+				} catch (IOException | ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		btnBrowse_1.setBounds(35, 87, 183, 27);
+		frmOop.getContentPane().add(btnBrowse_1);
+		
+		JButton btnClearData = new JButton("Clear Data");
+		btnClearData.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				GUI_Wrapper.clearData();
+				
+				
+			}
+		});
+		btnClearData.setBounds(35, 136, 183, 27);
+		frmOop.getContentPane().add(btnClearData);
+		
+		JButton btnSaveToCsv = new JButton("Save To CSV");
+		btnSaveToCsv.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				try {
+					GUI_Wrapper.saveTOCSV();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}	
+				
+			}
+		});
+		btnSaveToCsv.setBounds(35, 192, 183, 27);
+		frmOop.getContentPane().add(btnSaveToCsv);
+		
+		JLabel lblAlgorithms = new JLabel("Algorithms");
+		lblAlgorithms.setFont(new Font("Elephant", Font.BOLD, 18));
+		lblAlgorithms.setForeground(Color.WHITE);
+		lblAlgorithms.setBounds(524, 23, 114, 48);
+		frmOop.getContentPane().add(lblAlgorithms);
+		
+		txtMac = new JTextField();
+		txtMac.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				txtMac.setText("");
+
+				
+			}
+		});
+		txtMac.setText("MAC");
+		txtMac.setBounds(395, 139, 114, 21);
+		frmOop.getContentPane().add(txtMac);
+		txtMac.setColumns(10);
 		frmOop.setBackground(Color.WHITE);
 		frmOop.setBounds(100, 100, 1022, 800);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
