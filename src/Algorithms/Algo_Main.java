@@ -15,7 +15,7 @@ public class Algo_Main {
 	 * 
 	 * @since 2018
 	 */
-	
+
 	public static final String path_comb = Main.path_In_Algorithms+"BM2\\Comb\\_comb_all_BM2_.csv";
 	public static final String path_nogps = Main.path_In_Algorithms+"BM2\\Comb\\_comb_no_gps_ts1.csv";
 	/**

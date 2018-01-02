@@ -23,6 +23,9 @@ import java.awt.TextField;
 import java.awt.Choice;
 import java.awt.TextArea;
 import java.awt.Label;
+import java.awt.Button;
+import javax.swing.JPasswordField;
+import javax.swing.JSeparator;
 
 
 public class Home {
@@ -31,6 +34,8 @@ public class Home {
 	
 	int xx, xy;
 	private JTextField txtMac;
+	private JTextField textField;
+	private JTextField txtMac_1;
 
 	/**
 	 * Launch the application.
@@ -145,14 +150,48 @@ public class Home {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				txtMac.setText("");
+				
 
 				
 			}
 		});
 		txtMac.setText("MAC");
-		txtMac.setBounds(395, 139, 114, 21);
+		txtMac.setBounds(355, 195, 114, 21);
 		frmOop.getContentPane().add(txtMac);
 		txtMac.setColumns(10);
+		
+		Button button = new Button("Submit");
+		button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				txtMac.setText(textField.getText());			
+				System.out.println(textField.getText());
+
+			}
+		});
+		button.setBounds(288, 345, 76, 20);
+		frmOop.getContentPane().add(button);
+		
+		textField = new JTextField();
+		textField.setBounds(395, 90, 136, 21);
+		frmOop.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(395, 105, 136, 2);
+		frmOop.getContentPane().add(separator);
+		
+		JLabel lblMac = new JLabel("MAC");
+		lblMac.setForeground(Color.WHITE);
+		lblMac.setBounds(395, 60, 55, 17);
+		frmOop.getContentPane().add(lblMac);
+		
+		txtMac_1 = new JTextField();
+		txtMac_1.setText("MAC");
+		txtMac_1.setBounds(262, 262, 114, 21);
+		frmOop.getContentPane().add(txtMac_1);
+		txtMac_1.setColumns(10);
 		frmOop.setBackground(Color.WHITE);
 		frmOop.setBounds(100, 100, 1022, 800);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
