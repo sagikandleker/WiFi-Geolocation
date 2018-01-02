@@ -29,8 +29,8 @@ public class Main {
 	public static final String Algo2_File_Out = path_Out_Algorithms+"Algorithm_2.csv";
 
 	public static void main(String[] args) throws IOException, ParseException {
-		
-		Analayze_Files.getFiles();
+	
+		////Analayze_Files.getFiles();
 		
 		Scanner sc = new Scanner(System.in);
 		String input_choice;
