@@ -1,6 +1,7 @@
 package Main_App;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
@@ -33,7 +34,7 @@ public class Read_From {
 	/**
 	 * wigle_File read from CSV file all the data and copy it to ArrayList.
 	 */
-	public static void wigle_File(String file)throws IOException, ParseException {
+	public static void wigle_File(File file)throws IOException, ParseException {
 
 		ArrayList<Record> wigle_data = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
