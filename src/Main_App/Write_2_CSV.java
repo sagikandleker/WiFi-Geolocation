@@ -14,6 +14,11 @@ public class Write_2_CSV {
 
 	public static final ArrayList<Record> All_Data_List = new ArrayList<Record>();
 
+	
+	public static void clearData() {
+		All_Data_List.clear();
+	}
+	
 	/**
 	 *  Write_Headers Create CSV file with Headers.
 	 */
@@ -68,7 +73,7 @@ public class Write_2_CSV {
 	}
 
 	public static void Write() throws IOException {
-
+		Write_2_CSV.Write_Headers();
 		StringBuilder stringBuilder = new StringBuilder();
 		FileWriter fw = new FileWriter(Main.WigleWifi_file_Out, true);
 		for (int i = 0; i < All_Data_List.size(); i++) {
