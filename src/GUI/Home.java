@@ -8,6 +8,14 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+
+import GUI.Algorithms.Algorithm1;
+import GUI.Algorithms.Algorithm2;
+import GUI.Filters.IDFilter;
+import GUI.Filters.LocationFilter;
+import GUI.Filters.TimeFilter;
+import Main_App.Write_2_CSV;
+
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +34,9 @@ import java.awt.Label;
 import java.awt.Button;
 import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
+import java.awt.SystemColor;
+import javax.swing.JPanel;
+import javax.swing.border.MatteBorder;
 
 
 public class Home {
@@ -33,9 +44,7 @@ public class Home {
 	private JFrame frmOop;
 	
 	int xx, xy;
-	private JTextField txtMac;
 	private JTextField textField;
-	private JTextField txtMac_1;
 
 	/**
 	 * Launch the application.
@@ -72,7 +81,6 @@ public class Home {
 	private void initialize() {
 		frmOop = new JFrame();
 		frmOop.setTitle("OOP");
-		frmOop.getContentPane().setBackground(Color.DARK_GRAY);
 		frmOop.getContentPane().setLayout(null);
 		
 		JButton btnBrowse = new JButton("Add Folder");
@@ -90,9 +98,11 @@ public class Home {
 					e.printStackTrace();
 				}
 				// Browse button to select directory
+				
+				textField.setText("size of data: " + Write_2_CSV.All_Data_List.size());
 			}
 		});
-		btnBrowse.setBounds(35, 36, 183, 27);
+		btnBrowse.setBounds(22, 70, 183, 27);
 		frmOop.getContentPane().add(btnBrowse);
 		
 		JButton btnBrowse_1 = new JButton("Add CSV File");
@@ -100,14 +110,16 @@ public class Home {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
-					GUI_Wrapper.chooseCSVFile();
+					GUI_Wrapper.chooseCSVFile("mainfile");
 				} catch (IOException | ParseException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
+				textField.setText("size of data: " + Write_2_CSV.All_Data_List.size());
 			}
 		});
-		btnBrowse_1.setBounds(35, 87, 183, 27);
+		btnBrowse_1.setBounds(22, 109, 183, 27);
 		frmOop.getContentPane().add(btnBrowse_1);
 		
 		JButton btnClearData = new JButton("Clear Data");
@@ -116,11 +128,12 @@ public class Home {
 			public void mouseClicked(MouseEvent arg0) {
 				
 				GUI_Wrapper.clearData();
+				textField.setText("size of data: " + Write_2_CSV.All_Data_List.size());
 				
 				
 			}
 		});
-		btnClearData.setBounds(35, 136, 183, 27);
+		btnClearData.setBounds(22, 148, 183, 27);
 		frmOop.getContentPane().add(btnClearData);
 		
 		JButton btnSaveToCsv = new JButton("Save To CSV");
@@ -128,72 +141,115 @@ public class Home {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-					GUI_Wrapper.saveTOCSV();
+					GUI_Wrapper.saveTOCSV("WigleSorted");
 				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (ParseException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}	
 				
 			}
 		});
-		btnSaveToCsv.setBounds(35, 192, 183, 27);
+		btnSaveToCsv.setBounds(22, 187, 183, 27);
 		frmOop.getContentPane().add(btnSaveToCsv);
 		
 		JLabel lblAlgorithms = new JLabel("Algorithms");
 		lblAlgorithms.setFont(new Font("Elephant", Font.BOLD, 18));
 		lblAlgorithms.setForeground(Color.WHITE);
-		lblAlgorithms.setBounds(524, 23, 114, 48);
+		lblAlgorithms.setBounds(405, 23, 114, 48);
 		frmOop.getContentPane().add(lblAlgorithms);
 		
-		txtMac = new JTextField();
-		txtMac.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				txtMac.setText("");
-				
-
-				
+		JLabel lblFilters = new JLabel("Filters");
+		lblFilters.setForeground(Color.WHITE);
+		lblFilters.setFont(new Font("Elephant", Font.BOLD, 18));
+		lblFilters.setBounds(268, 23, 114, 48);
+		frmOop.getContentPane().add(lblFilters);
+		
+		JLabel lblDataStructure = new JLabel("Data Structure");
+		lblDataStructure.setForeground(Color.WHITE);
+		lblDataStructure.setFont(new Font("Elephant", Font.BOLD, 18));
+		lblDataStructure.setBounds(28, 5, 177, 53);
+		frmOop.getContentPane().add(lblDataStructure);
+		
+		JButton btnTime = new JButton("Time");
+		btnTime.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		txtMac.setText("MAC");
-		txtMac.setBounds(355, 195, 114, 21);
-		frmOop.getContentPane().add(txtMac);
-		txtMac.setColumns(10);
-		
-		Button button = new Button("Submit");
-		button.addMouseListener(new MouseAdapter() {
+		btnTime.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				
-				txtMac.setText(textField.getText());			
-				System.out.println(textField.getText());
-
+				TimeFilter timefilter = new TimeFilter();
+				timefilter.setVisible(true);
+				
+				
 			}
 		});
-		button.setBounds(288, 345, 76, 20);
-		frmOop.getContentPane().add(button);
+		btnTime.setBounds(253, 70, 98, 27);
+		frmOop.getContentPane().add(btnTime);
+		
+		JButton btnLocation = new JButton("Location");
+		btnLocation.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				LocationFilter locationfilter = new LocationFilter();
+				locationfilter.setVisible(true);
+				
+			}
+		});
+		btnLocation.setBounds(253, 127, 98, 27);
+		frmOop.getContentPane().add(btnLocation);
+		
+		JButton btnId = new JButton("ID");
+		btnId.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				IDFilter idfilter = new IDFilter();
+				idfilter.setVisible(true);
+				
+			}
+		});
+		btnId.setBounds(253, 187, 98, 27);
+		frmOop.getContentPane().add(btnId);
+		
+		JButton btnAlgorithm = new JButton("Algorithm 1");
+		btnAlgorithm.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Algorithm1 algorithm1 = new Algorithm1();
+				algorithm1.setVisible(true);
+			}
+		});
+		btnAlgorithm.setBounds(405, 70, 98, 27);
+		frmOop.getContentPane().add(btnAlgorithm);
+		
+		JButton btnAlgorithm_1 = new JButton("Algorithm 2");
+		btnAlgorithm_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				Algorithm2 algorithm2 = new Algorithm2();
+				algorithm2.setVisible(true);
+				
+			}
+		});
+		btnAlgorithm_1.setBounds(405, 109, 98, 27);
+		frmOop.getContentPane().add(btnAlgorithm_1);
 		
 		textField = new JTextField();
-		textField.setBounds(395, 90, 136, 21);
+		textField.setFont(new Font("Georgia Pro Semibold", Font.BOLD, 20));
+		textField.setBounds(22, 269, 183, 34);
 		frmOop.getContentPane().add(textField);
 		textField.setColumns(10);
-		
-		JSeparator separator = new JSeparator();
-		separator.setBounds(395, 105, 136, 2);
-		frmOop.getContentPane().add(separator);
-		
-		JLabel lblMac = new JLabel("MAC");
-		lblMac.setForeground(Color.WHITE);
-		lblMac.setBounds(395, 60, 55, 17);
-		frmOop.getContentPane().add(lblMac);
-		
-		txtMac_1 = new JTextField();
-		txtMac_1.setText("MAC");
-		txtMac_1.setBounds(262, 262, 114, 21);
-		frmOop.getContentPane().add(txtMac_1);
-		txtMac_1.setColumns(10);
+		textField.setEditable(false);
+		textField.setText("Size of data: " + Write_2_CSV.All_Data_List.size());
 		frmOop.setBackground(Color.WHITE);
-		frmOop.setBounds(100, 100, 1022, 800);
+		frmOop.setBounds(100, 100, 711, 510);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

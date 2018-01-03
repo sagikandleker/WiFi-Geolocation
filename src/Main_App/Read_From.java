@@ -77,7 +77,7 @@ public class Read_From {
 		Write_2_CSV.Build_ArrayList(wigle_data);
 	}
 
-	public static ArrayList<Record> comb_File(String file) throws IOException, ParseException {
+	public static ArrayList<Record> comb_File(File file) throws IOException, ParseException {
 
 		ArrayList<Record> comb_data = new ArrayList<Record>();
 		FileReader fr = new FileReader(file);
@@ -114,7 +114,7 @@ public class Read_From {
 		return comb_data;
 	}
 
-	public static ArrayList<ArrayList<Record_Mac_Signal>> nogps_File(String file) throws IOException {
+	public static ArrayList<ArrayList<Record_Mac_Signal>> nogps_File(File file) throws IOException {
 
 		Record_Mac_Signal rms;
 		ArrayList<ArrayList<Record_Mac_Signal>> nogps_data = new ArrayList<ArrayList<Record_Mac_Signal>>();

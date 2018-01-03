@@ -1,4 +1,4 @@
-package Algorithms;
+ package Algorithms;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,7 +10,8 @@ import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Record_Pos_Mac_Signal;
 import Data_Setup.Record_Pos_Wifi_Time;
 import Data_Setup.Signal;
-import Main_App.Main;
+import GUI.GUI_Wrapper;
+
 
 
 public class Algorithm_2 {
@@ -204,14 +205,16 @@ public class Algorithm_2 {
 	public static void Write() throws IOException {
 
 		StringBuilder stringBuilder = new StringBuilder();
-		FileWriter fw = new FileWriter(Main.Algo2_File_Out);
+		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm2+".csv");
+		String t = "Alt"+","+"Lon"+","+"Lat";
+		stringBuilder.append(t);
 		for (int i = 0; i < final_pos_array.size(); i++) {
 			stringBuilder.append("\n");
 			stringBuilder.append((final_pos_array.get(i).toString().replace("[", "").replace("]", "")));	
 		}
 
 		fw.write(stringBuilder.toString());
-		System.out.println("Algo2 Write file to ["+Main.Algo2_File_Out+"]");
+		
 		fw.close();
 
 	}
@@ -237,8 +240,7 @@ public class Algorithm_2 {
 
 			size++;
 		}
-		System.out.println(position);
-		System.out.println(all_parameters.getWeight());
+
 		final_pos_array.add(position);
 	}
 }

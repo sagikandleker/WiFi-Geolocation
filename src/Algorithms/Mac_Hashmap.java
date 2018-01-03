@@ -48,7 +48,6 @@ public class Mac_Hashmap {
 				frequency =  new Frequency(data.get(i).getWifiList().get(k).getFrequency());
 				wifi = new Wifi(ssid, mac, frequency, signal);
 				record = new Record_Pos_Wifi_Time(line, position, wifi, time);
-
 				if(hash.containsKey(mac.getMac()) && !hash.get(mac.getMac()).contains(record)) {
 					hash.get(mac.getMac()).add(record);
 				}

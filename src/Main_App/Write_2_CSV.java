@@ -1,9 +1,11 @@
 package Main_App;
 
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import Data_Setup.Record;
+
 
 
 /**
@@ -13,7 +15,6 @@ import Data_Setup.Record;
 public class Write_2_CSV {
 
 	public static final ArrayList<Record> All_Data_List = new ArrayList<Record>();
-
 	
 	public static void clearData() {
 		All_Data_List.clear();
@@ -22,9 +23,9 @@ public class Write_2_CSV {
 	/**
 	 *  Write_Headers Create CSV file with Headers.
 	 */
-	public static void Write_Headers() throws IOException{
+	public static void Write_Headers(String savefile) throws IOException{
 		String[] titles_List = {"Time","ID","Lat","Lon","Alt","#WiFi networks","SSID","MAC","Frequency","Signal"};
-		FileWriter file = new FileWriter(Main.WigleWifi_file_Out);
+		FileWriter file = new FileWriter(savefile, true);
 
 		for (int i = 0; i <= 5; i++) {
 			file.write(titles_List[i]+",");
@@ -72,10 +73,10 @@ public class Write_2_CSV {
 
 	}
 
-	public static void Write() throws IOException {
-		Write_2_CSV.Write_Headers();
+	public static void Write(String savefile) throws IOException {
+		Write_2_CSV.Write_Headers(savefile);
 		StringBuilder stringBuilder = new StringBuilder();
-		FileWriter fw = new FileWriter(Main.WigleWifi_file_Out, true);
+		FileWriter fw = new FileWriter(savefile, true);
 		for (int i = 0; i < All_Data_List.size(); i++) {
 			stringBuilder.append("\n");
 			stringBuilder.append((All_Data_List.get(i).toString().replace("[", "").replace("]", "")));	

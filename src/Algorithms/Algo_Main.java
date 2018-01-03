@@ -2,48 +2,47 @@ package Algorithms;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.Scanner;
+import java.util.ArrayList;
 
-import Main_App.Main;
+import Data_Setup.Position;
+import Data_Setup.Record_Mac_Signal;
+import GUI.GUI_Wrapper;
 import Main_App.Read_From;
 import Main_App.Write_2_CSV;
 
 public class Algo_Main {
-	/**
-	 * Choose between algo1 to algo2 and call function.
-	 * 
-	 * 
-	 * @since 2018
-	 */
+	
 
-	public static final String path_comb = Main.path_In_Algorithms+"BM2\\Comb\\_comb_all_BM2_.csv";
-	public static final String path_nogps = Main.path_In_Algorithms+"BM2\\Comb\\_comb_no_gps_ts1.csv";
-	/**
-	 * write string input and check which algo to call 1 or 2.
-	 *
-	 * @param string input choice 
-	 */
-	public static void ChooseAlgo() throws IOException, ParseException {
-		Scanner sc = new Scanner(System.in);
-		String choice;
-		System.out.println("Select an Algorithm you'd like to use: Algorithm1 / Algorithm2");
-		choice=sc.nextLine();
-
-		if(choice.equalsIgnoreCase("Algorithm1"))
-		{
+	
+	public static void ChooseAlgo1() throws IOException, ParseException {
+		
 			Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
 			Algorithm_1.Better();
-
-		}
-		sc.close();
-
-		if(choice.equalsIgnoreCase("Algorithm2"))
-		{
+			Algorithm_1.Write(Algorithm_1.rpwt);
+	}
 	
-			Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Read_From.comb_File(path_comb)), "Algo2"),Read_From.nogps_File(path_nogps));
-		
+	public static Position algo1_Mac(String mac) throws IOException {
+		Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
+		Algorithm_1.Better();
+		for (int i = 0; i < Algorithm_1.rpwt.size(); i++) {
+			
+			if(Algorithm_1.rpwt.get(i).getWifi().getMac().getMac().equalsIgnoreCase(mac)) {
+				return Algorithm_1.rpwt.get(i).getPosition();
+			}
 		}
-		sc.close();
+		return new Position();
 	}
 
+	public static void ChooseAlgo2() throws IOException, ParseException {
+		
+		Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Read_From.comb_File(GUI_Wrapper.combfile)), "Algo2"),Read_From.nogps_File(GUI_Wrapper.nogpsfile));
+		
+	}
+	
+	public static void algo2_all(ArrayList<Record_Mac_Signal> Allm_Alls) throws IOException, ParseException {
+	
+		Algorithm_2.Algo2((Mac_Hashmap.Build_Hash(Read_From.comb_File(GUI_Wrapper.savefile), "Algo2")),Allm_Alls);
+		System.out.println(Algorithm_2.final_pos_array);
+	
+	}
 }

@@ -3,9 +3,9 @@ package Algorithms;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import Data_Setup.Record_Pos_Wifi_Time;
-import Main_App.Main;
+import GUI.GUI_Wrapper;
+
 
 public class Algorithm_1 {
 	
@@ -22,8 +22,7 @@ public class Algorithm_1 {
 			key = namesOfKeys.get(i);
 			Algo1(Record_Pos_Wifi_Time.sort_Signal_Power(Mac_Hashmap.hash.get(key)));
 		}
-		
-		Write(rpwt);
+	
 	}
 
 	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> spwt) {
@@ -57,14 +56,16 @@ public class Algorithm_1 {
 	public static void Write(ArrayList<Record_Pos_Wifi_Time> rpwt) throws IOException {
 
 		StringBuilder stringBuilder = new StringBuilder();
-		FileWriter fw = new FileWriter(Main.Algo1_File_Out);
+		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm1+".csv");
+		String titles_list = "#ID"+","+"MAC"+","+"SSID"+","+"Frequency"+","+"Signal"+","+"Alt"+","+"Lon"+"," +"Lat"+","+"Time";
+		stringBuilder.append(titles_list);
 		for (int i = 0; i < rpwt.size(); i++) {
+			rpwt.get(i).setLine(i+1);
 			stringBuilder.append("\n");
 			stringBuilder.append((rpwt.get(i).toString().replace("[", "").replace("]", "")));	
 		}
 
 		fw.write(stringBuilder.toString());
-		System.out.println("Algo1 Write file to ["+Main.Algo1_File_Out+"]");
 		fw.close();
 
 	}
