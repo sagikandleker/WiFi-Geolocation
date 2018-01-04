@@ -1,65 +1,57 @@
 package Filtering;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
-import Data_Setup.Frequency;
 import Data_Setup.ID;
-import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.SSID;
-import Data_Setup.Signal;
 import Data_Setup.Time;
-import Data_Setup.Wifi;
-import Main_App.Main;
+import Main_App.Write_2_CSV;
 
 public class Time_Filter {
 	
-	public static void timeFilter(String time_begin,String time_end) throws ParseException, IOException {
+	public static void timeFilter(String time_begin,String time_end,String file) throws ParseException, IOException {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date_start =  format.parse(time_begin);
         Date date_end =  format.parse(time_end);
-
+        
+        
+        
  		ArrayList<Record_Filter> data = new ArrayList<Record_Filter>();
- 		FileReader fr = new FileReader(Main.WigleWifi_file_Out);
- 		BufferedReader br = new BufferedReader(fr);
- 		String Line = br.readLine();
- 		Line = br.readLine();
+ 	
  		
- 		while(Line != null) {
- 			String[] arr = (Line.split(","));
- 			Date temp= format.parse(arr[0]);
+ 		for (int i = 0; i < Write_2_CSV.All_Data_List.size(); i++) {
+			
+ 			Date temp= new Date(Write_2_CSV.All_Data_List.get(i).getDate().getTime());
  			if(temp.after(date_start) && temp.before(date_end)) {
- 				for (int i = 6; i < arr.length; i=i+4) {
+ 				 {
  					
- 				Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(arr[0]);
- 				Position position = new Position(arr[4], arr[3], arr[2]);
- 				Time time = new Time(date);
- 				ID id = new ID(arr[i]);
- 				Record_Filter record = new Record_Filter(time, position, id);
- 				data.add(record);
- 				
+ 					 Date d = new Date(Write_2_CSV.All_Data_List.get(i).getDate().getTime());
+ 					 Position position = Write_2_CSV.All_Data_List.get(i).getPosition();
+ 					 Time time = new Time(d);
+ 					 
+ 					 for (int k = 0; k < Write_2_CSV.All_Data_List.get(i).getWifiList().size(); k++) {
+					
+ 					 SSID id =new SSID(Write_2_CSV.All_Data_List.get(i).getWifiList().get(k).getSsid());
+ 					 Record_Filter record = new Record_Filter(time, position, id);
+ 					 data.add(record);
+ 					 
+ 					 }
  				}
  			}
  			
- 			Line = br.readLine();
+ 		
  		}
  		
- 		br.close();
+ 	
  		
- 		if(data.size() == 0) {
- 			System.out.println("Time not found");
- 		}
+ 		//supposed to be in another button
+ 			 Filter_2_KML.KML(data,file);
  		
- 		else
- 		{
- 			Filter_2_KML.KML(data,"Time");
- 		}
  	}
 }

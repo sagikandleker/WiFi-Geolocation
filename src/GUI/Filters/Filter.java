@@ -1,24 +1,25 @@
 package GUI.Filters;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
+import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-import java.awt.Color;
-import javax.swing.JPasswordField;
-import javax.swing.border.LineBorder;
+
+import GUI.GUI_Wrapper;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.text.ParseException;
+
 import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class Filter extends JFrame {
 
 	private JPanel contentPane;
@@ -49,7 +50,7 @@ public class Filter extends JFrame {
 	 * Create the frame.
 	 */
 	public Filter() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 854, 526);
 		contentPane = new JPanel();
 		contentPane.setBorder(null);
@@ -58,43 +59,21 @@ public class Filter extends JFrame {
 		
 		JRadioButton radioButton_3 = new JRadioButton("OR");
 		radioButton_3.setFont(new Font("Tahoma", Font.BOLD, 18));
-		radioButton_3.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				
-				
-			}
-		});
-		
 		radioButton_3.setActionCommand("enable");
 		radioButton_3.setEnabled(true);
 		
-		radioButton_3.setBounds(439, 324, 83, 29);
+		radioButton_3.setBounds(275, 302, 83, 29);
 		contentPane.add(radioButton_3);
 		
 		
 		JRadioButton radioButton_4 = new JRadioButton("AND");
 		radioButton_4.setFont(new Font("Tahoma", Font.BOLD, 18));
-		radioButton_4.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				
-				
-			}
-		});
-		radioButton_4.setBounds(328, 324, 97, 29);
+		radioButton_4.setBounds(174, 302, 83, 29);
 		contentPane.add(radioButton_4);
 		
 		JRadioButton radioButton_5 = new JRadioButton("NOT");
 		radioButton_5.setFont(new Font("Tahoma", Font.BOLD, 18));
-		radioButton_5.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				
-				
-			}
-		});
-		radioButton_5.setBounds(224, 324, 97, 29);
+		radioButton_5.setBounds(75, 302, 97, 29);
 		contentPane.add(radioButton_5);
 		
 		ButtonGroup bt1=new ButtonGroup();
@@ -102,9 +81,7 @@ public class Filter extends JFrame {
 		bt1.add(radioButton_4);
 		bt1.add(radioButton_5);
 		
-		ButtonGroup bt2=new ButtonGroup();
 		
-		ButtonGroup bt3=new ButtonGroup();
 		
 		textField = new JTextField();
 		textField.addMouseListener(new MouseAdapter() {
@@ -119,9 +96,7 @@ public class Filter extends JFrame {
 		textField.setText("Name Of Device");
 		textField.setColumns(10);
 
-		JButton btnSubmit = new JButton("Submit");
-		btnSubmit.setBounds(193, 410, 424, 29);
-		contentPane.add(btnSubmit);
+		
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Time");
 		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
@@ -139,9 +114,7 @@ public class Filter extends JFrame {
 					textField_2.setVisible(true);
 					textField_2.setEditable(true);
 					textField_2.setText("Being");
-					radioButton_6.setEnabled(true);
-					radioButton_7.setEnabled(true);
-					radioButton_8.setEnabled(true);
+					
 				}
 				
 				else if(!rdbtnNewRadioButton.isSelected()) {
@@ -154,9 +127,7 @@ public class Filter extends JFrame {
 					textField_2.setVisible(true);
 					textField_2.setEditable(false);
 					textField_2.setText("Being");
-					radioButton_6.setEnabled(false);
-					radioButton_7.setEnabled(false);
-					radioButton_8.setEnabled(false);
+					
 					
 				}
 				
@@ -223,9 +194,7 @@ public class Filter extends JFrame {
 					textField_5.setVisible(true);
 					textField_5.setEditable(true);
 					textField_5.setText("Radius");
-					radioButton_9.setEnabled(true);
-					radioButton_10.setEnabled(true);
-					radioButton_11.setEnabled(true);
+				
 				}
 				
 				else if(!rdbtnPosition.isSelected()) {
@@ -242,9 +211,7 @@ public class Filter extends JFrame {
 					textField_5.setVisible(true);
 					textField_5.setEditable(false);
 					textField_5.setText("Radius");
-					radioButton_9.setEnabled(false);
-					radioButton_10.setEnabled(false);
-					radioButton_11.setEnabled(false);
+					
 
 				}
 				
@@ -264,7 +231,7 @@ public class Filter extends JFrame {
 			}
 		});
 		textField_2.setColumns(10);
-		textField_2.setBounds(293, 117, 146, 26);
+		textField_2.setBounds(293, 147, 146, 26);
 		contentPane.add(textField_2);
 		textField_2.setText("Begin");
 
@@ -325,5 +292,89 @@ public class Filter extends JFrame {
 		lblFilters.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblFilters.setBounds(341, 16, 145, 20);
 		contentPane.add(lblFilters);
+		
+		JRadioButton rdbtnOnoff = new JRadioButton("ON/OFF");
+		rdbtnOnoff.setSelected(true);
+		rdbtnOnoff.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				if(rdbtnOnoff.isSelected())
+				{
+					
+				radioButton_3.setVisible(true);
+				radioButton_4.setVisible(true);
+				radioButton_5.setVisible(true);
+				}
+				else
+				{
+					radioButton_3.setVisible(false);
+					radioButton_4.setVisible(false);
+					radioButton_5.setVisible(false);
+				}
+			}
+		});
+		rdbtnOnoff.setFont(new Font("Tahoma", Font.BOLD, 18));
+		rdbtnOnoff.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnOnoff.setBounds(8, 272, 111, 25);
+		contentPane.add(rdbtnOnoff);
+		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				if(!rdbtnOnoff.isSelected())
+				{
+					if(rdbtnId.isSelected())
+					{
+						String id=textField.getText();
+						try {
+							GUI_Wrapper.idfilter(id);
+						} catch (IOException | ParseException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						
+						
+					}
+						
+					if(rdbtnNewRadioButton.isSelected())	
+					{
+						String begin=textField_2.getText();
+						String end=textField_1.getText();
+						try {
+							GUI_Wrapper.timefilter(begin,end);
+						} catch (ParseException | IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+					
+					if(rdbtnPosition.isSelected())
+					{
+						String lat=textField_3.getText();
+						String lon=textField_4.getText();
+						String radius=textField_5.getText();
+						GUI_Wrapper.positionfilter(lat, lon, radius);
+					}
+				}
+				
+				
+				
+			}
+		});
+		btnSubmit.setBounds(123, 412, 424, 29);
+		contentPane.add(btnSubmit);
+		
+		JButton btnNewButton = new JButton("Clear Data");
+		btnNewButton.setBounds(678, 362, 97, 25);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Save To KML File");
+		btnNewButton_1.setBounds(622, 414, 155, 25);
+		contentPane.add(btnNewButton_1);
+		
+		JLabel lblExampleYyyymmddHhmm = new JLabel("Example:  yyyy-MM-dd hh:mm:ss");
+		lblExampleYyyymmddHhmm.setBounds(293, 118, 193, 16);
+		contentPane.add(lblExampleYyyymmddHhmm);
 	}
 }

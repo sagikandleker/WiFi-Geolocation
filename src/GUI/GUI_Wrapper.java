@@ -13,6 +13,8 @@ import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
+import Filtering.ID_Filter;
+import Filtering.Time_Filter;
 import Main_App.Analayze_Files;
 import Main_App.Read_From;
 import Main_App.Write_2_CSV;
@@ -201,5 +203,22 @@ public class GUI_Wrapper {
 		}
 		Algo_Main.algo2_all(ams);
 
+	}
+	
+	
+	public static void idfilter(String id) throws IOException, ParseException
+	{
+		ID_Filter.idFilter(id, "C:\\Users\\itay1\\Desktop");
+	}
+	
+	public static void timefilter(String begin,String end) throws ParseException, IOException
+	{
+		
+		Time_Filter.timeFilter(begin, end, "C:\\Users\\itay1\\Desktop");
+	}
+	
+	public static void positionfilter(String lat,String lon,String radius)
+	{
+		
 	}
 }
