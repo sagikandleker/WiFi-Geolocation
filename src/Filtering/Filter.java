@@ -1,14 +1,13 @@
 package Filtering;
 
+import java.util.ArrayList;
 
-import java.io.IOException;
-import java.text.ParseException;
-import java.util.Scanner;
 
 public class Filter {
+	
+	public static ArrayList<Record_Filter> data = new ArrayList<Record_Filter>();
 
-
-	public void ChooseFilter(String Filter) throws IOException, ParseException
+	/*public void ChooseFilter(String Filter) throws IOException, ParseException
 	{
 		
 		if(Filter.equalsIgnoreCase("ID")) {
@@ -38,5 +37,5 @@ public class Filter {
 		}
 		
 		
-	}
+	}*/
 }

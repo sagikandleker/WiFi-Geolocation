@@ -13,7 +13,9 @@ import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
+import Filtering.Filter;
 import Filtering.ID_Filter;
+import Filtering.Position_Filter;
 import Filtering.Time_Filter;
 import Main_App.Analayze_Files;
 import Main_App.Read_From;
@@ -131,7 +133,25 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("allData")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.KML(Write_2_CSV.All_Data_List, savefile+".kml");		
+				Write_2_KML.KML(Write_2_CSV.All_Data_List, savefile+".kml");	
+			}
+			
+			if(name.equalsIgnoreCase("TimeFilter")) {
+				savefile = fileChooser.getSelectedFile();
+				Write_2_KML.Filter_KML(Filter.data, savefile+".kml");
+				Filter.data.clear();
+			}
+			
+			if(name.equalsIgnoreCase("IDFilter")) {
+				savefile = fileChooser.getSelectedFile();
+				Write_2_KML.Filter_KML(Filter.data, savefile+".kml");
+				Filter.data.clear();
+			}
+			
+			if(name.equalsIgnoreCase("PositionFilter")) {
+				savefile = fileChooser.getSelectedFile();
+				Write_2_KML.Filter_KML(Filter.data, savefile+".kml");
+				Filter.data.clear();
 			}
 
 
@@ -208,17 +228,18 @@ public class GUI_Wrapper {
 	
 	public static void idfilter(String id) throws IOException, ParseException
 	{
-		ID_Filter.idFilter(id, "C:\\Users\\itay1\\Desktop");
+		ID_Filter.idFilter(id);
 	}
 	
 	public static void timefilter(String begin,String end) throws ParseException, IOException
 	{
 		
-		Time_Filter.timeFilter(begin, end, "C:\\Users\\itay1\\Desktop");
+		Time_Filter.timeFilter(begin, end);
 	}
 	
-	public static void positionfilter(String lat,String lon,String radius)
+	public static void positionfilter(String lat,String lon,String radius) throws IOException, ParseException
 	{
 		
+		Position_Filter.positionFilter(lat, lon, radius);
 	}
 }

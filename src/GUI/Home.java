@@ -43,6 +43,7 @@ public class Home {
 
 	int xx, xy;
 	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -155,20 +156,20 @@ public class Home {
 
 		JLabel lblAlgorithms = new JLabel("Algorithms");
 		lblAlgorithms.setFont(new Font("Elephant", Font.BOLD, 18));
-		lblAlgorithms.setForeground(Color.WHITE);
-		lblAlgorithms.setBounds(405, 23, 114, 48);
+		lblAlgorithms.setForeground(Color.DARK_GRAY);
+		lblAlgorithms.setBounds(377, 7, 114, 48);
 		frmOop.getContentPane().add(lblAlgorithms);
 
 		JLabel lblFilters = new JLabel("Filters");
-		lblFilters.setForeground(Color.WHITE);
+		lblFilters.setForeground(Color.DARK_GRAY);
 		lblFilters.setFont(new Font("Elephant", Font.BOLD, 18));
-		lblFilters.setBounds(268, 23, 114, 48);
+		lblFilters.setBounds(236, 7, 114, 48);
 		frmOop.getContentPane().add(lblFilters);
 
 		JLabel lblDataStructure = new JLabel("Data Structure");
-		lblDataStructure.setForeground(Color.WHITE);
+		lblDataStructure.setForeground(Color.DARK_GRAY);
 		lblDataStructure.setFont(new Font("Elephant", Font.BOLD, 18));
-		lblDataStructure.setBounds(28, 5, 177, 53);
+		lblDataStructure.setBounds(22, 5, 177, 53);
 		frmOop.getContentPane().add(lblDataStructure);
 
 		JButton btnTime = new JButton("Filter");
@@ -185,7 +186,7 @@ public class Home {
 
 			}
 		});
-		btnTime.setBounds(253, 70, 98, 27);
+		btnTime.setBounds(236, 70, 98, 27);
 		frmOop.getContentPane().add(btnTime);
 
 		JButton btnAlgorithm = new JButton("Algorithm 1");
@@ -196,7 +197,7 @@ public class Home {
 				algorithm1.setVisible(true);
 			}
 		});
-		btnAlgorithm.setBounds(405, 70, 98, 27);
+		btnAlgorithm.setBounds(377, 70, 98, 27);
 		frmOop.getContentPane().add(btnAlgorithm);
 
 		JButton btnAlgorithm_1 = new JButton("Algorithm 2");
@@ -209,7 +210,7 @@ public class Home {
 
 			}
 		});
-		btnAlgorithm_1.setBounds(405, 109, 98, 27);
+		btnAlgorithm_1.setBounds(377, 109, 98, 27);
 		frmOop.getContentPane().add(btnAlgorithm_1);
 
 		textField = new JTextField();
@@ -236,8 +237,28 @@ public class Home {
 		});
 		btnSaveToKml.setBounds(22, 226, 183, 27);
 		frmOop.getContentPane().add(btnSaveToKml);
+		
+		textField_1 = new JTextField();
+		textField_1.setText("# Of AP: ");
+		textField_1.setFont(new Font("Georgia Pro Semibold", Font.BOLD, 20));
+		textField_1.setEditable(false);
+		textField_1.setColumns(10);
+		textField_1.setBounds(377, 269, 162, 34);
+		frmOop.getContentPane().add(textField_1);
+		
+		JButton btnInfo = new JButton("Info");
+		btnInfo.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				
+				
+			}
+		});
+		btnInfo.setBounds(377, 226, 162, 27);
+		frmOop.getContentPane().add(btnInfo);
 		frmOop.setBackground(Color.WHITE);
-		frmOop.setBounds(100, 100, 711, 510);
+		frmOop.setBounds(100, 100, 573, 370);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

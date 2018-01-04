@@ -12,13 +12,13 @@ import de.micromata.opengis.kml.v_2_2_0.Placemark;
 
 public class Filter_2_KML {
 
-	public static void KML(ArrayList<Record_Filter> data,String file) throws IOException	
+	public static void KML(ArrayList<Record_Filter> data, String file) throws IOException	
 	{
 		DateFormat TimeFormater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		final Kml kml = new Kml();
 		Document doc = kml.createAndSetDocument();
 
-		for (int i = 0; i < data.size(); i++) 
+		for (int i = 0; i < data.size(); i++)
 		{
 			String date = TimeFormater.format(data.get(i).getDate().getTime());
 			Placemark place =  doc.createAndAddPlacemark().withName(data.get(i).getSsid()).withOpen(Boolean.TRUE);
