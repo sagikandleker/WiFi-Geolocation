@@ -3,6 +3,10 @@ package Data_Setup;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Record combined Position, Wifi and Time.
+ *
+ */
 public class Record_Pos_Wifi_Time {
 
 	private Position position;

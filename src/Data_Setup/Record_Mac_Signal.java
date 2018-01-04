@@ -1,5 +1,9 @@
 package Data_Setup;
 
+/**
+ * Record combined Mac and Signal.
+ *
+ */
 public class Record_Mac_Signal {
 
 	private Signal signal;

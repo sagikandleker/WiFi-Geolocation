@@ -1,11 +1,10 @@
 package Data_Setup;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Time build time from java.util.Date.
+ * Time build time from java.util.Date. (Example: 03/12/2017 08:37:10).
  */
 
 public class Time {
@@ -46,6 +45,9 @@ public class Time {
 			return false;
 	}
 	
+	/**
+	 * toString
+	 */
 	@Override
 	public String toString() {
 		return TimeFormater.format(time);

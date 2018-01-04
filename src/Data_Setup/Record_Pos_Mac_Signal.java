@@ -1,5 +1,9 @@
 package Data_Setup;
 
+/**
+ * Record combined Position, Mac and Signal.
+ *
+ */
 public class Record_Pos_Mac_Signal {
 
 	Position position;
@@ -7,6 +11,13 @@ public class Record_Pos_Mac_Signal {
 	Signal signal;
 	int line;
 	
+	/**
+	 * 
+	 * @param line Number of the line.
+	 * @param position
+	 * @param mac
+	 * @param signal
+	 */
 	public Record_Pos_Mac_Signal(int line, Position position, Mac mac, Signal signal) {
 		this.line = line;
 		this.position = position;
@@ -15,6 +26,9 @@ public class Record_Pos_Mac_Signal {
 	
 	}
 	
+	/**
+	 * 
+	 */
 	public Record_Pos_Mac_Signal() {
 		this.line = -1;
 		this.position = new Position();

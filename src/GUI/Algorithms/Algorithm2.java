@@ -5,12 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import Algorithms.Algorithm_2;
 import Algorithms.Mac_Hashmap;
-import Data_Setup.Mac;
-import Data_Setup.Record_Mac_Signal;
-import Data_Setup.Signal;
 import GUI.GUI_Wrapper;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -24,7 +20,6 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 

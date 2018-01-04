@@ -3,9 +3,7 @@ package GUI;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.Color;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -13,31 +11,18 @@ import GUI.Algorithms.Algorithm1;
 import GUI.Algorithms.Algorithm2;
 import GUI.Filters.Filter;
 import Main_App.Write_2_CSV;
-
 import java.awt.event.MouseEvent;
-import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.awt.event.MouseAdapter;
 import javax.swing.JLabel;
-import javax.swing.JTextPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextField;
-import java.awt.TextField;
-import java.awt.Choice;
-import java.awt.TextArea;
-import java.awt.Label;
-import java.awt.Button;
-import javax.swing.JPasswordField;
-import javax.swing.JSeparator;
-import java.awt.SystemColor;
-import javax.swing.JPanel;
-import javax.swing.border.MatteBorder;
 
 
-public class Home {
+public class GUI {
 
 	private JFrame frmOop;
 
