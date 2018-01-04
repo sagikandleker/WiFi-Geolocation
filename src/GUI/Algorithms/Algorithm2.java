@@ -6,7 +6,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Algorithms.Algorithm_2;
+import Algorithms.Mac_Hashmap;
+import Data_Setup.Mac;
 import Data_Setup.Record_Mac_Signal;
+import Data_Setup.Signal;
 import GUI.GUI_Wrapper;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -20,6 +24,7 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -70,27 +75,26 @@ public class Algorithm2 extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblAlgorithm = new JLabel("Algorithm 2");
 		lblAlgorithm.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAlgorithm.setFont(new Font("Segoe UI Semilight", Font.BOLD, 20));
 		lblAlgorithm.setBounds(173, 16, 152, 35);
 		contentPane.add(lblAlgorithm);
-		
+
 		textField = new JTextField();
 		textField.setBounds(15, 107, 499, 26);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		textField.setEnabled(false);
-		textField.setEditable(false);
-		
+
+
 		txtMac = new JTextField();
 		txtMac.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				txtMac.setText("");
-				
+
 			}
 		});
 		txtMac.setText("MAC 1");
@@ -106,7 +110,7 @@ public class Algorithm2 extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				if(jradio2.isSelected())
 				{
-					
+
 					textField.setEnabled(false);
 					txtMac.setEnabled(true);
 					txtMac_1.setEnabled(true);
@@ -114,7 +118,7 @@ public class Algorithm2 extends JFrame {
 					txtSignal.setEnabled(true);
 					txtSignal_1.setEnabled(true);
 					txtSignal_2.setEnabled(true);
-					
+
 					textField.setEditable(false);
 					txtMac.setEditable(true);
 					txtMac_1.setEditable(true);
@@ -122,43 +126,43 @@ public class Algorithm2 extends JFrame {
 					txtSignal.setEditable(true);
 					txtSignal_1.setEditable(true);
 					txtSignal_2.setEditable(true);
-					
+
 					txtMac.setText("MAC 1");
 					txtMac_1.setText("MAC 2");
 					txtMac_2.setText("MAC 3");
 					txtSignal.setText("Signal 1");
 					txtSignal_1.setText("Signal 2");
 					txtSignal_2.setText("Signal 3");
-					
-					
-					
-					
+
+
+
+
 				}
 			}
 		});
 		jradio2.setBounds(15, 145, 252, 29);
 		contentPane.add(jradio2);
-		
+
 		jradio2.setActionCommand("enable");
 		jradio2.setEnabled(true);
-	
-		
+
+
 		JRadioButton jradio = new JRadioButton("String Line From \"nogps\" File Input");
 		jradio.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(jradio.isSelected())
 				{
-				
+
 					textField.setEnabled(true);
 					txtMac.setEnabled(false);
 					txtMac_1.setEnabled(false);
 					txtMac_2.setEnabled(false);
-					
+
 					txtSignal.setEnabled(false);
 					txtSignal_1.setEnabled(false);
 					txtSignal_2.setEnabled(false);
-					
+
 					textField.setEditable(true);
 					txtMac.setEditable(false);
 					txtMac_1.setEditable(false);
@@ -166,7 +170,7 @@ public class Algorithm2 extends JFrame {
 					txtSignal.setEditable(false);
 					txtSignal_1.setEditable(false);
 					txtSignal_2.setEditable(false);
-					
+
 					txtMac.setText("MAC 1");
 					txtMac_1.setText("MAC 2");
 					txtMac_2.setText("MAC 3");
@@ -175,27 +179,28 @@ public class Algorithm2 extends JFrame {
 					txtSignal_2.setText("Signal 3");
 
 				}
-				
+
 			}
 		});
 		jradio.setBounds(15, 66, 293, 29);
 		contentPane.add(jradio);
-		
+		jradio.setSelected(true);
+
 		jradio.setActionCommand("enable");
 		jradio.setEnabled(true);
-		
+
 		ButtonGroup bt=new ButtonGroup();
 		bt.add(jradio);
 		bt.add(jradio2);
-		
-		
-			
-		
+
+
+
+
 		txtMac_1 = new JTextField();
 		txtMac_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				txtMac_1.setText("");
 			}
 		});
@@ -207,11 +212,11 @@ public class Algorithm2 extends JFrame {
 		txtMac_1.setVisible(true);
 		txtMac_1.setEditable(false);
 		txtMac_2 = new JTextField();
-		
+
 		txtMac_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				txtMac_2.setText("");
 			}
 		});
@@ -226,7 +231,7 @@ public class Algorithm2 extends JFrame {
 		txtSignal.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				txtSignal.setText("");
 			}
 		});
@@ -241,7 +246,7 @@ public class Algorithm2 extends JFrame {
 		txtSignal_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				txtSignal_1.setText("");
 			}
 		});
@@ -253,11 +258,11 @@ public class Algorithm2 extends JFrame {
 		txtSignal_1.setVisible(true);
 		txtSignal_1.setEditable(false);
 		txtSignal_2 = new JTextField();
-		
+
 		txtSignal_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				txtSignal_2.setText("");
 			}
 		});
@@ -268,45 +273,45 @@ public class Algorithm2 extends JFrame {
 		txtSignal_2.setEnabled(false);
 		txtSignal_2.setVisible(true);
 		txtSignal_2.setEditable(false);
-		
+
 		textField_5 = new JTextField();
 		textField_5.setEditable(false);
 		textField_5.setColumns(10);
 		textField_5.setBounds(191, 369, 134, 26);
 		contentPane.add(textField_5);
-		
+
 		JLabel lblLat = new JLabel("Lat");
 		lblLat.setBounds(66, 342, 69, 20);
 		contentPane.add(lblLat);
-		
+
 		JLabel lblLon = new JLabel("Lon");
 		lblLon.setBounds(240, 342, 69, 20);
 		contentPane.add(lblLon);
-		
+
 		JLabel lblAlt = new JLabel("Alt");
 		lblAlt.setBounds(409, 342, 69, 20);
 		contentPane.add(lblAlt);
-		
+
 		textField_1 = new JTextField();
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBounds(15, 369, 134, 26);
 		contentPane.add(textField_1);
-		
+
 		textField_2 = new JTextField();
 		textField_2.setEditable(false);
 		textField_2.setColumns(10);
 		textField_2.setBounds(359, 369, 134, 26);
 		contentPane.add(textField_2);
-		
+
 		lblMac = new JLabel("MAC");
 		lblMac.setBounds(77, 174, 69, 20);
 		contentPane.add(lblMac);
-		
+
 		lblSignal = new JLabel("Signal");
 		lblSignal.setBounds(311, 174, 69, 20);
 		contentPane.add(lblSignal);
-		
+
 		btnNewButton = new JButton("Export Algorithm 2 (All Data) to CSV File");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
@@ -325,12 +330,12 @@ public class Algorithm2 extends JFrame {
 		});
 		btnNewButton.setBounds(67, 518, 411, 29);
 		contentPane.add(btnNewButton);
-		
+
 		btnNewButton_1 = new JButton("Add nogps File");
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent args0) {
-				
+
 				try {
 					GUI_Wrapper.chooseCSVFile("nogpsfile");
 				} catch (IOException | ParseException e) {
@@ -338,21 +343,21 @@ public class Algorithm2 extends JFrame {
 					e.printStackTrace();
 				}
 				// Browse button to select directory
-			
-				
+
+
 			}
 		});
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
+
+
 			}
 		});
-		
+
 
 		btnNewButton_1.setBounds(97, 473, 170, 29);
 		contentPane.add(btnNewButton_1);
-		
+
 		btnAddCombFile = new JButton("Add comb File");
 		btnAddCombFile.addMouseListener(new MouseAdapter() {
 			@Override
@@ -364,45 +369,69 @@ public class Algorithm2 extends JFrame {
 					e.printStackTrace();
 				}
 				// Browse button to select directory
-			
-				
+
+
 			}
 		});
 		btnAddCombFile.setBounds(282, 473, 181, 29);
 		contentPane.add(btnAddCombFile);
-		
+
 		btnSubmit = new JButton("Submit");
 		btnSubmit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
-				String m1 = txtMac.getText();
-				String m2 = txtMac_1.getText();
-				String m3 = txtMac_2.getText();
-				String s1 = txtSignal.getText();
-				String s2 = txtSignal_1.getText();
-				String s3 = txtSignal_2.getText();
-				
-				
-				ArrayList<String> Allm_Alls = new ArrayList<String>();
-				
-				Allm_Alls.add(m1);
-				Allm_Alls.add(s1);
-				Allm_Alls.add(m2);
-				Allm_Alls.add(s2);
-				Allm_Alls.add(m3);
-				Allm_Alls.add(s3);
-				
+				if(jradio2.isSelected()) {
+					String m1 = txtMac.getText();
+					String m2 = txtMac_1.getText();
+					String m3 = txtMac_2.getText();
+					String s1 = txtSignal.getText();
+					String s2 = txtSignal_1.getText();
+					String s3 = txtSignal_2.getText();
+
+
+					ArrayList<String> Allm_Alls = new ArrayList<String>();
+
+					Allm_Alls.add(m1);
+					Allm_Alls.add(s1);
+					Allm_Alls.add(m2);
+					Allm_Alls.add(s2);
+					Allm_Alls.add(m3);
+					Allm_Alls.add(s3);
+
 
 					try {
 						GUI_Wrapper.algo2Short(Allm_Alls);
+						textField_2.setText(""+Algorithm_2.final_pos_array.get(0).alt);
+						textField_5.setText(""+Algorithm_2.final_pos_array.get(0).lon);
+						textField_1.setText(""+Algorithm_2.final_pos_array.get(0).lat);
+						Algorithm_2.final_pos_array.clear();
+						Mac_Hashmap.hash.clear();
 					} catch (IOException | ParseException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-				
+
+				}
+				else if(jradio.isSelected()) {
+					
+					String line = textField.getText();
+					try {
+						GUI_Wrapper.algo2Line(line);
+						textField_2.setText(""+Algorithm_2.final_pos_array.get(0).alt);
+						textField_5.setText(""+Algorithm_2.final_pos_array.get(0).lon);
+						textField_1.setText(""+Algorithm_2.final_pos_array.get(0).lat);
+						Algorithm_2.final_pos_array.clear();
+						Mac_Hashmap.hash.clear();
+					} catch (IOException | ParseException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+
+
+				}
 			}
 		});
+
 		btnSubmit.setBounds(183, 411, 197, 29);
 		contentPane.add(btnSubmit);
 

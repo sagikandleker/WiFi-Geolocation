@@ -81,9 +81,9 @@ public class Algorithm1 extends JFrame {
 				String mac = txtMac.getText();
 				try {
 					Position p = GUI_Wrapper.algo1Short(mac);
-					textField.setText(""+p.alt);
+					textField.setText(""+p.lat);
 					textField_1.setText(""+p.lon);
-					textField_2.setText(""+p.lat);
+					textField_2.setText(""+p.alt);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -108,24 +108,24 @@ public class Algorithm1 extends JFrame {
 		contentPane.add(lblLat);
 		
 		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		textField.setEditable(false);
-		textField.setBounds(15, 175, 137, 46);
+		textField.setBounds(0, 175, 167, 46);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
-		textField_1.setBounds(182, 175, 137, 46);
+		textField_1.setBounds(182, 175, 160, 46);
 		contentPane.add(textField_1);
 		
 		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		textField_2.setEditable(false);
 		textField_2.setColumns(10);
-		textField_2.setBounds(357, 175, 136, 46);
+		textField_2.setBounds(357, 175, 160, 46);
 		contentPane.add(textField_2);
 		
 		JButton btnNewButton = new JButton("Export Algorithm 1 (All Data) to CSV File");

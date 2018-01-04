@@ -21,7 +21,7 @@ public class Algorithm_2 {
 			mindiff=3, nosignal=0.32344759,
 			diffnosignal=100;
 
-	static final ArrayList<Position> final_pos_array  = new ArrayList<Position>();
+	public static ArrayList<Position> final_pos_array  = new ArrayList<Position>();
 
 	public static void no_gps_lines(HashMap<String,ArrayList<Record_Pos_Wifi_Time>> hash2, ArrayList<ArrayList<Record_Mac_Signal>> rms) throws IOException {
 
@@ -45,7 +45,7 @@ public class Algorithm_2 {
 					three.add(ms);
 				}
 			}
-
+			
 			Algo2(hash2, three);
 		}
 
@@ -214,8 +214,8 @@ public class Algorithm_2 {
 		}
 
 		fw.write(stringBuilder.toString());
-		
 		fw.close();
+		final_pos_array.clear();
 
 	}
 
