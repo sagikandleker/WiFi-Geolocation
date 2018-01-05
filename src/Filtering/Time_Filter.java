@@ -18,7 +18,8 @@ import Main_App.Write_2_CSV;
 public class Time_Filter {
 
 	public static void timeFilter(String time_begin, String time_end) throws ParseException, IOException {
-
+		
+		
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date_start =  format.parse(time_begin);
 		Date date_end =  format.parse(time_end);

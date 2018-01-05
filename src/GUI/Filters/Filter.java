@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-
 import GUI.GUI_Wrapper;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -16,19 +15,33 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.ParseException;
-
 import javax.swing.SwingConstants;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 
 @SuppressWarnings("serial")
 public class Filter extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
-	private JTextField textField_1;
+	private JComboBox comboBox;
+	private JComboBox comboBox_1;
+	private JComboBox comboBox_2;
+	private JComboBox comboBox_3;
+	private JComboBox comboBox_4;
+	private JComboBox comboBox_5;
+	private JComboBox comboBox_6;
+	private JComboBox comboBox_7;
+	private JComboBox comboBox_8;
+	private JComboBox comboBox_9;
+	private JComboBox comboBox_10;
+	private JComboBox comboBox_11;
 
 	/**
 	 * Launch the application.
@@ -51,7 +64,7 @@ public class Filter extends JFrame {
 	 */
 	public Filter() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 854, 526);
+		setBounds(100, 100, 768, 622);
 		contentPane = new JPanel();
 		contentPane.setBorder(null);
 		setContentPane(contentPane);
@@ -60,21 +73,23 @@ public class Filter extends JFrame {
 		JRadioButton radioButton_3 = new JRadioButton("OR");
 		radioButton_3.setFont(new Font("Tahoma", Font.BOLD, 18));
 		radioButton_3.setActionCommand("enable");
-		radioButton_3.setEnabled(true);
+		radioButton_3.setEnabled(false);
 
-		radioButton_3.setBounds(275, 302, 83, 29);
+		radioButton_3.setBounds(278, 422, 83, 29);
 		contentPane.add(radioButton_3);
 
 
 		JRadioButton radioButton_4 = new JRadioButton("AND");
 		radioButton_4.setFont(new Font("Tahoma", Font.BOLD, 18));
-		radioButton_4.setBounds(174, 302, 83, 29);
+		radioButton_4.setBounds(177, 422, 83, 29);
 		contentPane.add(radioButton_4);
+		radioButton_4.setEnabled(false);
 
 		JRadioButton radioButton_5 = new JRadioButton("NOT");
 		radioButton_5.setFont(new Font("Tahoma", Font.BOLD, 18));
-		radioButton_5.setBounds(75, 302, 97, 29);
+		radioButton_5.setBounds(78, 422, 97, 29);
 		contentPane.add(radioButton_5);
+		radioButton_5.setEnabled(false);
 
 		ButtonGroup bt1=new ButtonGroup();
 		bt1.add(radioButton_3);
@@ -84,6 +99,7 @@ public class Filter extends JFrame {
 
 
 		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -91,7 +107,7 @@ public class Filter extends JFrame {
 
 			}
 		});
-		textField.setBounds(36, 120, 146, 26);
+		textField.setBounds(29, 120, 146, 26);
 		contentPane.add(textField);
 		textField.setText("Name Of Device");
 		textField.setColumns(10);
@@ -99,45 +115,55 @@ public class Filter extends JFrame {
 
 
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Time");
+		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
 				if(rdbtnNewRadioButton.isSelected()) {
 
+					comboBox.setEnabled(true);
+					comboBox_1.setEnabled(true);
+					comboBox_2.setEnabled(true);
+					comboBox_3.setEnabled(true);
+					comboBox_4.setEnabled(true);
+					comboBox_5.setEnabled(true);
+					comboBox_6.setEnabled(true);
+					comboBox_7.setEnabled(true);
+					comboBox_8.setEnabled(true);
+					comboBox_9.setEnabled(true);
+					comboBox_10.setEnabled(true);
+					comboBox_11.setEnabled(true);
 
-					textField_1.setEnabled(true);
-					textField_1.setVisible(true);
-					textField_1.setEditable(true);
-					textField_1.setText("End");
-					textField_2.setEnabled(true);
-					textField_2.setVisible(true);
-					textField_2.setEditable(true);
-					textField_2.setText("Being");
 
 				}
 
 				else if(!rdbtnNewRadioButton.isSelected()) {
 
-					textField_1.setEnabled(false);
-					textField_1.setVisible(true);
-					textField_1.setEditable(false);
-					textField_1.setText("End");
-					textField_2.setEnabled(false);
-					textField_2.setVisible(true);
-					textField_2.setEditable(false);
-					textField_2.setText("Being");
 
+					comboBox.setEnabled(false);
+					comboBox_1.setEnabled(false);
+					comboBox_2.setEnabled(false);
+					comboBox_3.setEnabled(false);
+					comboBox_4.setEnabled(false);
+					comboBox_5.setEnabled(false);
+					comboBox_6.setEnabled(false);
+					comboBox_7.setEnabled(false);
+					comboBox_8.setEnabled(false);
+					comboBox_9.setEnabled(false);
+					comboBox_10.setEnabled(false);
+					comboBox_11.setEnabled(false);
 
 				}
 
 			}
 		});
-		rdbtnNewRadioButton.setBounds(293, 79, 155, 29);
+		rdbtnNewRadioButton.setBounds(293, 54, 155, 29);
 		contentPane.add(rdbtnNewRadioButton);
 		rdbtnNewRadioButton.setSelected(true);
 
 		JRadioButton rdbtnId = new JRadioButton("ID");
+		rdbtnId.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		rdbtnId.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -148,9 +174,6 @@ public class Filter extends JFrame {
 					textField.setVisible(true);
 					textField.setEditable(true);
 					textField.setText("Name Of Device");
-					radioButton_3.setEnabled(true);
-					radioButton_4.setEnabled(true);
-					radioButton_5.setEnabled(true);
 
 
 				}
@@ -161,21 +184,20 @@ public class Filter extends JFrame {
 					textField.setVisible(true);
 					textField.setEditable(false);
 					textField.setText("Name Of Device");
-					radioButton_3.setEnabled(false);
-					radioButton_4.setEnabled(false);
-					radioButton_5.setEnabled(false);
+
 
 				}
 
 			}
 		});
-		rdbtnId.setBounds(36, 79, 155, 29);
+		rdbtnId.setBounds(36, 54, 155, 29);
 		contentPane.add(rdbtnId);
 		rdbtnId.setSelected(true);
 
 
 
 		JRadioButton rdbtnPosition = new JRadioButton("Position");
+		rdbtnPosition.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		rdbtnPosition.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -218,25 +240,13 @@ public class Filter extends JFrame {
 
 			}
 		});
-		rdbtnPosition.setBounds(586, 79, 155, 29);
+		rdbtnPosition.setBounds(586, 54, 155, 29);
 		contentPane.add(rdbtnPosition);
 		rdbtnPosition.setSelected(true);
 
-		textField_2 = new JTextField();
-		textField_2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				textField_2.setText("");
-
-			}
-		});
-		textField_2.setColumns(10);
-		textField_2.setBounds(293, 147, 146, 26);
-		contentPane.add(textField_2);
-		textField_2.setText("Begin");
-
 
 		textField_3 = new JTextField();
+		textField_3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -244,12 +254,13 @@ public class Filter extends JFrame {
 			}
 		});
 		textField_3.setColumns(10);
-		textField_3.setBounds(586, 120, 146, 26);
+		textField_3.setBounds(566, 120, 166, 26);
 		contentPane.add(textField_3);
 		textField_3.setText("Lat");
 
 
 		textField_4 = new JTextField();
+		textField_4.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField_4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -257,12 +268,13 @@ public class Filter extends JFrame {
 			}
 		});
 		textField_4.setColumns(10);
-		textField_4.setBounds(586, 186, 146, 26);
+		textField_4.setBounds(566, 186, 166, 26);
 		contentPane.add(textField_4);
 		textField_4.setText("Lon");
 
 
 		textField_5 = new JTextField();
+		textField_5.setFont(new Font("Tahoma", Font.BOLD, 15));
 		textField_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -270,23 +282,9 @@ public class Filter extends JFrame {
 			}
 		});
 		textField_5.setColumns(10);
-		textField_5.setBounds(586, 250, 146, 26);
+		textField_5.setBounds(566, 250, 166, 26);
 		contentPane.add(textField_5);
 		textField_5.setText("Radius");
-
-
-		textField_1 = new JTextField();
-		textField_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				textField_1.setText("");
-
-			}
-		});
-		textField_1.setColumns(10);
-		textField_1.setBounds(293, 186, 146, 26);
-		contentPane.add(textField_1);
-		textField_1.setText("End");
 
 		JLabel lblFilters = new JLabel("Filters");
 		lblFilters.setFont(new Font("Tahoma", Font.BOLD, 20));
@@ -301,108 +299,90 @@ public class Filter extends JFrame {
 				if(rdbtnOnoff.isSelected())
 				{
 
-					radioButton_3.setVisible(true);
-					radioButton_4.setVisible(true);
-					radioButton_5.setVisible(true);
+					radioButton_3.setEnabled(true);
+					radioButton_4.setEnabled(true);
+					radioButton_5.setEnabled(true);
 				}
 				else
 				{
-					radioButton_3.setVisible(false);
-					radioButton_4.setVisible(false);
-					radioButton_5.setVisible(false);
+					radioButton_3.setEnabled(false);
+					radioButton_4.setEnabled(false);
+					radioButton_5.setEnabled(false);
 				}
 			}
 		});
 		rdbtnOnoff.setFont(new Font("Tahoma", Font.BOLD, 18));
 		rdbtnOnoff.setHorizontalAlignment(SwingConstants.CENTER);
-		rdbtnOnoff.setBounds(8, 272, 261, 25);
+		rdbtnOnoff.setBounds(11, 392, 261, 25);
 		contentPane.add(rdbtnOnoff);
-		JButton btnSubmit = new JButton("Submit");
-		btnSubmit.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-
-			}
-		});
-		btnSubmit.setBounds(123, 412, 424, 29);
-		contentPane.add(btnSubmit);
-
-		JButton btnNewButton = new JButton("Clear Data");
-		btnNewButton.setBounds(678, 362, 97, 25);
-		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Save To KML File");
-		btnNewButton_1.setBounds(622, 414, 155, 25);
-		contentPane.add(btnNewButton_1);
-
-		JLabel lblExampleYyyymmddHhmm = new JLabel("Example:  yyyy-MM-dd hh:mm:ss");
-		lblExampleYyyymmddHhmm.setBounds(293, 118, 193, 16);
-		contentPane.add(lblExampleYyyymmddHhmm);
-
-		JButton button = new JButton("Save To KML File");
-		button.addMouseListener(new MouseAdapter() {
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				if(!rdbtnOnoff.isSelected())
-				{
+			public void mouseClicked(MouseEvent e) {
+				if(!rdbtnOnoff.isSelected()) {
+					if(rdbtnId.isSelected()) {
+
+						String id = textField.getText();
+						try {
+							GUI_Wrapper.idfilter(id);
+							GUI_Wrapper.saveTOFolder("idfilter");
+						} catch (IOException | ParseException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+
+
+					}	
+
 					if(rdbtnNewRadioButton.isSelected())	
 					{
-						String begin=textField_2.getText();
-						String end=textField_1.getText();
+						String begin_hour = (String)comboBox.getSelectedItem();
+						String begin_minute = (String)comboBox_1.getSelectedItem();
+						String begin_second = (String)comboBox_2.getSelectedItem();
+						String begin_day = (String)comboBox_3.getSelectedItem();
+						String begin_month = (String)comboBox_4.getSelectedItem();
+						String begin_year = (String)comboBox_5.getSelectedItem();
+
+						String end_hour = (String)comboBox_9.getSelectedItem();
+						String end_minute = (String)comboBox_10.getSelectedItem();
+						String end_second = (String)comboBox_11.getSelectedItem();
+						String end_day = (String)comboBox_6.getSelectedItem();
+						String end_month = (String)comboBox_7.getSelectedItem();
+						String end_year = (String)comboBox_8.getSelectedItem();
+
+						if(begin_hour=="" || begin_minute=="" || begin_second=="" || begin_day==""
+								|| begin_month=="" || begin_year=="" || end_hour==""
+								|| end_minute=="" || end_second=="" || end_day==""
+								|| end_month=="" || end_year=="") System.exit(1);
+
+						String begin_time = begin_year + "-" + begin_month + "-" + begin_day +" "+
+								begin_hour +":"+ begin_minute +":"+ begin_second;
+
+						String end_time = end_year + "-" + end_month + "-" + end_day +" "+
+								end_hour +":"+ end_minute +":"+ end_second;
+
+
 						try {
-							GUI_Wrapper.timefilter(begin, end);
-							GUI_Wrapper.saveTOKML("TimeFilter");
+							GUI_Wrapper.timefilter(begin_time, end_time);
+							GUI_Wrapper.saveTOFolder("timefilter");
 						} catch (ParseException | IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 					}
-				}
-			}
-		});
-		button.setBounds(293, 228, 155, 25);
-		contentPane.add(button);
-
-		JButton button_1 = new JButton("Save To KML File");
-		button_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(!rdbtnOnoff.isSelected())
-				{
-					if(rdbtnId.isSelected())
-					{
-						String id = textField.getText();
-						try {
-							GUI_Wrapper.idfilter(id);
-							GUI_Wrapper.saveTOKML("IDFilter");
-						} catch (IOException | ParseException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
 
 
-					}
-				}
-			}
-		});
-		button_1.setBounds(36, 162, 155, 25);
-		contentPane.add(button_1);
 
-		JButton button_2 = new JButton("Save To KML File");
-		button_2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-
-				if(!rdbtnOnoff.isSelected())
-				{
 					if(rdbtnPosition.isSelected())
 					{
 						String lat = textField_3.getText();
 						String lon = textField_4.getText();
 						String radius = textField_5.getText();
+
 						try {
 							GUI_Wrapper.positionfilter(lat, lon, radius);
-							GUI_Wrapper.saveTOKML("PositionFilter");
+							GUI_Wrapper.saveTOFolder("positionfilter");
 						} catch (IOException | ParseException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -413,7 +393,81 @@ public class Filter extends JFrame {
 
 			}
 		});
-		button_2.setBounds(586, 292, 155, 25);
-		contentPane.add(button_2);
+		btnNewButton_1.setBounds(167, 511, 424, 25);
+		contentPane.add(btnNewButton_1);
+
+		comboBox = new JComboBox();
+		comboBox.setToolTipText("");
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Hour", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"}));
+		comboBox.setBounds(234, 172, 73, 26);
+		contentPane.add(comboBox);
+
+		comboBox_1 = new JComboBox();
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Minute", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"}));
+		comboBox_1.setBounds(322, 172, 88, 26);
+		contentPane.add(comboBox_1);
+
+		comboBox_2 = new JComboBox();
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Second", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"}));
+		comboBox_2.setBounds(425, 172, 83, 26);
+		contentPane.add(comboBox_2);
+
+		comboBox_3 = new JComboBox();
+		comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"Day", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
+		comboBox_3.setBounds(234, 135, 73, 26);
+		contentPane.add(comboBox_3);
+
+		comboBox_4 = new JComboBox();
+		comboBox_4.setModel(new DefaultComboBoxModel(new String[] {"Month", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"}));
+		comboBox_4.setBounds(322, 135, 88, 26);
+		contentPane.add(comboBox_4);
+
+		comboBox_5 = new JComboBox();
+		comboBox_5.setModel(new DefaultComboBoxModel(new String[] {"Year", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"}));
+		comboBox_5.setBounds(425, 135, 83, 26);
+		contentPane.add(comboBox_5);
+
+		comboBox_6 = new JComboBox();
+		comboBox_6.setModel(new DefaultComboBoxModel(new String[] {"Day", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"}));
+		comboBox_6.setBounds(234, 271, 73, 26);
+		contentPane.add(comboBox_6);
+
+		comboBox_7 = new JComboBox();
+		comboBox_7.setModel(new DefaultComboBoxModel(new String[] {"Month", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"}));
+		comboBox_7.setBounds(322, 271, 88, 26);
+		contentPane.add(comboBox_7);
+
+		comboBox_8 = new JComboBox();
+		comboBox_8.setModel(new DefaultComboBoxModel(new String[] {"Year", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020"}));
+		comboBox_8.setBounds(425, 271, 83, 26);
+		contentPane.add(comboBox_8);
+
+		comboBox_9 = new JComboBox();
+		comboBox_9.setModel(new DefaultComboBoxModel(new String[] {"Hour", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"}));
+		comboBox_9.setToolTipText("");
+		comboBox_9.setBounds(234, 308, 73, 26);
+		contentPane.add(comboBox_9);
+
+		comboBox_10 = new JComboBox();
+		comboBox_10.setModel(new DefaultComboBoxModel(new String[] {"Minute", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"}));
+		comboBox_10.setBounds(322, 308, 88, 26);
+		contentPane.add(comboBox_10);
+
+		comboBox_11 = new JComboBox();
+		comboBox_11.setModel(new DefaultComboBoxModel(new String[] {"Second", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"}));
+		comboBox_11.setBounds(425, 308, 83, 26);
+		contentPane.add(comboBox_11);
+
+		JLabel lblNewLabel = new JLabel("Begin");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel.setBounds(234, 99, 97, 20);
+		contentPane.add(lblNewLabel);
+
+		JLabel lblEnd = new JLabel("End");
+		lblEnd.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblEnd.setBounds(234, 234, 97, 20);
+		contentPane.add(lblEnd);
+
+
 	}
 }

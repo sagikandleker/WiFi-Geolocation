@@ -66,7 +66,6 @@ public class Write_2_KML {
 		}
 
 		kml.marshal(new File(file));
-		System.out.println("Finish to create KML File");
 	}
 
 }

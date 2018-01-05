@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import Algorithms.Mac_Hashmap;
 import GUI.Algorithms.Algorithm1;
 import GUI.Algorithms.Algorithm2;
 import GUI.Filters.Filter;
@@ -28,7 +29,6 @@ public class GUI {
 
 	int xx, xy;
 	private JTextField textField;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -76,13 +76,12 @@ public class GUI {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
-					GUI_Wrapper.choosefolder();
+					GUI_Wrapper.choosefolder();		
 				} catch (IOException | ParseException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				// Browse button to select directory
-
 				textField.setText("size of data: " + Write_2_CSV.All_Data_List.size());
 			}
 		});
@@ -223,14 +222,6 @@ public class GUI {
 		btnSaveToKml.setBounds(22, 226, 183, 27);
 		frmOop.getContentPane().add(btnSaveToKml);
 		
-		textField_1 = new JTextField();
-		textField_1.setText("# Of AP: ");
-		textField_1.setFont(new Font("Georgia Pro Semibold", Font.BOLD, 20));
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
-		textField_1.setBounds(377, 269, 162, 34);
-		frmOop.getContentPane().add(textField_1);
-		
 		JButton btnInfo = new JButton("Info");
 		btnInfo.addMouseListener(new MouseAdapter() {
 			@Override
@@ -240,10 +231,14 @@ public class GUI {
 				
 			}
 		});
-		btnInfo.setBounds(377, 226, 162, 27);
+		btnInfo.setBounds(377, 275, 162, 27);
 		frmOop.getContentPane().add(btnInfo);
+		
+		JLabel label = new JLabel("");
+		label.setBounds(227, 148, 123, 96);
+		frmOop.getContentPane().add(label);
 		frmOop.setBackground(Color.WHITE);
-		frmOop.setBounds(100, 100, 573, 370);
+		frmOop.setBounds(100, 100, 573, 380);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

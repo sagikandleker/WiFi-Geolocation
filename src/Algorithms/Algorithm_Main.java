@@ -15,7 +15,7 @@ public class Algorithm_Main {
 
 	public static void ChooseAlgo1() throws IOException, ParseException {
 
-		Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
+		//Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
 		Algorithm_1.AnalyzeMAC();
 		Algorithm_1.Write();
 	}

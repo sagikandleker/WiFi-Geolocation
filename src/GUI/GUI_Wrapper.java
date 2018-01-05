@@ -1,14 +1,14 @@
 package GUI;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import Algorithms.Algo_Main;
+import Algorithms.Algorithm_Main;
+import Algorithms.Mac_Hashmap;
 import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
@@ -30,12 +30,12 @@ public class GUI_Wrapper {
 	public static File nogpsfile = new File("");
 	public static File combfile = new File("");
 	public static File savefile = new File("");
+	public static File savefolder = new File("");
 	public static File algorithm1 = new File("");
 	public static File algorithm2 = new File("");
 
 
-	public static void choosefolder() throws IOException, ParseException
-	{
+	public static void choosefolder() throws IOException, ParseException {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new java.io.File("."));
 		chooser.setDialogTitle("Browse the folder to process");
@@ -55,6 +55,7 @@ public class GUI_Wrapper {
 		}
 
 		Analayze_Files.getFiles(folder);
+		Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
 
 	}
 
@@ -112,12 +113,12 @@ public class GUI_Wrapper {
 			}
 			else if(name.equalsIgnoreCase("Algo1")) {
 				algorithm1 = fileChooser.getSelectedFile();
-				Algo_Main.ChooseAlgo1();
+				Algorithm_Main.ChooseAlgo1();
 			}
 
 			else if(name.equalsIgnoreCase("Algo2")) {
 				algorithm2 = fileChooser.getSelectedFile();
-				Algo_Main.ChooseAlgo2();
+				Algorithm_Main.ChooseAlgo2();
 			}
 		}
 	}
@@ -158,6 +159,44 @@ public class GUI_Wrapper {
 		}
 	}
 
+	public static void saveTOFolder(String name) throws FileNotFoundException {
+		
+		JFileChooser chooser = new JFileChooser();
+		chooser.setCurrentDirectory(new java.io.File("."));
+		chooser.setDialogTitle("Choose folder to save");
+		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		chooser.setAcceptAllFileFilterUsed(false);
+
+		if (chooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
+
+		} else {
+			System.out.println("No Selection");
+		}
+		
+		if(name.equalsIgnoreCase("idfilter"))
+		{
+			savefolder = chooser.getSelectedFile();
+			Write_2_KML.Filter_KML(Filter.data, savefolder + "\\ID_Filter.kml");
+			Filter.data.clear();
+		}
+		
+		if(name.equalsIgnoreCase("timefilter"))
+		{
+			savefolder = chooser.getSelectedFile();
+			Write_2_KML.Filter_KML(Filter.data, savefolder + "\\Time_Filter.kml");
+			Filter.data.clear();
+		}
+		
+		if(name.equalsIgnoreCase("positionfilter"))
+		{
+			savefolder = chooser.getSelectedFile();
+			Write_2_KML.Filter_KML(Filter.data, savefolder + "\\Position_Filter.kml");
+			Filter.data.clear();
+		}
+		
+		
+		
+	}
 
 	public static void exportAlgo1() throws IOException, ParseException {
 		saveTOCSV("Algo1");
@@ -167,7 +206,7 @@ public class GUI_Wrapper {
 	}
 
 	public static Position algo1Short(String mac) throws IOException {
-		return Algo_Main.algo1_Mac(mac);
+		return Algorithm_Main.algo1_Mac(mac);
 
 	}
 
@@ -186,7 +225,7 @@ public class GUI_Wrapper {
 			three_ms.add(ms);
 		}
 
-		Algo_Main.algo2_all(three_ms);
+		Algorithm_Main.algo2_all(three_ms);
 	}
 
 	public static void algo2Line(String line) throws IOException, ParseException {
@@ -221,7 +260,7 @@ public class GUI_Wrapper {
 				break;
 
 		}
-		Algo_Main.algo2_all(ams);
+		Algorithm_Main.algo2_all(ams);
 
 	}
 	

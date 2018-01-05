@@ -2,7 +2,77 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
     <Document>
         <Placemark>
-            <name>00:1a:dd:e3:06:e4</name>
+            <name>afikim-wifi</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Moria</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>AUC_54_R</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>AUC_51_3</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>surikat</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Ariel_University</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>afikim-wifi</name>
+            <open>1</open>
+            <TimeStamp>
+                <when>2017-12-03T08:37:10Z</when>
+            </TimeStamp>
+            <Point>
+                <coordinates>35.20726399020641,32.10253330333696,699.287760530489</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>afikim-wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -12,7 +82,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> d8:fe:e3:03:5a:31</name>
+            <name>Moria</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -22,7 +92,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> a0:4f:d4:3b:e9:01</name>
+            <name>Lidor a</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -32,7 +102,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 14:ae:db:3a:64:05</name>
+            <name>tanya</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -42,7 +112,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:f4:7c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -52,7 +122,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 10:be:f5:3b:68:2c</name>
+            <name>Hagar</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -62,7 +132,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -72,7 +142,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:99:68</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -82,7 +152,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:94:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -92,7 +162,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> a0:4f:d4:3a:a0:e1</name>
+            <name>Cellcom-WiFi_0123</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:13Z</when>
@@ -102,7 +172,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:94:18</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -112,7 +182,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> d0:0f:6d:f1:35:2f</name>
+            <name>Sveta</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -122,7 +192,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> a0:ab:1b:59:55:54</name>
+            <name>ear</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -132,7 +202,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 10:be:f5:39:8f:f2</name>
+            <name>LARISA</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -142,7 +212,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> b0:48:7a:a1:80:8c</name>
+            <name>Knoch</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -152,7 +222,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:12:2a:39:2c:3c</name>
+            <name>netbox-550b</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -162,7 +232,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 10:be:f5:a7:b4:f4</name>
+            <name>Home</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -172,7 +242,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:96:f1:97</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -182,7 +252,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:78:cc</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -192,7 +262,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:d2:88</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:15Z</when>
@@ -202,7 +272,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:09:03:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:18Z</when>
@@ -212,7 +282,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 14:ae:db:43:88:35</name>
+            <name>BEZEQINT-8831</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:18Z</when>
@@ -222,7 +292,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:14:33:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:18Z</when>
@@ -232,7 +302,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:96:28:f7</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:18Z</when>
@@ -242,7 +312,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:94:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:21Z</when>
@@ -252,7 +322,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:96:f4:77</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:21Z</when>
@@ -262,7 +332,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:94:17</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:21Z</when>
@@ -272,7 +342,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:78:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:24Z</when>
@@ -282,7 +352,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:8c:54:90:ce:d1</name>
+            <name>victoria</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:24Z</when>
@@ -292,7 +362,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>06:ae:db:3a:64:05</name>
+            <name>BezeqFree</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:27Z</when>
@@ -302,7 +372,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:14:33:cc</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:27Z</when>
@@ -312,7 +382,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 14:ae:db:cb:05:f5</name>
+            <name>Mama</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:27Z</when>
@@ -322,7 +392,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:9b:f3:26:ab:3a</name>
+            <name>SGH-I337M</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:27Z</when>
@@ -332,7 +402,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>80:37:73:d7:ab:3a</name>
+            <name>Hoom_2.4</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:30Z</when>
@@ -342,7 +412,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:09:03:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:33Z</when>
@@ -352,7 +422,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:89:03:37</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:33Z</when>
@@ -362,7 +432,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:f4:7c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:33Z</when>
@@ -372,7 +442,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:d2:8c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:33Z</when>
@@ -382,7 +452,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 14:ae:db:58:0d:6d</name>
+            <name>__ery</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:33Z</when>
@@ -392,7 +462,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:09:03:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:36Z</when>
@@ -402,7 +472,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> cc:fa:00:ae:93:46</name>
+            <name>bezek freeee</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:36Z</when>
@@ -412,7 +482,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:0e:f4:c1:50:14</name>
+            <name>vladimir</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:36Z</when>
@@ -422,7 +492,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:a9:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:39Z</when>
@@ -432,7 +502,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:28:f8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:39Z</when>
@@ -442,7 +512,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>a4:08:f5:20:72:6a</name>
+            <name>HOTFiber-3C40</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:42Z</when>
@@ -452,7 +522,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:77:48</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:42Z</when>
@@ -462,7 +532,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 14:ae:db:cf:86:f5</name>
+            <name>Biren2809</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:42Z</when>
@@ -472,7 +542,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:16:f4:78</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:45Z</when>
@@ -482,7 +552,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:9b:f3:26:ab:3a</name>
+            <name>SGH-I337M</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:45Z</when>
@@ -492,7 +562,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:45Z</when>
@@ -502,7 +572,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:96:d2:87</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:45Z</when>
@@ -512,7 +582,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:93:b8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:45Z</when>
@@ -522,7 +592,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:a9:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:49Z</when>
@@ -532,7 +602,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7a:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:49Z</when>
@@ -542,7 +612,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:09:03:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:52Z</when>
@@ -552,7 +622,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:28</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:52Z</when>
@@ -562,7 +632,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:0c:cc</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:52Z</when>
@@ -572,7 +642,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:78:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:52Z</when>
@@ -582,7 +652,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:2c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:52Z</when>
@@ -592,7 +662,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:7a:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:55Z</when>
@@ -602,7 +672,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:0c:cc</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:55Z</when>
@@ -612,7 +682,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:a9:27</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:55Z</when>
@@ -622,7 +692,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:a9:37</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:55Z</when>
@@ -632,7 +702,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:26:ae:28</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:55Z</when>
@@ -642,7 +712,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> a0:4f:d4:46:a9:e1</name>
+            <name>richman</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:55Z</when>
@@ -652,7 +722,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:88:7a:17</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -662,7 +732,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7a:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -672,7 +742,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7a:18</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -682,7 +752,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:28</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -692,7 +762,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:78:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -702,7 +772,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:26:b0:58</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -712,7 +782,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:78:37</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -722,7 +792,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7b:8c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -732,7 +802,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:86:d8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:37:58Z</when>
@@ -742,7 +812,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:09:0c:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:04Z</when>
@@ -752,7 +822,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:89:0c:c7</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:04Z</when>
@@ -762,7 +832,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:90:cc</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:04Z</when>
@@ -772,7 +842,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:7b:87</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:04Z</when>
@@ -782,7 +852,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:90:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:07Z</when>
@@ -792,7 +862,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:a9:28</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -802,7 +872,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:8c:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -812,7 +882,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:2c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -822,7 +892,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7b:8c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -832,7 +902,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:bb:3a</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -842,7 +912,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:bb:86</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -852,7 +922,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:8c:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -862,7 +932,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:94:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -872,7 +942,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:94:17</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -882,7 +952,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:d2:88</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:10Z</when>
@@ -892,7 +962,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:7b:8c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -902,7 +972,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:7b:87</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -912,7 +982,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:90:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -922,7 +992,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:09:03:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -932,7 +1002,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:89:03:37</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -942,7 +1012,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:89:8c:37</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -952,7 +1022,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:0a:08:b8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -962,7 +1032,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:d2:8c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -972,7 +1042,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:f4:7c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:13Z</when>
@@ -982,7 +1052,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:7b:8c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:16Z</when>
@@ -992,7 +1062,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7b:88</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:16Z</when>
@@ -1002,7 +1072,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:bb:86</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:16Z</when>
@@ -1012,7 +1082,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:25:86:cc:00:f8</name>
+            <name>AUC_54_R</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:19Z</when>
@@ -1022,7 +1092,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:25:86:cc:07:b2</name>
+            <name>KCG_54</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:19Z</when>
@@ -1032,7 +1102,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:7a:18</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1042,7 +1112,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:cd:68</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1052,7 +1122,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 84:c9:b2:4a:e7:87</name>
+            <name>dlink</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1062,7 +1132,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:7a:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1072,7 +1142,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:7a:17</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1082,7 +1152,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:a9:27</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1092,7 +1162,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c4</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1102,7 +1172,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c5</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:22Z</when>
@@ -1112,7 +1182,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>ec:8c:a2:08:92:48</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:25Z</when>
@@ -1122,7 +1192,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:92:4c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:25Z</when>
@@ -1132,7 +1202,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:2c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:25Z</when>
@@ -1142,7 +1212,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:08:a9:28</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:25Z</when>
@@ -1152,7 +1222,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:dd:f4:f5:c5</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:28Z</when>
@@ -1162,7 +1232,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> f0:b0:52:3e:d6:f8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:28Z</when>
@@ -1172,7 +1242,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> e6:46:da:e4:84:c0</name>
+            <name>Aviramf phone</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:28Z</when>
@@ -1182,7 +1252,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:e0:83</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:28Z</when>
@@ -1192,7 +1262,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:88:7b:87</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:28Z</when>
@@ -1202,7 +1272,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:26:d2:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:28Z</when>
@@ -1212,7 +1282,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:16:05:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:40Z</when>
@@ -1222,7 +1292,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:2f:7f:6b:70</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:43Z</when>
@@ -1232,7 +1302,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>b2:6c:ac:a0:7b:4d</name>
+            <name>magneto</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:46Z</when>
@@ -1242,7 +1312,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:2f:7f:6b:70</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1252,7 +1322,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:44:58</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1262,7 +1332,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> c2:6c:ac:a0:7b:4d</name>
+            <name>outsense</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1272,7 +1342,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 90:6c:ac:a0:7b:4d</name>
+            <name>EVE</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1282,7 +1352,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:05:3c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1292,7 +1362,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 90:6c:ac:9f:fb:1f</name>
+            <name>Guest</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1302,7 +1372,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c4</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1312,7 +1382,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c5</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1322,7 +1392,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> d0:bf:9c:db:31:30</name>
+            <name>HP-Print-30-Officejet 7610</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1332,7 +1402,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> ec:8c:a2:26:d2:c8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:49Z</when>
@@ -1342,7 +1412,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>f8:e9:03:12:ef:3b</name>
+            <name>ShapeDo</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:52Z</when>
@@ -1352,7 +1422,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> a2:6c:ac:9f:fb:27</name>
+            <name>Neuropplied</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:52Z</when>
@@ -1362,7 +1432,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> c2:6c:ac:9f:fb:27</name>
+            <name>shapedo</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:52Z</when>
@@ -1372,7 +1442,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> b2:6c:ac:9f:fb:27</name>
+            <name>iagree</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:52Z</when>
@@ -1382,7 +1452,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 90:6c:ac:9f:fb:27</name>
+            <name>Guest</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:52Z</when>
@@ -1392,7 +1462,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:27:22:f3:e2:f3</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:55Z</when>
@@ -1402,7 +1472,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:a6:9a</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:55Z</when>
@@ -1412,7 +1482,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:06:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:55Z</when>
@@ -1422,7 +1492,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 58:70:c6:00:d0:f1</name>
+            <name>YICarCam_00d0f1</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:55Z</when>
@@ -1432,7 +1502,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>08:97:58:32:a6:3e</name>
+            <name>NIPPON_2516</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1442,7 +1512,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:2f:7f:6b:70</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1452,7 +1522,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> f8:a9:d0:66:06:4d</name>
+            <name>Orange G2_4113</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1462,7 +1532,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> b2:6c:ac:9f:fb:1f</name>
+            <name>iagree</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1472,7 +1542,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f5:e9:25</name>
+            <name>Afikim-73925</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1482,7 +1552,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:44:5c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1492,7 +1562,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:42:6c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1502,7 +1572,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:11:6b:2a:90:3c</name>
+            <name>Cartiheal</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1512,7 +1582,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:95:42:67</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1522,7 +1592,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:14:2f:a8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:38:58Z</when>
@@ -1532,7 +1602,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:dd:f5:e9:24</name>
+            <name>PEPWAVE_C99D</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:01Z</when>
@@ -1542,7 +1612,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f5:e9:25</name>
+            <name>Afikim-73925</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:01Z</when>
@@ -1552,7 +1622,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:06:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:01Z</when>
@@ -1562,7 +1632,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:ef:04</name>
+            <name>PEPWAVE_9481</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:01Z</when>
@@ -1572,7 +1642,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> b2:6c:ac:a0:7b:4d</name>
+            <name>magneto</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:01Z</when>
@@ -1582,7 +1652,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:42:68</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:01Z</when>
@@ -1592,7 +1662,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:dd:f4:ef:04</name>
+            <name>PEPWAVE_9481</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1602,7 +1672,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f5:06:a4</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1612,7 +1682,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f5:06:a5</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1622,7 +1692,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:44:58</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1632,7 +1702,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 58:70:c6:00:d0:f1</name>
+            <name>YICarCam_00d0f1</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1642,7 +1712,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 90:6c:ac:9f:fb:1f</name>
+            <name>Guest</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1652,7 +1722,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 90:6c:ac:a0:7b:4d</name>
+            <name>EVE</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1662,7 +1732,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:06:ec</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1672,7 +1742,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:2d:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1682,7 +1752,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:05:38</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:04Z</when>
@@ -1692,7 +1762,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:dd:f5:e9:25</name>
+            <name>Afikim-73925</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:07Z</when>
@@ -1702,7 +1772,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:a6:9a</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:07Z</when>
@@ -1712,7 +1782,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:22:f3:e2:f3</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:07Z</when>
@@ -1722,7 +1792,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:dd:f5:e9:25</name>
+            <name>Afikim-73925</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1732,7 +1802,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f5:e9:24</name>
+            <name>PEPWAVE_C99D</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1742,7 +1812,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:ef:c5</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1752,7 +1822,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:2f:7f:6b:70</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1762,7 +1832,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:0d:f0:3e:fa:ca</name>
+            <name>Gateway</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1772,7 +1842,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:42:68</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1782,7 +1852,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:14:2f:a8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1792,7 +1862,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:06:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1802,7 +1872,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:96:06:e7</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1812,7 +1882,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> b2:6c:ac:a0:7b:4d</name>
+            <name>magneto</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:10Z</when>
@@ -1822,7 +1892,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:27:22:f3:e2:f3</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1832,7 +1902,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 10:be:f5:36:02:e2</name>
+            <name>TOP-SECRET</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1842,7 +1912,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:06:ec</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1852,7 +1922,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:ef:c4</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1862,7 +1932,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c5</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1872,7 +1942,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:ef:04</name>
+            <name>PEPWAVE_9481</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1882,7 +1952,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c4</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:13Z</when>
@@ -1892,7 +1962,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>cc:b2:55:e7:7e:ba</name>
+            <name>Bezeq-NGN_E77EB9</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:16Z</when>
@@ -1902,7 +1972,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:f5:c4</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:16Z</when>
@@ -1912,7 +1982,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>00:1a:dd:f4:fc:84</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:19Z</when>
@@ -1922,7 +1992,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:fc:85</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:19Z</when>
@@ -1932,7 +2002,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> f8:e7:1e:33:87:38</name>
+            <name>Police_Shomron </name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:19Z</when>
@@ -1942,7 +2012,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:fc:64</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:19Z</when>
@@ -1952,7 +2022,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:1a:dd:f4:fc:65</name>
+            <name>Afikim_Wifi</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:19Z</when>
@@ -1962,7 +2032,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:96:06:e7</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:22Z</when>
@@ -1972,7 +2042,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:16:cd:18</name>
+            <name>IT-MNG</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:25Z</when>
@@ -1982,7 +2052,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:56:cd:18</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:25Z</when>
@@ -1992,7 +2062,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:19:13:fc:a4</name>
+            <name>KCG_20</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:25Z</when>
@@ -2002,7 +2072,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>f8:e7:1e:33:87:3c</name>
+            <name>Police_Shomron </name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:28Z</when>
@@ -2012,7 +2082,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:cd:1c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:28Z</when>
@@ -2022,7 +2092,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:fd:e8</name>
+            <name>IT-MNG</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:28Z</when>
@@ -2032,7 +2102,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:56:cd:18</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:31Z</when>
@@ -2042,7 +2112,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:16:cd:18</name>
+            <name>IT-MNG</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:31Z</when>
@@ -2052,7 +2122,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 00:27:19:13:fc:a4</name>
+            <name>KCG_20</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:31Z</when>
@@ -2062,7 +2132,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:55:fd:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:31Z</when>
@@ -2072,7 +2142,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:15:fd:ec</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:34Z</when>
@@ -2082,7 +2152,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:3a:28</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:34Z</when>
@@ -2092,7 +2162,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:36:9c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:34Z</when>
@@ -2102,7 +2172,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:36:98</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:34Z</when>
@@ -2112,7 +2182,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:96:cd:17</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:34Z</when>
@@ -2122,7 +2192,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>24:79:2a:2b:34:a8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:37Z</when>
@@ -2132,7 +2202,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:3a:2c</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:37Z</when>
@@ -2142,7 +2212,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:15:fd:ec</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:40Z</when>
@@ -2152,7 +2222,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:15:fd:e8</name>
+            <name>IT-MNG</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:40Z</when>
@@ -2162,7 +2232,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name> 1c:b9:c4:55:fd:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:40Z</when>
@@ -2172,7 +2242,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:16:05:78</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:43Z</when>
@@ -2182,7 +2252,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>1c:b9:c4:16:2b:e8</name>
+            <name>Ariel_University</name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:46Z</when>
@@ -2192,7 +2262,7 @@
             </Point>
         </Placemark>
         <Placemark>
-            <name>8c:0c:90:af:76:53</name>
+            <name></name>
             <open>1</open>
             <TimeStamp>
                 <when>2017-12-03T08:39:49Z</when>
