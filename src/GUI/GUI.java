@@ -42,7 +42,7 @@ public class GUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Home window = new Home();
+					GUI window = new GUI();
 					window.frmOop.setUndecorated(true);
 					window.frmOop.setVisible(true);
 				} catch (Exception e) {
@@ -55,7 +55,7 @@ public class GUI {
 	/**
 	 * Create the application.
 	 */
-	public Home() {
+	public GUI() {
 		initialize();
 	}
 

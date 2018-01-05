@@ -9,7 +9,7 @@ import de.micromata.opengis.kml.v_2_2_0.Document;
 import de.micromata.opengis.kml.v_2_2_0.Kml;
 import de.micromata.opengis.kml.v_2_2_0.Placemark;
 
-
+//TODO Move the function to Write_2_KML.
 public class Filter_2_KML {
 
 	public static void KML(ArrayList<Record_Filter> data, String file) throws IOException	

@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 
-
+/**
+ * Analyze Folder.
+ *
+ */
 public class Analayze_Files {
 
 	/**
@@ -12,7 +15,7 @@ public class Analayze_Files {
 	 * and sending them to Analyze function.
 	 */
 	public static void getFiles(File folder) throws IOException, ParseException {
-		
+
 		String[] files_Names = folder.list();
 
 		for(int i = 0; i < files_Names.length; i++) {
@@ -22,6 +25,6 @@ public class Analayze_Files {
 
 			}
 		}
-		
+
 	}
 }

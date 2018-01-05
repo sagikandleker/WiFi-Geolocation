@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 import Data_Setup.Frequency;
@@ -21,6 +20,10 @@ import Data_Setup.Signal;
 import Data_Setup.Time;
 import Data_Setup.Wifi;
 
+/**
+ * Reading from files in different styles.
+ *
+ */
 public class Read_From {
 
 	private static Mac mac;
@@ -30,10 +33,12 @@ public class Read_From {
 	private static Position position;
 	private static ID id;
 	private static Wifi wifi;
-	//TODO private static Time time;
 
 	/**
 	 * wigle_File read from CSV file all the data and copy it to ArrayList.
+	 * @param file name of file.
+	 * @throws IOException
+	 * @throws ParseException
 	 */
 	public static void wigle_File(File file)throws IOException, ParseException {
 
@@ -78,6 +83,14 @@ public class Read_From {
 		Write_2_CSV.Build_ArrayList(wigle_data);
 	}
 
+	/**
+	 * comb_File read from CSV file all the data and copy it to ArrayList.
+	 * @param file name of file.
+	 * @param name of the function who called to comb_File.
+	 * @return comb_data ArrayList approx Record.
+	 * @throws IOException
+	 * @throws ParseException
+	 */
 	public static ArrayList<Record> comb_File(File file, String name) throws IOException, ParseException {
 
 		ArrayList<Record> comb_data = new ArrayList<Record>();
@@ -119,6 +132,12 @@ public class Read_From {
 		return comb_data;
 	}
 
+	/**
+	 * nogps_File read from CSV file (Without the Position) all the data and copy it to ArrayList.
+	 * @param file name of file.
+	 * @return nogps_data ArrayList inside ArrayList approx Record_Mac_Signal.
+	 * @throws IOException
+	 */
 	public static ArrayList<ArrayList<Record_Mac_Signal>> nogps_File(File file) throws IOException {
 
 		Record_Mac_Signal rms;

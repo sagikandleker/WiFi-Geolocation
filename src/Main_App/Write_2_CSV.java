@@ -1,25 +1,27 @@
 package Main_App;
 
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import Data_Setup.Record;
 
 
-
 /**
- * Write_2_CSV Build sorted CSV file.
+ * This class building ArrayList with the All data and sorting them.
+ * Additionally, Write the sorted data to CSV File.
  */
 
 public class Write_2_CSV {
 
+	/**
+	 * All_Data_List this the ArrayList with all data.
+	 */
 	public static final ArrayList<Record> All_Data_List = new ArrayList<Record>();
-	
+
 	public static void clearData() {
 		All_Data_List.clear();
 	}
-	
+
 	/**
 	 *  Write_Headers Create CSV file with Headers.
 	 */
@@ -73,6 +75,11 @@ public class Write_2_CSV {
 
 	}
 
+	/**
+	 * Write the sorted data to file.
+	 * @param savefile name of file to save.
+	 * @throws IOException
+	 */
 	public static void Write(String savefile) throws IOException {
 		Write_2_CSV.Write_Headers(savefile);
 		StringBuilder stringBuilder = new StringBuilder();
