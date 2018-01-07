@@ -7,10 +7,9 @@ import javax.swing.JButton;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import Algorithms.Mac_Hashmap;
 import GUI.Algorithms.Algorithm1;
 import GUI.Algorithms.Algorithm2;
-import GUI.Filters.Filter;
+import GUI.Filters.GUI_Filter;
 import Main_App.Write_2_CSV;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -21,7 +20,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextField;
-
 
 public class GUI {
 
@@ -165,7 +163,7 @@ public class GUI {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
-				Filter filter = new Filter();
+				GUI_Filter filter = new GUI_Filter();
 				filter.setVisible(true);
 
 			}

@@ -23,7 +23,7 @@ import java.awt.event.ActionEvent;
 
 
 @SuppressWarnings("serial")
-public class Filter extends JFrame {
+public class GUI_Filter extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -325,7 +325,7 @@ public class Filter extends JFrame {
 
 						String id = textField.getText();
 						try {
-							GUI_Wrapper.idfilter(id);
+							GUI_Wrapper.idFilter(id);
 							GUI_Wrapper.saveTOFolder("idfilter");
 						} catch (IOException | ParseException e1) {
 							// TODO Auto-generated catch block
@@ -364,7 +364,7 @@ public class Filter extends JFrame {
 
 
 						try {
-							GUI_Wrapper.timefilter(begin_time, end_time);
+							GUI_Wrapper.timeFilter(begin_time, end_time);
 							GUI_Wrapper.saveTOFolder("timefilter");
 						} catch (ParseException | IOException e1) {
 							// TODO Auto-generated catch block
@@ -381,7 +381,7 @@ public class Filter extends JFrame {
 						String radius = textField_5.getText();
 
 						try {
-							GUI_Wrapper.positionfilter(lat, lon, radius);
+							GUI_Wrapper.positionFilter(lat, lon, radius);
 							GUI_Wrapper.saveTOFolder("positionfilter");
 						} catch (IOException | ParseException e1) {
 							// TODO Auto-generated catch block

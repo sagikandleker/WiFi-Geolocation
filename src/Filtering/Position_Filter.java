@@ -1,11 +1,7 @@
 package Filtering;
 
-import java.io.IOException;
-import java.text.ParseException;
-import java.util.Date;
-import Data_Setup.Position;
-import Data_Setup.SSID;
-import Data_Setup.Time;
+
+import Data_Setup.Record;
 import Main_App.Write_2_CSV;
 
 /**
@@ -14,34 +10,34 @@ import Main_App.Write_2_CSV;
  */
 public class Position_Filter {
 
-	public static void positionFilter(String lat, String lon,String radius) throws IOException, ParseException {
+	private String lat, lon, radius;
 
-		for (int i = 0; i < Write_2_CSV.All_Data_List.size(); i++) {
+	public Position_Filter(String lat, String lon, String radius) {
+		this.lat = lat;
+		this.lon = lon;
+		this.radius = radius;
+	}
 
-			double templat = (Write_2_CSV.All_Data_List.get(i).getPosition().getLat());
-			double templon = (Write_2_CSV.All_Data_List.get(i).getPosition().getLon());
-			double tempRadius = Double.parseDouble(radius);
-			double lat2 = Double.parseDouble(lat);
-			double lon2 = Double.parseDouble(lon);
+	/**
+	 * 
+	 * @param position
+	 */
+	public static void positionFilter(Position_Filter position) {
 
-			if(distance(lat2,lon2,templat,templon) <= tempRadius) {
+		double latD = Double.parseDouble(position.lat);
+		double lonD = Double.parseDouble(position.lon);
+		double tempR = Double.parseDouble(position.radius);
 
-				Date d = new Date(Write_2_CSV.All_Data_List.get(i).getDate().getTime());
-				Position position = Write_2_CSV.All_Data_List.get(i).getPosition();
-				Time time = new Time(d);
+		Write_2_CSV.All_Data_List.stream()
+		.forEach(p -> {if(distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR)
+			Filter.position_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()))
+			;
+		else {
+			return;
 
-				/**
-				 * Loop to run inside the line.
-				 */
-				for (int k = 0; k < Write_2_CSV.All_Data_List.get(i).getWifiList().size(); k++) {
-
-					SSID ssid = new SSID(Write_2_CSV.All_Data_List.get(i).getWifiList().get(k).getSsid());
-					Record_Filter record = new Record_Filter(time, position, ssid);
-
-					Filter.data.add(record);
-				}
-			}
 		}
+		});
+		System.out.println(Filter.position_data);
 	}
 
 	/**

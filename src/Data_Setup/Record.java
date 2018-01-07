@@ -22,10 +22,24 @@ public class Record {
 	 * @param time
 	 * @param position
 	 */
+	
 	public Record(Time date, Position position) {
 		this.date = date;
 		this.position = position;
 		this.WifiList = new ArrayList<Wifi>();
+	}
+	
+	public Record(Time date, Position position,ArrayList<Wifi> WifiList)
+	{
+		this.date = date;
+		this.position = position;
+		this.WifiList =  WifiList;
+	}
+	public Record(Date date, Position position,ArrayList<Wifi> WifiList)
+	{
+		this.date = new Time(date);
+		this.position = position;
+		this.WifiList =  WifiList;
 	}
 	
 	/**

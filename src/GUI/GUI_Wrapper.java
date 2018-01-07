@@ -1,7 +1,6 @@
 package GUI;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -139,27 +138,27 @@ public class GUI_Wrapper {
 			
 			if(name.equalsIgnoreCase("TimeFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.Filter_KML(Filter.data, savefile+".kml");
-				Filter.data.clear();
+				Write_2_KML.KML(Filter.time_data, savefile+".kml");
+				
 			}
 			
 			if(name.equalsIgnoreCase("IDFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.Filter_KML(Filter.data, savefile+".kml");
-				Filter.data.clear();
+				Write_2_KML.KML(Filter.id_data, savefile+".kml");
+				
 			}
 			
 			if(name.equalsIgnoreCase("PositionFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.Filter_KML(Filter.data, savefile+".kml");
-				Filter.data.clear();
+				Write_2_KML.KML(Filter.position_data, savefile+".kml");
+				
 			}
 
 
 		}
 	}
 
-	public static void saveTOFolder(String name) throws FileNotFoundException {
+	public static void saveTOFolder(String name) throws IOException {
 		
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new java.io.File("."));
@@ -176,21 +175,21 @@ public class GUI_Wrapper {
 		if(name.equalsIgnoreCase("idfilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			Write_2_KML.Filter_KML(Filter.data, savefolder + "\\ID_Filter.kml");
+			Write_2_KML.KML(Filter.id_data, savefolder + "\\ID_Filter.kml");
 			Filter.data.clear();
 		}
 		
 		if(name.equalsIgnoreCase("timefilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			Write_2_KML.Filter_KML(Filter.data, savefolder + "\\Time_Filter.kml");
+			Write_2_KML.KML(Filter.time_data, savefolder + "\\Time_Filter.kml");
 			Filter.data.clear();
 		}
 		
 		if(name.equalsIgnoreCase("positionfilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			Write_2_KML.Filter_KML(Filter.data, savefolder + "\\Position_Filter.kml");
+			Write_2_KML.KML(Filter.position_data, savefolder + "\\Position_Filter.kml");
 			Filter.data.clear();
 		}
 		
@@ -228,6 +227,12 @@ public class GUI_Wrapper {
 		Algorithm_Main.algo2_all(three_ms);
 	}
 
+	/**
+	 * Analyze Line with " " bugs, and send the MAC and Signal to Algorithm 2.
+	 * @param line from "nogps" file.
+	 * @throws IOException
+	 * @throws ParseException
+	 */
 	public static void algo2Line(String line) throws IOException, ParseException {
 
 		String word="";
@@ -265,20 +270,33 @@ public class GUI_Wrapper {
 	}
 	
 	
-	public static void idfilter(String id) throws IOException, ParseException
+	public static void idFilter(String id) throws IOException, ParseException
 	{
-		ID_Filter.idFilter(id);
+		ID_Filter f = new ID_Filter(id);
+		ID_Filter.idFilter(f);
 	}
 	
-	public static void timefilter(String begin,String end) throws ParseException, IOException
+	public static void timeFilter(String start,String end) throws ParseException, IOException
 	{
-		
-		Time_Filter.timeFilter(begin, end);
+		Time_Filter f = new Time_Filter(start, end);
+		Time_Filter.timeFilter(f);
 	}
 	
-	public static void positionfilter(String lat,String lon,String radius) throws IOException, ParseException
+	public static void positionFilter(String lat,String lon,String radius) throws IOException, ParseException
 	{
+		Position_Filter f = new Position_Filter(lat, lon, radius);
+		Position_Filter.positionFilter(f);
+	}
+	
+	public static void orFilter() {
 		
-		Position_Filter.positionFilter(lat, lon, radius);
+	}
+	
+	public static void andFilter() {
+		
+	}
+	
+	public static void notFilter() {
+		
 	}
 }
