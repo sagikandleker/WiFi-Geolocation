@@ -16,6 +16,11 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.ParseException;
 import javax.swing.SwingConstants;
+
+import Filtering.ID_Filter;
+import Filtering.Position_Filter;
+import Filtering.Time_Filter;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
@@ -42,6 +47,9 @@ public class GUI_Filter extends JFrame {
 	private JComboBox comboBox_9;
 	private JComboBox comboBox_10;
 	private JComboBox comboBox_11;
+	private ID_Filter idOb;
+	private Time_Filter timeOb;
+	private Position_Filter posOb;
 
 	/**
 	 * Launch the application.
@@ -320,13 +328,24 @@ public class GUI_Filter extends JFrame {
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(!rdbtnOnoff.isSelected()) {
+
 					if(rdbtnId.isSelected()) {
 
 						String id = textField.getText();
+						
+						
 						try {
+							if(!rdbtnOnoff.isSelected()){
 							GUI_Wrapper.idFilter(id);
 							GUI_Wrapper.saveTOFolder("idfilter");
+							}
+							else {
+								
+								idOb = new ID_Filter(id);
+								//GUI_Wrapper.idOrFilter(id);
+								//Filtering.ChooseBetweenFilter.OrFilter(p_f, i_f, t_f);
+							}
+							
 						} catch (IOException | ParseException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -364,8 +383,13 @@ public class GUI_Filter extends JFrame {
 
 
 						try {
+							if(!rdbtnOnoff.isSelected()){
 							GUI_Wrapper.timeFilter(begin_time, end_time);
 							GUI_Wrapper.saveTOFolder("timefilter");
+							}
+							else {
+								timeOb = new Time_Filter(begin_time, end_time);
+							}
 						} catch (ParseException | IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -381,15 +405,38 @@ public class GUI_Filter extends JFrame {
 						String radius = textField_5.getText();
 
 						try {
+							if(!rdbtnOnoff.isSelected()){
 							GUI_Wrapper.positionFilter(lat, lon, radius);
 							GUI_Wrapper.saveTOFolder("positionfilter");
+							}
+							else {
+								
+								posOb = new Position_Filter(lat, lon, radius);
+							}
 						} catch (IOException | ParseException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 					}
-
-				}
+					
+					if(rdbtnOnoff.isSelected()) {
+						if(radioButton_3.isSelected()) {
+							try {
+								GUI_Wrapper.orFilter(posOb, idOb, timeOb);
+								try {
+									GUI_Wrapper.saveTOKML("And");
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+							} catch (ParseException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+						}
+					}
+			
+					
 
 			}
 		});

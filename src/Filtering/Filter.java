@@ -13,7 +13,8 @@ public class Filter {
 	public static ArrayList<Record> id_data = new ArrayList<Record>();
 	public static ArrayList<Record> time_data = new ArrayList<Record>();
 	public static ArrayList<Record> position_data = new ArrayList<Record>();
-	
+	public static ArrayList<Record> or_data = new ArrayList<Record>();
+	public static ArrayList<Record> and_data = new ArrayList<Record>();
 	
 	
 }

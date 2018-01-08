@@ -35,4 +35,28 @@ public class Time_Filter {
 		.forEach(p -> Filter.time_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList())));
 
 	}
+
+	public String getStart() {
+		return start;
+	}
+
+	public void setStart(String start) {
+		this.start = start;
+	}
+
+	public String getEnd() {
+		return end;
+	}
+
+	public void setEnd(String end) {
+		this.end = end;
+	}
+
+	@Override
+	public String toString() {
+		return start + "," + end;
+	}
+
+	
+
 }

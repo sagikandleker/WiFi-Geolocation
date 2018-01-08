@@ -17,6 +17,43 @@ public class Position_Filter {
 		this.lon = lon;
 		this.radius = radius;
 	}
+	
+	
+
+	public String getLat() {
+		return lat;
+	}
+
+
+
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+
+
+
+	public String getLon() {
+		return lon;
+	}
+
+
+
+	public void setLon(String lon) {
+		this.lon = lon;
+	}
+
+
+
+	public String getRadius() {
+		return radius;
+	}
+
+
+
+	public void setRadius(String radius) {
+		this.radius = radius;
+	}
+
 
 	/**
 	 * 
@@ -30,8 +67,7 @@ public class Position_Filter {
 
 		Write_2_CSV.All_Data_List.stream()
 		.forEach(p -> {if(distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR)
-			Filter.position_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()))
-			;
+			Filter.position_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()));
 		else {
 			return;
 
@@ -48,7 +84,7 @@ public class Position_Filter {
 	 * @param lon2
 	 * @return
 	 */
-	private static double distance(double lat1, double lon1, double lat2, double lon2) {
+	public static double distance(double lat1, double lon1, double lat2, double lon2) {
 		double theta = lon1 - lon2;
 		double dist = Math.sin(deg2rad(lat1))*Math.sin(deg2rad(lat2))+Math.cos(deg2rad(lat1))*Math.cos(deg2rad(lat2))*Math.cos(deg2rad(theta));
 		dist = Math.acos(dist);
@@ -76,4 +112,15 @@ public class Position_Filter {
 	private static double rad2deg(double rad) {
 		return (rad * 180 / Math.PI);
 	}
+
+
+
+	@Override
+	public String toString() {
+		return lat + "," + lon + "," + radius;
+	}
+	
+	
+	
+	
 }

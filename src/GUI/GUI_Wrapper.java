@@ -12,6 +12,7 @@ import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
+import Filtering.ChooseBetweenFilter;
 import Filtering.Filter;
 import Filtering.ID_Filter;
 import Filtering.Position_Filter;
@@ -32,8 +33,7 @@ public class GUI_Wrapper {
 	public static File savefolder = new File("");
 	public static File algorithm1 = new File("");
 	public static File algorithm2 = new File("");
-
-
+	
 	public static void choosefolder() throws IOException, ParseException {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new java.io.File("."));
@@ -153,6 +153,13 @@ public class GUI_Wrapper {
 				Write_2_KML.KML(Filter.position_data, savefile+".kml");
 				
 			}
+			
+			if(name.equalsIgnoreCase("And")) {
+				savefile = fileChooser.getSelectedFile();
+				Write_2_KML.KML(Filter.and_data, savefile+".kml");
+				Filter.and_data.clear();
+				
+			}
 
 
 		}
@@ -192,9 +199,7 @@ public class GUI_Wrapper {
 			Write_2_KML.KML(Filter.position_data, savefolder + "\\Position_Filter.kml");
 			Filter.data.clear();
 		}
-		
-		
-		
+
 	}
 
 	public static void exportAlgo1() throws IOException, ParseException {
@@ -288,11 +293,13 @@ public class GUI_Wrapper {
 		Position_Filter.positionFilter(f);
 	}
 	
-	public static void orFilter() {
-		
+	public static void orFilter(Position_Filter posOb, ID_Filter idOb, Time_Filter timeOb) throws ParseException {
+
+		ChooseBetweenFilter.OrFilter(posOb, idOb, timeOb);
 	}
 	
 	public static void andFilter() {
+		
 		
 	}
 	

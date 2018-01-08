@@ -16,6 +16,15 @@ public class ID_Filter {
 		this.nameOfDevice = id;
 	}
 	
+	public String getNameOfDevice() {
+		return nameOfDevice;
+	}
+
+	public void setNameOfDevice(String nameOfDevice) {
+		this.nameOfDevice = nameOfDevice;
+	}
+
+
 	/**
 	 * 
 	 * @param id
@@ -28,4 +37,11 @@ public class ID_Filter {
 		.forEach(p -> Filter.id_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList())));
 		
 	}
+
+	@Override
+	public String toString() {
+		return nameOfDevice;
+	}
+	
+	
 }
