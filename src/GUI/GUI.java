@@ -24,8 +24,6 @@ import javax.swing.JTextField;
 public class GUI {
 
 	private JFrame frmOop;
-
-	int xx, xy;
 	private JTextField textField;
 
 	/**
@@ -231,10 +229,6 @@ public class GUI {
 		});
 		btnInfo.setBounds(377, 275, 162, 27);
 		frmOop.getContentPane().add(btnInfo);
-		
-		JLabel label = new JLabel("");
-		label.setBounds(227, 148, 123, 96);
-		frmOop.getContentPane().add(label);
 		frmOop.setBackground(Color.WHITE);
 		frmOop.setBounds(100, 100, 573, 380);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

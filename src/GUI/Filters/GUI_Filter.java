@@ -50,7 +50,7 @@ public class GUI_Filter extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Filter frame = new Filter();
+					GUI_Filter frame = new GUI_Filter();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -62,7 +62,7 @@ public class GUI_Filter extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Filter() {
+	public GUI_Filter() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 768, 622);
 		contentPane = new JPanel();
@@ -467,6 +467,20 @@ public class GUI_Filter extends JFrame {
 		lblEnd.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblEnd.setBounds(234, 234, 97, 20);
 		contentPane.add(lblEnd);
+		
+		JButton btnNewButton = new JButton("Map");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				GUI_Map map = new GUI_Map();
+				//map.setVisible(true);
+				
+				
+			}
+		});
+		btnNewButton.setBounds(586, 365, 135, 96);
+		contentPane.add(btnNewButton);
 
 
 	}
