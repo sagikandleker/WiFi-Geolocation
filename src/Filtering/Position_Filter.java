@@ -37,7 +37,7 @@ public class Position_Filter {
 
 		}
 		});
-		System.out.println(Filter.position_data);
+		
 	}
 
 	/**
