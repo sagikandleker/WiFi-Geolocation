@@ -1,8 +1,7 @@
 package Filtering;
 
-
 import Data_Setup.Record;
-import Main_App.Write_2_CSV;
+import db.Database;
 
 /**
  * Filtering by Lat and Lon by radius.
@@ -10,47 +9,53 @@ import Main_App.Write_2_CSV;
  */
 public class Position_Filter {
 
-	private String lat, lon, radius;
+	private double lat, lon, radius;
 
 	public Position_Filter(String lat, String lon, String radius) {
-		this.lat = lat;
-		this.lon = lon;
-		this.radius = radius;
+		this.lat = Double.parseDouble(lat);
+		this.lon = Double.parseDouble(lon);
+		this.radius = Double.parseDouble(radius);
 	}
-	
-	
 
-	public String getLat() {
+	public Position_Filter() {
+		this.lat = 0;
+		this.lon = 0;
+		this.radius = 0;
+	}
+
+
+
+	public double getLat() {
 		return lat;
 	}
 
 
 
-	public void setLat(String lat) {
+	public void setLat(double lat) {
 		this.lat = lat;
 	}
 
 
 
-	public String getLon() {
+	public double getLon() {
 		return lon;
 	}
 
 
 
-	public void setLon(String lon) {
+	public void setLon(double lon) {
 		this.lon = lon;
 	}
 
 
 
-	public String getRadius() {
+	public double getRadius() {
 		return radius;
 	}
 
 
 
-	public void setRadius(String radius) {
+	public void setRadius(double radius) {
 		this.radius = radius;
 	}
 
@@ -61,11 +66,11 @@ public class Position_Filter {
 	 */
 	public static void positionFilter(Position_Filter position) {
 
-		double latD = Double.parseDouble(position.lat);
-		double lonD = Double.parseDouble(position.lon);
-		double tempR = Double.parseDouble(position.radius);
+		double latD = position.lat;
+		double lonD = position.lon;
+		double tempR = position.radius;
 
-		Write_2_CSV.All_Data_List.stream()
+		Database.All_Data.stream()
 		.forEach(p -> {if(distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR)
 			Filter.position_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()));
 		else {
@@ -73,7 +78,7 @@ public class Position_Filter {
 
 		}
 		});
-		
+
 	}
 
 	/**
@@ -118,9 +123,5 @@ public class Position_Filter {
 	@Override
 	public String toString() {
 		return lat + "," + lon + "," + radius;
-	}
-	
-	
-	
-	
+	}	
 }

@@ -1,4 +1,4 @@
-package GUI;
+package GUI.Panels;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JScrollPane;
 
-public class Info extends JFrame {
+public class Panel_Info extends JFrame {
 //App Information:
 	//How does it work? Simple you add folder with Wigle files or just one Wigle file and you can choose what to do next.
 
@@ -24,7 +24,7 @@ public class Info extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Info frame = new Info();
+					Panel_Info frame = new Panel_Info();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class Info extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Info() {
+	public Panel_Info() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 550, 409);
 		getContentPane().setLayout(null);

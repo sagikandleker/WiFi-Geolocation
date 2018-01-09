@@ -1,13 +1,13 @@
-package GUI.Algorithms;
-
+package GUI.Panels;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import Algorithms.Algorithm_2;
 import Algorithms.Mac_Hashmap;
 import GUI.GUI_Wrapper;
+import db.Database;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -22,9 +22,11 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JEditorPane;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
-public class Algorithm2 extends JFrame {
+public class Panel_Algorithm_2 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -43,6 +45,7 @@ public class Algorithm2 extends JFrame {
 	private JButton btnNewButton_1;
 	private JButton btnAddCombFile;
 	private JButton btnSubmit;
+	private JEditorPane editorPane;
 
 	/**
 	 * Launch the application.
@@ -51,7 +54,7 @@ public class Algorithm2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Algorithm2 frame = new Algorithm2();
+					Panel_Algorithm_2 frame = new Panel_Algorithm_2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -63,7 +66,7 @@ public class Algorithm2 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Algorithm2() {
+	public Panel_Algorithm_2() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 548, 685);
 		contentPane = new JPanel();
@@ -323,7 +326,7 @@ public class Algorithm2 extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(67, 518, 411, 29);
+		btnNewButton.setBounds(48, 544, 411, 29);
 		contentPane.add(btnNewButton);
 
 		btnNewButton_1 = new JButton("Add nogps File");
@@ -350,7 +353,7 @@ public class Algorithm2 extends JFrame {
 		});
 
 
-		btnNewButton_1.setBounds(97, 473, 170, 29);
+		btnNewButton_1.setBounds(78, 499, 170, 29);
 		contentPane.add(btnNewButton_1);
 
 		btnAddCombFile = new JButton("Add comb File");
@@ -368,7 +371,7 @@ public class Algorithm2 extends JFrame {
 
 			}
 		});
-		btnAddCombFile.setBounds(282, 473, 181, 29);
+		btnAddCombFile.setBounds(263, 499, 181, 29);
 		contentPane.add(btnAddCombFile);
 
 		btnSubmit = new JButton("Submit");
@@ -396,10 +399,10 @@ public class Algorithm2 extends JFrame {
 
 					try {
 						GUI_Wrapper.algo2Short(Allm_Alls);
-						textField_2.setText(""+Algorithm_2.final_pos_array.get(0).alt);
-						textField_5.setText(""+Algorithm_2.final_pos_array.get(0).lon);
-						textField_1.setText(""+Algorithm_2.final_pos_array.get(0).lat);
-						Algorithm_2.final_pos_array.clear();
+						textField_2.setText(""+Database.final_algo2_data.get(0).alt);
+						textField_5.setText(""+Database.final_algo2_data.get(0).lon);
+						textField_1.setText(""+Database.final_algo2_data.get(0).lat);
+						Database.final_algo2_data.clear();
 						Mac_Hashmap.hash.clear();
 					} catch (IOException | ParseException e1) {
 						// TODO Auto-generated catch block
@@ -408,14 +411,14 @@ public class Algorithm2 extends JFrame {
 
 				}
 				else if(jradio.isSelected()) {
-					
+
 					String line = textField.getText();
 					try {
 						GUI_Wrapper.algo2Line(line);
-						textField_2.setText(""+Algorithm_2.final_pos_array.get(0).alt);
-						textField_5.setText(""+Algorithm_2.final_pos_array.get(0).lon);
-						textField_1.setText(""+Algorithm_2.final_pos_array.get(0).lat);
-						Algorithm_2.final_pos_array.clear();
+						textField_2.setText(""+Database.final_algo2_data.get(0).alt);
+						textField_5.setText(""+Database.final_algo2_data.get(0).lon);
+						textField_1.setText(""+Database.final_algo2_data.get(0).lat);
+						Database.final_algo2_data.clear();
 						Mac_Hashmap.hash.clear();
 					} catch (IOException | ParseException e1) {
 						// TODO Auto-generated catch block
@@ -427,8 +430,14 @@ public class Algorithm2 extends JFrame {
 			}
 		});
 
-		btnSubmit.setBounds(183, 411, 197, 29);
+		btnSubmit.setBounds(164, 437, 197, 29);
 		contentPane.add(btnSubmit);
+
+		editorPane = new JEditorPane();
+		editorPane.setEditable(false);
+		editorPane.setBackground(Color.DARK_GRAY);
+		editorPane.setBounds(173, 49, 152, 2);
+		contentPane.add(editorPane);
 
 	}
 }

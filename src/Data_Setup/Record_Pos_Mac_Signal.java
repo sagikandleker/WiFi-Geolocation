@@ -73,6 +73,4 @@ public class Record_Pos_Mac_Signal {
 	public String toString() {
 		return line + "," + position + "," + mac + "," + signal;
 	}
-	
-	
 }

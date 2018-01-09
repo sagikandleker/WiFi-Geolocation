@@ -52,7 +52,5 @@ public class Time {
 	public String toString() {
 		return TimeFormater.format(time);
 	}
-
-	
 }
 

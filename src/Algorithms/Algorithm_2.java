@@ -1,6 +1,5 @@
 package Algorithms;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +9,7 @@ import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Record_Pos_Mac_Signal;
 import Data_Setup.Record_Pos_Wifi_Time;
 import Data_Setup.Signal;
-import GUI.GUI_Wrapper;
+import db.Database;
 
 
 /**
@@ -24,7 +23,7 @@ public class Algorithm_2 {
 			mindiff=3, nosignal=0.32344759,
 			diffnosignal=100;
 
-	public static ArrayList<Position> final_pos_array  = new ArrayList<Position>();
+	
 
 	/**
 	 * Taking three pairs (MAC with Signal) and send them to Algorithm 2 function with the HashMap.
@@ -58,7 +57,7 @@ public class Algorithm_2 {
 			Algo2(hash, three);
 		}
 
-		Write();
+		Writing.CSVFile.write_Algo2(Database.final_algo2_data);
 
 	}
 
@@ -117,7 +116,7 @@ public class Algorithm_2 {
 		
 		if(comb_data.size() == 1) {
 			position = new Position(comb_data.get(size).getPosition());
-			final_pos_array.add(position);
+			Database.final_algo2_data.add(position);
 
 		}
 		else {
@@ -249,14 +248,14 @@ public class Algorithm_2 {
 			size++;
 		}
 
-		final_pos_array.add(position);
+		Database.final_algo2_data.add(position);
 	}
 	
 	/**
 	 * Writing the Positions for each line from the "nogps" file after the calculation to CSV file.
 	 * @throws IOException
 	 */
-	public static void Write() throws IOException {
+	/*public static void Write() throws IOException {
 
 		StringBuilder stringBuilder = new StringBuilder();
 		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm2+".csv");
@@ -271,5 +270,5 @@ public class Algorithm_2 {
 		fw.close();
 		final_pos_array.clear();
 
-	}
+	}*/
 }

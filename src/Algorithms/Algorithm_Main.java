@@ -4,12 +4,11 @@ package Algorithms;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
-
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import GUI.GUI_Wrapper;
-import Main_App.Read_From;
-import Main_App.Write_2_CSV;
+import Writing.CSVFile;
+import db.Database;
 
 public class Algorithm_Main {
 
@@ -17,16 +16,16 @@ public class Algorithm_Main {
 
 		//Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
 		Algorithm_1.AnalyzeMAC();
-		Algorithm_1.Write();
+		CSVFile.write_Algo1(Database.final_algo1_data);
 	}
 
 	public static Position algo1_Mac(String mac) throws IOException {
-		Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
+		Mac_Hashmap.Build_Hash(Database.All_Data, "Algo1");
 		Algorithm_1.AnalyzeMAC();
-		for (int i = 0; i < Algorithm_1.rpwt.size(); i++) {
+		for (int i = 0; i < Database.final_algo1_data.size(); i++) {
 
-			if(Algorithm_1.rpwt.get(i).getWifi().getMac().getMac().equalsIgnoreCase(mac)) {
-				return Algorithm_1.rpwt.get(i).getPosition();
+			if(Database.final_algo1_data.get(i).getWifi().getMac().getMac().equalsIgnoreCase(mac)) {
+				return Database.final_algo1_data.get(i).getPosition();
 			}
 		}
 		return new Position();
@@ -34,13 +33,13 @@ public class Algorithm_Main {
 
 	public static void ChooseAlgo2() throws IOException, ParseException {
 
-		Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Read_From.comb_File(GUI_Wrapper.combfile,"noHeaders")), "Algo2"),Read_From.nogps_File(GUI_Wrapper.nogpsfile));
+		Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Reading.CombFile.read(GUI_Wrapper.combfile,"noHeaders")), "Algo2"),Reading.NogpsFile.read(GUI_Wrapper.nogpsfile));
 
 	}
 
 	public static void algo2_all(ArrayList<Record_Mac_Signal> mac_signal) throws IOException, ParseException {
 
-		Algorithm_2.Algo2((Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo2")),mac_signal);
+		Algorithm_2.Algo2((Mac_Hashmap.Build_Hash(Database.All_Data, "Algo2")),mac_signal);
 
 	}
 

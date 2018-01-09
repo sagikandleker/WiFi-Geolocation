@@ -1,4 +1,4 @@
-package Main_App;
+package Writing;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import de.micromata.opengis.kml.v_2_2_0.Placemark;
  * Write to KML File. 
  *
  */
-public class Write_2_KML {
+public class KMLFile {
 
 	/**
 	 * Write to KML file from "All_Data_List" ArrayList (All the data).

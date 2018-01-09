@@ -1,10 +1,11 @@
-package GUI.Filters;
+package GUI.Panels;
 
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import GUI.GUI_Wrapper;
@@ -25,10 +26,13 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.JTree;
+import javax.swing.JEditorPane;
 
 
 @SuppressWarnings("serial")
-public class GUI_Filter extends JFrame {
+public class Panel_Filters extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -58,7 +62,7 @@ public class GUI_Filter extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI_Filter frame = new GUI_Filter();
+					Panel_Filters frame = new Panel_Filters();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -70,7 +74,7 @@ public class GUI_Filter extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUI_Filter() {
+	public Panel_Filters() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 768, 622);
 		contentPane = new JPanel();
@@ -79,7 +83,7 @@ public class GUI_Filter extends JFrame {
 		contentPane.setLayout(null);
 
 		JRadioButton radioButton_3 = new JRadioButton("OR");
-		radioButton_3.setFont(new Font("Tahoma", Font.BOLD, 18));
+		radioButton_3.setFont(new Font("Segoe UI Semilight", Font.BOLD | Font.ITALIC, 18));
 		radioButton_3.setActionCommand("enable");
 		radioButton_3.setEnabled(false);
 
@@ -88,16 +92,17 @@ public class GUI_Filter extends JFrame {
 
 
 		JRadioButton radioButton_4 = new JRadioButton("AND");
-		radioButton_4.setFont(new Font("Tahoma", Font.BOLD, 18));
+		radioButton_4.setFont(new Font("Segoe UI Semilight", Font.BOLD | Font.ITALIC, 18));
 		radioButton_4.setBounds(177, 422, 83, 29);
 		contentPane.add(radioButton_4);
 		radioButton_4.setEnabled(false);
 
 		JRadioButton radioButton_5 = new JRadioButton("NOT");
-		radioButton_5.setFont(new Font("Tahoma", Font.BOLD, 18));
+		radioButton_5.setFont(new Font("Segoe UI Semilight", Font.BOLD | Font.ITALIC, 18));
 		radioButton_5.setBounds(78, 422, 97, 29);
 		contentPane.add(radioButton_5);
 		radioButton_5.setEnabled(false);
+		radioButton_5.setSelected(true);
 
 		ButtonGroup bt1=new ButtonGroup();
 		bt1.add(radioButton_3);
@@ -107,7 +112,7 @@ public class GUI_Filter extends JFrame {
 
 
 		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textField.setFont(new Font("Segoe UI Semilight", Font.BOLD, 15));
 		textField.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -123,7 +128,7 @@ public class GUI_Filter extends JFrame {
 
 
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Time");
-		rdbtnNewRadioButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		rdbtnNewRadioButton.setFont(new Font("Segoe UI Semilight", Font.BOLD, 18));
 		rdbtnNewRadioButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -171,7 +176,7 @@ public class GUI_Filter extends JFrame {
 		rdbtnNewRadioButton.setSelected(true);
 
 		JRadioButton rdbtnId = new JRadioButton("ID");
-		rdbtnId.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		rdbtnId.setFont(new Font("Segoe UI Semilight", Font.BOLD, 18));
 		rdbtnId.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -205,7 +210,7 @@ public class GUI_Filter extends JFrame {
 
 
 		JRadioButton rdbtnPosition = new JRadioButton("Position");
-		rdbtnPosition.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		rdbtnPosition.setFont(new Font("Segoe UI Semilight", Font.BOLD, 18));
 		rdbtnPosition.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -254,7 +259,7 @@ public class GUI_Filter extends JFrame {
 
 
 		textField_3 = new JTextField();
-		textField_3.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textField_3.setFont(new Font("Segoe UI Semilight", Font.BOLD, 15));
 		textField_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -268,7 +273,7 @@ public class GUI_Filter extends JFrame {
 
 
 		textField_4 = new JTextField();
-		textField_4.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textField_4.setFont(new Font("Segoe UI Semilight", Font.BOLD, 15));
 		textField_4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -282,7 +287,7 @@ public class GUI_Filter extends JFrame {
 
 
 		textField_5 = new JTextField();
-		textField_5.setFont(new Font("Tahoma", Font.BOLD, 15));
+		textField_5.setFont(new Font("Segoe UI Semilight", Font.BOLD, 15));
 		textField_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -295,7 +300,7 @@ public class GUI_Filter extends JFrame {
 		textField_5.setText("Radius");
 
 		JLabel lblFilters = new JLabel("Filters");
-		lblFilters.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFilters.setFont(new Font("Segoe UI Semilight", Font.BOLD, 20));
 		lblFilters.setBounds(341, 16, 145, 20);
 		contentPane.add(lblFilters);
 
@@ -319,7 +324,7 @@ public class GUI_Filter extends JFrame {
 				}
 			}
 		});
-		rdbtnOnoff.setFont(new Font("Tahoma", Font.BOLD, 18));
+		rdbtnOnoff.setFont(new Font("Segoe UI Semilight", Font.BOLD, 18));
 		rdbtnOnoff.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnOnoff.setBounds(11, 392, 261, 25);
 		contentPane.add(rdbtnOnoff);
@@ -329,51 +334,61 @@ public class GUI_Filter extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-					if(rdbtnId.isSelected()) {
+				if(rdbtnId.isSelected()) {
 
-						String id = textField.getText();
-						
-						
+					String id = textField.getText();
+
+					if(id.equalsIgnoreCase("Name Of Device") || id.equalsIgnoreCase("")) {
+						JOptionPane.showMessageDialog(null, "Invalid ID Input", "Message", JOptionPane.INFORMATION_MESSAGE);
+
+					}
+					else {
+
 						try {
 							if(!rdbtnOnoff.isSelected()){
-							GUI_Wrapper.idFilter(id);
-							GUI_Wrapper.saveTOFolder("idfilter");
+								GUI_Wrapper.idFilter(id);
+								GUI_Wrapper.saveTOFolder("idfilter");
 							}
 							else {
-								
-								idOb = new ID_Filter(id);
-								//GUI_Wrapper.idOrFilter(id);
-								//Filtering.ChooseBetweenFilter.OrFilter(p_f, i_f, t_f);
+
+								idOb = new ID_Filter(id);	
 							}
-							
+
 						} catch (IOException | ParseException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 
+					}
+				}
+				else if(!rdbtnId.isSelected()) {
+					idOb = new ID_Filter();
+				}
 
-					}	
+				if(rdbtnNewRadioButton.isSelected())	
+				{
+					String begin_hour = (String)comboBox.getSelectedItem();
+					String begin_minute = (String)comboBox_1.getSelectedItem();
+					String begin_second = (String)comboBox_2.getSelectedItem();
+					String begin_day = (String)comboBox_3.getSelectedItem();
+					String begin_month = (String)comboBox_4.getSelectedItem();
+					String begin_year = (String)comboBox_5.getSelectedItem();
 
-					if(rdbtnNewRadioButton.isSelected())	
-					{
-						String begin_hour = (String)comboBox.getSelectedItem();
-						String begin_minute = (String)comboBox_1.getSelectedItem();
-						String begin_second = (String)comboBox_2.getSelectedItem();
-						String begin_day = (String)comboBox_3.getSelectedItem();
-						String begin_month = (String)comboBox_4.getSelectedItem();
-						String begin_year = (String)comboBox_5.getSelectedItem();
+					String end_hour = (String)comboBox_9.getSelectedItem();
+					String end_minute = (String)comboBox_10.getSelectedItem();
+					String end_second = (String)comboBox_11.getSelectedItem();
+					String end_day = (String)comboBox_6.getSelectedItem();
+					String end_month = (String)comboBox_7.getSelectedItem();
+					String end_year = (String)comboBox_8.getSelectedItem();
 
-						String end_hour = (String)comboBox_9.getSelectedItem();
-						String end_minute = (String)comboBox_10.getSelectedItem();
-						String end_second = (String)comboBox_11.getSelectedItem();
-						String end_day = (String)comboBox_6.getSelectedItem();
-						String end_month = (String)comboBox_7.getSelectedItem();
-						String end_year = (String)comboBox_8.getSelectedItem();
+					if(begin_hour=="Hour" || begin_minute=="Minute" || begin_second=="Second" || begin_day=="Day"
+							|| begin_month=="Month" || begin_year=="Year" || end_hour=="Hour"
+							|| end_minute=="Minute" || end_second=="Second" || end_day=="Day"
+							|| end_month=="Month" || end_year=="Year") {
 
-						if(begin_hour=="" || begin_minute=="" || begin_second=="" || begin_day==""
-								|| begin_month=="" || begin_year=="" || end_hour==""
-								|| end_minute=="" || end_second=="" || end_day==""
-								|| end_month=="" || end_year=="") System.exit(1);
+						JOptionPane.showMessageDialog(null, "Invalid Time Input", "Message", JOptionPane.INFORMATION_MESSAGE);
+					}
+					else {
 
 						String begin_time = begin_year + "-" + begin_month + "-" + begin_day +" "+
 								begin_hour +":"+ begin_minute +":"+ begin_second;
@@ -384,8 +399,8 @@ public class GUI_Filter extends JFrame {
 
 						try {
 							if(!rdbtnOnoff.isSelected()){
-							GUI_Wrapper.timeFilter(begin_time, end_time);
-							GUI_Wrapper.saveTOFolder("timefilter");
+								GUI_Wrapper.timeFilter(begin_time, end_time);
+								GUI_Wrapper.saveTOFolder("timefilter");
 							}
 							else {
 								timeOb = new Time_Filter(begin_time, end_time);
@@ -395,22 +410,33 @@ public class GUI_Filter extends JFrame {
 							e1.printStackTrace();
 						}
 					}
+				}
+				else if(!rdbtnNewRadioButton.isSelected()) {
+					timeOb = new Time_Filter("" , "");
+				}
 
 
+				if(rdbtnPosition.isSelected())
+				{
+					String lat = textField_3.getText();
+					String lon = textField_4.getText();
+					String radius = textField_5.getText();
 
-					if(rdbtnPosition.isSelected())
-					{
-						String lat = textField_3.getText();
-						String lon = textField_4.getText();
-						String radius = textField_5.getText();
+					if(lat.equalsIgnoreCase("Lat") || lat.equalsIgnoreCase("") 
+							|| lon.equalsIgnoreCase("Lon") || lon.equalsIgnoreCase("")
+							|| radius.equalsIgnoreCase("Radius") || radius.equalsIgnoreCase("")) {
 
+						JOptionPane.showMessageDialog(null, "Invalid Position Input", "Message", JOptionPane.INFORMATION_MESSAGE);
+
+					}
+					else {
 						try {
 							if(!rdbtnOnoff.isSelected()){
-							GUI_Wrapper.positionFilter(lat, lon, radius);
-							GUI_Wrapper.saveTOFolder("positionfilter");
+								GUI_Wrapper.positionFilter(lat, lon, radius);
+								GUI_Wrapper.saveTOFolder("positionfilter");
 							}
 							else {
-								
+
 								posOb = new Position_Filter(lat, lon, radius);
 							}
 						} catch (IOException | ParseException e1) {
@@ -418,25 +444,59 @@ public class GUI_Filter extends JFrame {
 							e1.printStackTrace();
 						}
 					}
-					
-					if(rdbtnOnoff.isSelected()) {
-						if(radioButton_3.isSelected()) {
+				}
+				else if(!rdbtnPosition.isSelected()) {
+					posOb = new Position_Filter();
+				}
+
+				if(rdbtnOnoff.isSelected()) {
+					if(radioButton_4.isSelected()) {
+						try {
+							GUI_Wrapper.Filters(posOb, idOb, timeOb, "And");
 							try {
-								GUI_Wrapper.orFilter(posOb, idOb, timeOb);
-								try {
-									GUI_Wrapper.saveTOKML("And");
-								} catch (IOException e1) {
-									// TODO Auto-generated catch block
-									e1.printStackTrace();
-								}
-							} catch (ParseException e1) {
+								GUI_Wrapper.saveTOKML("And");
+							} catch (IOException e1) {
 								// TODO Auto-generated catch block
 								e1.printStackTrace();
 							}
+						} catch (ParseException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
 						}
 					}
-			
-					
+
+					else if(radioButton_3.isSelected()) {
+						try {
+							GUI_Wrapper.Filters(posOb, idOb, timeOb, "Or");
+							try {
+								GUI_Wrapper.saveTOKML("Or");
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+						} catch (ParseException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+
+					else if(radioButton_5.isSelected()) {
+						try {
+							GUI_Wrapper.Filters(posOb, idOb, timeOb, "Not");
+							try {
+								GUI_Wrapper.saveTOKML("Not");
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+						} catch (ParseException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+				}
+
+
 
 			}
 		});
@@ -506,28 +566,20 @@ public class GUI_Filter extends JFrame {
 		contentPane.add(comboBox_11);
 
 		JLabel lblNewLabel = new JLabel("Begin");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel.setFont(new Font("Segoe UI Semilight", Font.BOLD | Font.ITALIC, 18));
 		lblNewLabel.setBounds(234, 99, 97, 20);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblEnd = new JLabel("End");
-		lblEnd.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblEnd.setFont(new Font("Segoe UI Semilight", Font.BOLD | Font.ITALIC, 18));
 		lblEnd.setBounds(234, 234, 97, 20);
 		contentPane.add(lblEnd);
-		
-		JButton btnNewButton = new JButton("Map");
-		btnNewButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				
-				GUI_Map map = new GUI_Map();
-				//map.setVisible(true);
-				
-				
-			}
-		});
-		btnNewButton.setBounds(586, 365, 135, 96);
-		contentPane.add(btnNewButton);
+
+		JEditorPane editorPane = new JEditorPane();
+		editorPane.setBackground(Color.DARK_GRAY);
+		editorPane.setBounds(322, 40, 97, 2);
+		contentPane.add(editorPane);
+		editorPane.setEditable(false);
 
 
 	}

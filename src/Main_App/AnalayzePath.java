@@ -8,7 +8,7 @@ import java.text.ParseException;
  * Analyze Folder.
  *
  */
-public class Analayze_Files {
+public class AnalayzePath {
 
 	/**
 	 *  getFiles Call to Write_Headers function and check all the CSV files in the folder,
@@ -21,7 +21,7 @@ public class Analayze_Files {
 		for(int i = 0; i < files_Names.length; i++) {
 			if(files_Names[i].startsWith("WigleWifi") && files_Names[i].endsWith(".csv")) {
 				File file = new File(folder+"/"+files_Names[i]);
-				Read_From.wigle_File(file);
+				Reading.WigleFile.read(file);
 
 			}
 		}

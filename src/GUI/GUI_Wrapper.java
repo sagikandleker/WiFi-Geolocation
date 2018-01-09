@@ -12,15 +12,17 @@ import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
-import Filtering.ChooseBetweenFilter;
+import Filtering.And_Filter;
 import Filtering.Filter;
 import Filtering.ID_Filter;
+import Filtering.Not_Filter;
+import Filtering.Or_Filter;
 import Filtering.Position_Filter;
 import Filtering.Time_Filter;
-import Main_App.Analayze_Files;
-import Main_App.Read_From;
-import Main_App.Write_2_CSV;
-import Main_App.Write_2_KML;
+import Main_App.AnalayzePath;
+import Writing.CSVFile;
+import Writing.KMLFile;
+import db.Database;
 
 public class GUI_Wrapper {
 
@@ -33,7 +35,8 @@ public class GUI_Wrapper {
 	public static File savefolder = new File("");
 	public static File algorithm1 = new File("");
 	public static File algorithm2 = new File("");
-	
+
+
 	public static void choosefolder() throws IOException, ParseException {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new java.io.File("."));
@@ -53,8 +56,8 @@ public class GUI_Wrapper {
 			folder = folder.getParentFile();
 		}
 
-		Analayze_Files.getFiles(folder);
-		Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
+		AnalayzePath.getFiles(folder);
+		Mac_Hashmap.Build_Hash(Database.All_Data, "Algo1");
 
 	}
 
@@ -76,7 +79,7 @@ public class GUI_Wrapper {
 		if(name.equalsIgnoreCase("mainfile"))
 		{
 			file = chooser.getSelectedFile();
-			Read_From.wigle_File(file);
+			Reading.WigleFile.read(file);
 		}
 		else if(name.equalsIgnoreCase("nogpsfile"))
 		{
@@ -92,7 +95,7 @@ public class GUI_Wrapper {
 
 	public static void clearData() {
 
-		Write_2_CSV.clearData();
+		Database.All_Data.clear();
 
 	}
 
@@ -108,7 +111,7 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("WigleSorted")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_CSV.Write(savefile+".csv");		
+				CSVFile.write(savefile+".csv");		
 			}
 			else if(name.equalsIgnoreCase("Algo1")) {
 				algorithm1 = fileChooser.getSelectedFile();
@@ -133,40 +136,56 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("allData")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.KML(Write_2_CSV.All_Data_List, savefile+".kml");	
+				KMLFile.KML(Database.All_Data, savefile+".kml");	
 			}
-			
+
 			if(name.equalsIgnoreCase("TimeFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.KML(Filter.time_data, savefile+".kml");
-				
+				KMLFile.KML(Filter.time_data, savefile+".kml");
+
 			}
-			
+
 			if(name.equalsIgnoreCase("IDFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.KML(Filter.id_data, savefile+".kml");
-				
+				KMLFile.KML(Filter.id_data, savefile+".kml");
+
 			}
-			
+
 			if(name.equalsIgnoreCase("PositionFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.KML(Filter.position_data, savefile+".kml");
-				
+				KMLFile.KML(Filter.position_data, savefile+".kml");
+
 			}
-			
+
 			if(name.equalsIgnoreCase("And")) {
 				savefile = fileChooser.getSelectedFile();
-				Write_2_KML.KML(Filter.and_data, savefile+".kml");
-				Filter.and_data.clear();
-				
+				KMLFile.KML(Filter.filters_data, savefile+".kml");
+				Filter.filters_data.clear();
+
 			}
+			
+			if(name.equalsIgnoreCase("Or")) {
+				savefile = fileChooser.getSelectedFile();
+				KMLFile.KML(Filter.filters_data, savefile+".kml");
+				Filter.filters_data.clear();
+
+			}
+
+			
+			if(name.equalsIgnoreCase("Not")) {
+				savefile = fileChooser.getSelectedFile();
+				KMLFile.KML(Filter.filters_data, savefile+".kml");
+				Filter.filters_data.clear();
+
+			}
+
 
 
 		}
 	}
 
 	public static void saveTOFolder(String name) throws IOException {
-		
+
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(new java.io.File("."));
 		chooser.setDialogTitle("Choose folder to save");
@@ -178,25 +197,25 @@ public class GUI_Wrapper {
 		} else {
 			System.out.println("No Selection");
 		}
-		
+
 		if(name.equalsIgnoreCase("idfilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			Write_2_KML.KML(Filter.id_data, savefolder + "\\ID_Filter.kml");
+			KMLFile.KML(Filter.id_data, savefolder + "\\ID_Filter.kml");
 			Filter.data.clear();
 		}
-		
+
 		if(name.equalsIgnoreCase("timefilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			Write_2_KML.KML(Filter.time_data, savefolder + "\\Time_Filter.kml");
+			KMLFile.KML(Filter.time_data, savefolder + "\\Time_Filter.kml");
 			Filter.data.clear();
 		}
-		
+
 		if(name.equalsIgnoreCase("positionfilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			Write_2_KML.KML(Filter.position_data, savefolder + "\\Position_Filter.kml");
+			KMLFile.KML(Filter.position_data, savefolder + "\\Position_Filter.kml");
 			Filter.data.clear();
 		}
 
@@ -273,37 +292,40 @@ public class GUI_Wrapper {
 		Algorithm_Main.algo2_all(ams);
 
 	}
-	
-	
+
+
 	public static void idFilter(String id) throws IOException, ParseException
 	{
 		ID_Filter f = new ID_Filter(id);
 		ID_Filter.idFilter(f);
 	}
-	
+
 	public static void timeFilter(String start,String end) throws ParseException, IOException
 	{
 		Time_Filter f = new Time_Filter(start, end);
 		Time_Filter.timeFilter(f);
 	}
-	
+
 	public static void positionFilter(String lat,String lon,String radius) throws IOException, ParseException
 	{
 		Position_Filter f = new Position_Filter(lat, lon, radius);
 		Position_Filter.positionFilter(f);
 	}
-	
-	public static void orFilter(Position_Filter posOb, ID_Filter idOb, Time_Filter timeOb) throws ParseException {
 
-		ChooseBetweenFilter.OrFilter(posOb, idOb, timeOb);
-	}
-	
-	public static void andFilter() {
-		
-		
-	}
-	
-	public static void notFilter() {
-		
+	public static void Filters(Position_Filter posOb, ID_Filter idOb, Time_Filter timeOb, String name) throws ParseException {
+
+		if(name.equalsIgnoreCase("Or")) {
+			
+			Or_Filter.direct(timeOb, posOb, idOb);
+		}
+		else if(name.equalsIgnoreCase("And")) {
+
+			And_Filter.direct(timeOb, posOb, idOb);
+		}
+
+		else if(name.equalsIgnoreCase("Not")) {
+
+			Not_Filter.direct(timeOb, posOb, idOb);
+		}
 	}
 }

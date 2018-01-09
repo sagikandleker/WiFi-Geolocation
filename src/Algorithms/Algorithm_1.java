@@ -5,14 +5,14 @@ package Algorithms;
  import java.util.ArrayList;
  import Data_Setup.Record_Pos_Wifi_Time;
  import GUI.GUI_Wrapper;
+import db.Database;
  
  /**
   * This main class, represents the exact Position for each MAC by HashMap containing inside data about each MAC.
   *
   */
  public class Algorithm_1 {
- 	
- 	public static ArrayList<Record_Pos_Wifi_Time> rpwt = new ArrayList<Record_Pos_Wifi_Time>();
+
  	
  /**
   * Analyzing the names of keys and send them to Algo1 function.
@@ -58,14 +58,14 @@ package Algorithms;
  			
  			size++;
  		}
- 		rpwt.add(position);
+ 		Database.final_algo1_data.add(position);
  	}
  
  	/**
  	 * Writing the exact Position to CSV File for each MAC.
  	 * @throws IOException
  	 */
- 	public static void Write() throws IOException {
+ 	/*public static void Write() throws IOException {
  
  		StringBuilder stringBuilder = new StringBuilder();
  		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm1+".csv");
@@ -80,6 +80,6 @@ package Algorithms;
  		fw.write(stringBuilder.toString());
  		fw.close();
  
- 	}
+ 	}*/
  
  } 
