@@ -16,11 +16,11 @@ public class AnalayzePath {
 	 */
 	public static void getFiles(File folder) throws IOException, ParseException {
 
-		String[] files_Names = folder.list();
+		String[] files_names = folder.list();
 
-		for(int i = 0; i < files_Names.length; i++) {
-			if(files_Names[i].startsWith("WigleWifi") && files_Names[i].endsWith(".csv")) {
-				File file = new File(folder+"/"+files_Names[i]);
+		for(int i = 0; i < files_names.length; i++) {
+			if(files_names[i].startsWith("WigleWifi") && files_names[i].endsWith(".csv")) {
+				File file = new File(folder+"/"+files_names[i]);
 				Reading.WigleFile.read(file);
 
 			}
