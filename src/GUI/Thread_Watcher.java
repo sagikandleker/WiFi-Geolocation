@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchEvent.Kind;
-import Main_App.Analayze_Files;
-import Main_App.Write_2_CSV;
+
+import Main_App.AnalayzePath;
+import db.Database;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.text.ParseException;
@@ -60,11 +61,11 @@ public class Thread_Watcher implements Runnable {
 		Kind<?> kind = event.kind();
 
 		if (kind.equals(StandardWatchEventKinds.ENTRY_CREATE)) {
-			Write_2_CSV.All_Data_List.clear();
+			Database.All_Data.clear();
 
 			try {
-				Analayze_Files.getFiles(GUI_Wrapper.folder);
-				GUI.textField.setText("Size of data: " + Write_2_CSV.All_Data_List.size());
+				AnalayzePath.getFiles(GUI_Wrapper.folder);
+				GUI.textField.setText("Size of data: " + Database.All_Data.size());
 
 			}
 			catch (IOException | ParseException e) {
@@ -75,10 +76,10 @@ public class Thread_Watcher implements Runnable {
 
 		else if (kind.equals(StandardWatchEventKinds.ENTRY_DELETE)) {
 
-			Write_2_CSV.All_Data_List.clear();
+			Database.All_Data.clear();
 			try {
-				Analayze_Files.getFiles(GUI_Wrapper.folder);
-				GUI.textField.setText("Size of data: " + Write_2_CSV.All_Data_List.size());
+				AnalayzePath.getFiles(GUI_Wrapper.folder);
+				GUI.textField.setText("Size of data: " + Database.All_Data.size());
 
 			} 
 			catch (IOException | ParseException e) {
@@ -88,11 +89,11 @@ public class Thread_Watcher implements Runnable {
 
 		else if (kind.equals(StandardWatchEventKinds.ENTRY_MODIFY)) {
 
-			Write_2_CSV.All_Data_List.clear();
+			Database.All_Data.clear();
 
 			try {
-				Analayze_Files.getFiles(GUI_Wrapper.folder);
-				GUI.textField.setText("Size of data: " + Write_2_CSV.All_Data_List.size());
+				AnalayzePath.getFiles(GUI_Wrapper.folder);
+				GUI.textField.setText("Size of data: " + Database.All_Data.size());
 
 			} 
 			catch (IOException e) {
