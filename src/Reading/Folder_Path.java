@@ -1,18 +1,20 @@
-package Main_App;
+package Reading;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 
 /**
- * Analyze Folder.
+ * Analyze Folder to get only WigleWifi files.
  *
  */
-public class AnalayzePath {
+public class Folder_Path {
 
 	/**
-	 *  getFiles Call to Write_Headers function and check all the CSV files in the folder,
-	 * and sending them to Analyze function.
+	 * getFiles by name "WigleWifi" and endWith format ".csv".
+	 * @param folder This path to read from the user.
+	 * @throws IOException
+	 * @throws ParseException
 	 */
 	public static void getFiles(File folder) throws IOException, ParseException {
 
@@ -21,10 +23,9 @@ public class AnalayzePath {
 		for(int i = 0; i < files_names.length; i++) {
 			if(files_names[i].startsWith("WigleWifi") && files_names[i].endsWith(".csv")) {
 				File file = new File(folder+"/"+files_names[i]);
-				Reading.WigleFile.read(file);
+				Reading.Wigle_File.read(file);
 
 			}
-		}
-
+		}	
 	}
 }

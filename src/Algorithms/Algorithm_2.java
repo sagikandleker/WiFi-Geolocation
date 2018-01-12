@@ -57,7 +57,7 @@ public class Algorithm_2 {
 			Algo2(hash, three);
 		}
 
-		Writing.CSVFile.write_Algo2(Database.final_algo2_data);
+		Writing.CSV_File.write_Algo2(Database.final_algo2_data);
 
 	}
 
@@ -250,25 +250,4 @@ public class Algorithm_2 {
 
 		Database.final_algo2_data.add(position);
 	}
-	
-	/**
-	 * Writing the Positions for each line from the "nogps" file after the calculation to CSV file.
-	 * @throws IOException
-	 */
-	/*public static void Write() throws IOException {
-
-		StringBuilder stringBuilder = new StringBuilder();
-		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm2+".csv");
-		String t = "Alt"+","+"Lon"+","+"Lat";
-		stringBuilder.append(t);
-		for (int i = 0; i < final_pos_array.size(); i++) {
-			stringBuilder.append("\n");
-			stringBuilder.append((final_pos_array.get(i).toString().replace("[", "").replace("]", "")));	
-		}
-
-		fw.write(stringBuilder.toString());
-		fw.close();
-		final_pos_array.clear();
-
-	}*/
 }

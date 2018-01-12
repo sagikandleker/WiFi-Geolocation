@@ -16,7 +16,7 @@ import db.Database;
  * Additionally, Write the sorted data to CSV File.
  */
 
-public class CSVFile {
+public class CSV_File {
 
 
 	/*public static void clearData() {
@@ -82,7 +82,7 @@ public class CSVFile {
 	 * @throws IOException
 	 */
 	public static void write(String savefile) throws IOException {
-		Writing.CSVFile.Write_Headers(savefile);
+		Writing.CSV_File.Write_Headers(savefile);
 		StringBuilder stringBuilder = new StringBuilder();
 		FileWriter fw = new FileWriter(savefile, true);
 		for (int i = 0; i < Database.All_Data.size(); i++) {

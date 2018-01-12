@@ -5,14 +5,13 @@ import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchEvent.Kind;
 
-import Main_App.AnalayzePath;
 import db.Database;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.text.ParseException;
 
 /**
- * 
+ * Thread Watcher on folder to change.
  *
  */
 public class Thread_Watcher implements Runnable {
@@ -64,7 +63,7 @@ public class Thread_Watcher implements Runnable {
 			Database.All_Data.clear();
 
 			try {
-				AnalayzePath.getFiles(GUI_Wrapper.folder);
+				Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
 				GUI.textField.setText("Size of data: " + Database.All_Data.size());
 
 			}
@@ -78,7 +77,7 @@ public class Thread_Watcher implements Runnable {
 
 			Database.All_Data.clear();
 			try {
-				AnalayzePath.getFiles(GUI_Wrapper.folder);
+				Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
 				GUI.textField.setText("Size of data: " + Database.All_Data.size());
 
 			} 
@@ -92,7 +91,7 @@ public class Thread_Watcher implements Runnable {
 			Database.All_Data.clear();
 
 			try {
-				AnalayzePath.getFiles(GUI_Wrapper.folder);
+				Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
 				GUI.textField.setText("Size of data: " + Database.All_Data.size());
 
 			} 

@@ -18,13 +18,13 @@ import Data_Setup.SSID;
 import Data_Setup.Signal;
 import Data_Setup.Time;
 import Data_Setup.Wifi;
-import Writing.CSVFile;
+import Writing.CSV_File;
 
 /**
  * Reading from files in different styles.
  *
  */
-public class WigleFile {
+public class Wigle_File {
 
 	private static Mac mac;
 	private static Signal signal;
@@ -79,6 +79,6 @@ public class WigleFile {
 		}
 
 		br.close();
-		CSVFile.Build_ArrayList(wigle_data);
+		CSV_File.Build_ArrayList(wigle_data);
 	}
 }

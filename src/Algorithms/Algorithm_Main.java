@@ -7,16 +7,15 @@ import java.util.ArrayList;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import GUI.GUI_Wrapper;
-import Writing.CSVFile;
+import Writing.CSV_File;
 import db.Database;
 
 public class Algorithm_Main {
 
 	public static void ChooseAlgo1() throws IOException, ParseException {
 
-		//Mac_Hashmap.Build_Hash(Write_2_CSV.All_Data_List, "Algo1");
 		Algorithm_1.AnalyzeMAC();
-		CSVFile.write_Algo1(Database.final_algo1_data);
+		CSV_File.write_Algo1(Database.final_algo1_data);
 	}
 
 	public static Position algo1_Mac(String mac) throws IOException {
@@ -33,7 +32,7 @@ public class Algorithm_Main {
 
 	public static void ChooseAlgo2() throws IOException, ParseException {
 
-		Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Reading.CombFile.read(GUI_Wrapper.combfile,"noHeaders")), "Algo2"),Reading.NogpsFile.read(GUI_Wrapper.nogpsfile));
+		Algorithm_2.no_gps_lines(Mac_Hashmap.Build_Hash((Reading.Comb_File.read(GUI_Wrapper.combfile,"noHeaders")), "Algo2"),Reading.Nogps_File.read(GUI_Wrapper.nogpsfile));
 
 	}
 

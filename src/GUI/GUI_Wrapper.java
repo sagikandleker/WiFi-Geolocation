@@ -19,9 +19,8 @@ import Filtering.Not_Filter;
 import Filtering.Or_Filter;
 import Filtering.Position_Filter;
 import Filtering.Time_Filter;
-import Main_App.AnalayzePath;
-import Writing.CSVFile;
-import Writing.KMLFile;
+import Writing.CSV_File;
+import Writing.KML_File;
 import db.Database;
 
 public class GUI_Wrapper {
@@ -56,7 +55,7 @@ public class GUI_Wrapper {
 			folder = folder.getParentFile();
 		}
 
-		AnalayzePath.getFiles(folder);
+		Reading.Folder_Path.getFiles(folder);
 		Mac_Hashmap.Build_Hash(Database.All_Data, "Algo1");
 
 	}
@@ -79,7 +78,7 @@ public class GUI_Wrapper {
 		if(name.equalsIgnoreCase("mainfile"))
 		{
 			file = chooser.getSelectedFile();
-			Reading.WigleFile.read(file);
+			Reading.Wigle_File.read(file);
 		}
 		else if(name.equalsIgnoreCase("nogpsfile"))
 		{
@@ -111,7 +110,7 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("WigleSorted")) {
 				savefile = fileChooser.getSelectedFile();
-				CSVFile.write(savefile+".csv");		
+				CSV_File.write(savefile+".csv");		
 			}
 			else if(name.equalsIgnoreCase("Algo1")) {
 				algorithm1 = fileChooser.getSelectedFile();
@@ -136,37 +135,37 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("allData")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Database.All_Data, savefile+".kml");	
+				KML_File.KML(Database.All_Data, savefile+".kml");	
 			}
 
 			if(name.equalsIgnoreCase("TimeFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Filter.time_data, savefile+".kml");
+				KML_File.KML(Filter.time_data, savefile+".kml");
 
 			}
 
 			if(name.equalsIgnoreCase("IDFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Filter.id_data, savefile+".kml");
+				KML_File.KML(Filter.id_data, savefile+".kml");
 
 			}
 
 			if(name.equalsIgnoreCase("PositionFilter")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Filter.position_data, savefile+".kml");
+				KML_File.KML(Filter.position_data, savefile+".kml");
 
 			}
 
 			if(name.equalsIgnoreCase("And")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Filter.filters_data, savefile+".kml");
+				KML_File.KML(Filter.filters_data, savefile+".kml");
 				Filter.filters_data.clear();
 
 			}
 			
 			if(name.equalsIgnoreCase("Or")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Filter.filters_data, savefile+".kml");
+				KML_File.KML(Filter.filters_data, savefile+".kml");
 				Filter.filters_data.clear();
 
 			}
@@ -174,7 +173,7 @@ public class GUI_Wrapper {
 			
 			if(name.equalsIgnoreCase("Not")) {
 				savefile = fileChooser.getSelectedFile();
-				KMLFile.KML(Filter.filters_data, savefile+".kml");
+				KML_File.KML(Filter.filters_data, savefile+".kml");
 				Filter.filters_data.clear();
 
 			}
@@ -201,21 +200,21 @@ public class GUI_Wrapper {
 		if(name.equalsIgnoreCase("idfilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			KMLFile.KML(Filter.id_data, savefolder + "\\ID_Filter.kml");
+			KML_File.KML(Filter.id_data, savefolder + "\\ID_Filter.kml");
 			Filter.data.clear();
 		}
 
 		if(name.equalsIgnoreCase("timefilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			KMLFile.KML(Filter.time_data, savefolder + "\\Time_Filter.kml");
+			KML_File.KML(Filter.time_data, savefolder + "\\Time_Filter.kml");
 			Filter.data.clear();
 		}
 
 		if(name.equalsIgnoreCase("positionfilter"))
 		{
 			savefolder = chooser.getSelectedFile();
-			KMLFile.KML(Filter.position_data, savefolder + "\\Position_Filter.kml");
+			KML_File.KML(Filter.position_data, savefolder + "\\Position_Filter.kml");
 			Filter.data.clear();
 		}
 

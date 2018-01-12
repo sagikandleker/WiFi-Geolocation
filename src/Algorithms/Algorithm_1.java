@@ -1,10 +1,9 @@
 package Algorithms;
  
- import java.io.FileWriter;
- import java.io.IOException;
- import java.util.ArrayList;
- import Data_Setup.Record_Pos_Wifi_Time;
- import GUI.GUI_Wrapper;
+import java.io.IOException;
+import java.util.ArrayList;
+import Data_Setup.Record_Pos_Wifi_Time;
+
 import db.Database;
  
  /**
@@ -60,26 +59,4 @@ import db.Database;
  		}
  		Database.final_algo1_data.add(position);
  	}
- 
- 	/**
- 	 * Writing the exact Position to CSV File for each MAC.
- 	 * @throws IOException
- 	 */
- 	/*public static void Write() throws IOException {
- 
- 		StringBuilder stringBuilder = new StringBuilder();
- 		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm1+".csv");
- 		String titles_list = "#ID"+","+"MAC"+","+"SSID"+","+"Frequency"+","+"Signal"+","+"Alt"+","+"Lon"+"," +"Lat"+","+"Time";
- 		stringBuilder.append(titles_list);
- 		for (int i = 0; i < rpwt.size(); i++) {
- 			rpwt.get(i).setLine(i+1);
- 			stringBuilder.append("\n");
- 			stringBuilder.append((rpwt.get(i).toString().replace("[", "").replace("]", "")));	
-		}
- 
- 		fw.write(stringBuilder.toString());
- 		fw.close();
- 
- 	}*/
- 
  } 

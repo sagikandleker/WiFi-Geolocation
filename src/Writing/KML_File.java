@@ -14,7 +14,7 @@ import de.micromata.opengis.kml.v_2_2_0.Placemark;
  * Write to KML File. 
  *
  */
-public class KMLFile {
+public class KML_File {
 
 	/**
 	 * Write to KML file from "All_Data_List" ArrayList (All the data).

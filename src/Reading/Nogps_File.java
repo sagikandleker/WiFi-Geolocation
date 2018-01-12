@@ -10,7 +10,7 @@ import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
 
 
-public class NogpsFile {
+public class Nogps_File {
 	
 	private static Mac mac;
 	private static Signal signal;

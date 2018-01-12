@@ -18,7 +18,7 @@ import Data_Setup.Signal;
 import Data_Setup.Time;
 import Data_Setup.Wifi;
 
-public class CombFile {
+public class Comb_File {
 	
 	private static Mac mac;
 	private static Signal signal;
