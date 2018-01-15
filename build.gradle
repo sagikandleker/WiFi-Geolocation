@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
 
 // TODO folder OOP//src//Main//Java/Allthecode
 // TODO folder OOP//src//Test//Java/all the test
