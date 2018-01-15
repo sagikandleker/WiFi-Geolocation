@@ -2,7 +2,8 @@ Algorithms
 Data_Setup
 Filtering
 GUI
-GUI.Algorithms
-GUI.Filters
-Main_App
+GUI.Panels
+Reading
 Tests
+Writing
+db
