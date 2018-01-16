@@ -3,8 +3,8 @@ package Algorithms;
 import java.io.IOException;
 import java.util.ArrayList;
 import Data_Setup.Record_Pos_Wifi_Time;
+import Memory.Data_Structures;
 
-import db.Database;
  
  /**
   * This main class, represents the exact Position for each MAC by HashMap containing inside data about each MAC.
@@ -57,6 +57,6 @@ import db.Database;
  			
  			size++;
  		}
- 		Database.final_algo1_data.add(position);
+ 		Data_Structures.final_algo1_data.add(position);
  	}
  } 

@@ -5,7 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import Data_Setup.Record;
-import db.Database;
+import Memory.Data_Structures;
 
 /**
  * Filtering by Begin time to End time.
@@ -30,7 +30,7 @@ public class Time_Filter {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date_start =  format.parse(tf.start);
 		Date date_end =  format.parse(tf.end);
-		Database.All_Data.stream()
+		Data_Structures.All_Data.stream()
 		.filter(p -> p.getDate().after(date_start) && p.getDate().before(date_end))
 		.forEach(p -> Filter.time_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList())));
 

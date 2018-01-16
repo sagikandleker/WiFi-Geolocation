@@ -4,9 +4,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import Data_Setup.Record;
-import db.Database;
+import Memory.Data_Structures;
+
 
 public class And_Filter {
 
@@ -39,7 +39,7 @@ public class And_Filter {
 		Date d1 = format.parse(tfilter.getStart());
 		Date d2 = format.parse(tfilter.getEnd());
 
-		Database.All_Data.stream()
+		Data_Structures.All_Data.stream()
 		.forEach(p -> { if(p.getid().equalsIgnoreCase(ifilter.getNameOfDevice())
 				&& (p.getDate().after(d1) && p.getDate().before(d2))) 
 			Filter.filters_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()));
@@ -61,7 +61,7 @@ public class And_Filter {
 		double lonD = pfilter.getLon();
 		double tempR = pfilter.getRadius();
 
-		Database.All_Data.stream()
+		Data_Structures.All_Data.stream()
 		.forEach(p -> { if(p.getDate().after(d1) && p.getDate().before(d2)
 				&& (Position_Filter.distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR))
 			Filter.filters_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()));
@@ -79,7 +79,7 @@ public class And_Filter {
 		double lonD = pfilter.getLon();
 		double tempR = pfilter.getRadius();
 
-		Database.All_Data.stream()
+		Data_Structures.All_Data.stream()
 		.forEach(p -> { if(p.getid().equalsIgnoreCase(ifilter.getNameOfDevice())
 				&& (Position_Filter.distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR))
 			Filter.filters_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()));
@@ -102,7 +102,7 @@ public class And_Filter {
 		double tempR = pfilter.getRadius();
 
 
-		Database.All_Data.stream()
+		Data_Structures.All_Data.stream()
 		.forEach(p -> { if(p.getid().equalsIgnoreCase(ifilter.getNameOfDevice())
 				&& (p.getDate().after(d1) && p.getDate().before(d2)) 
 				&& (Position_Filter.distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR))

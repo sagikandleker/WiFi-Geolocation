@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="db.Database" project="OOP" file="/OOP/src/db/Database.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="496" y="260"/>    
+  <class id="1" language="java" name="Memory.Data_Stractures" project="OOP" file="/OOP/src/Memory/Data_Stractures.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="329" x="64" y="157"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

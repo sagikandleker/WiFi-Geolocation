@@ -7,10 +7,12 @@ import javax.swing.JButton;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import Data_base.ConnectionMySQL;
 import GUI.Panels.Panel_Algorithm_1;
 import GUI.Panels.Panel_Algorithm_2;
 import GUI.Panels.Panel_Filters;
-import db.Database;
+import GUI.Panels.Panel_Login;
+import Memory.Data_Structures;
 
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -19,6 +21,8 @@ import java.nio.file.Path;
 import java.text.ParseException;
 import java.awt.event.MouseAdapter;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -92,7 +96,14 @@ public class GUI {
 					e.printStackTrace();
 				}
 				// Browse button to select directory
-				textField.setText("size of data: " + Database.All_Data.size());
+				if(Data_Structures.Sql_flag == true) {
+					
+					textField.setText("size of data: " + Data_Structures.Sql_Data.size());
+				}
+				else {
+					textField.setText("size of data: " + Data_Structures.All_Data.size());
+				}
+				
 			}
 		});
 		btnBrowse.setBounds(22, 70, 183, 27);
@@ -109,7 +120,13 @@ public class GUI {
 					e.printStackTrace();
 				}
 
-				textField.setText("size of data: " + Database.All_Data.size());
+				if(Data_Structures.Sql_flag == true) {
+					textField.setText("size of data: " + Data_Structures.Sql_Data.size());
+				}
+				else {
+					textField.setText("size of data: " + Data_Structures.All_Data.size());
+				}
+				
 			}
 		});
 		btnBrowse_1.setBounds(22, 109, 183, 27);
@@ -121,7 +138,7 @@ public class GUI {
 			public void mouseClicked(MouseEvent arg0) {
 
 				GUI_Wrapper.clearData();
-				textField.setText("size of data: " + Database.All_Data.size());
+				textField.setText("size of data: " + Data_Structures.All_Data.size());
 
 
 			}
@@ -213,7 +230,7 @@ public class GUI {
 		frmOop.getContentPane().add(textField);
 		textField.setColumns(10);
 		textField.setEditable(false);
-		textField.setText("Size of data: " + Database.All_Data.size());
+		textField.setText("Size of data: " + Data_Structures.All_Data.size());
 
 		JButton btnSaveToKml = new JButton("Save To KML");
 		btnSaveToKml.addMouseListener(new MouseAdapter() {
@@ -238,7 +255,6 @@ public class GUI {
 			public void mouseClicked(MouseEvent e) {
 
 
-
 			}
 		});
 		btnInfo.setBounds(377, 284, 162, 27);
@@ -261,6 +277,36 @@ public class GUI {
 		editorPane_2.setBackground(Color.DARK_GRAY);
 		editorPane_2.setBounds(403, 44, 136, 2);
 		frmOop.getContentPane().add(editorPane_2);
+		
+		JButton btnMysql = new JButton("mySQL");
+		btnMysql.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				Panel_Login pl = new Panel_Login();
+				pl.setVisible(true);
+			
+			}
+		});
+		btnMysql.setBounds(251, 188, 97, 25);
+		frmOop.getContentPane().add(btnMysql);
+		
+		JButton btnLoadDataFrom = new JButton("Load Data From SQL");
+		btnLoadDataFrom.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				try {
+					Data_Structures.Sql_Data.clear();
+					ConnectionMySQL.start();
+					textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
+				} catch (IOException | ParseException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnLoadDataFrom.setBounds(249, 227, 151, 25);
+		frmOop.getContentPane().add(btnLoadDataFrom);
 		frmOop.setBackground(Color.WHITE);
 		frmOop.setBounds(100, 100, 589, 380);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

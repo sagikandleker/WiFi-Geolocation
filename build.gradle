@@ -3,3 +3,16 @@ apply plugin: 'eclipse'
 
 // TODO folder OOP//src//Main//Java/Allthecode
 // TODO folder OOP//src//Test//Java/all the test
+/*
+jar {
+    manifest {
+        attributes "gui.gui": 'com.foo.bar.guigui'
+    }
+}
+*/
+
+task gui(type: JavaExec) {
+main = "gui.gui"
+classpath = sourceSets.main.runtimeClasspath
+println ("Finish to create GUI")
+}

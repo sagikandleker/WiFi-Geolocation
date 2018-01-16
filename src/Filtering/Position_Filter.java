@@ -1,7 +1,7 @@
 package Filtering;
 
 import Data_Setup.Record;
-import db.Database;
+import Memory.Data_Structures;
 
 /**
  * Filtering by Lat and Lon by radius.
@@ -70,7 +70,7 @@ public class Position_Filter {
 		double lonD = position.lon;
 		double tempR = position.radius;
 
-		Database.All_Data.stream()
+		Data_Structures.All_Data.stream()
 		.forEach(p -> {if(distance(latD, lonD, p.getPosition().getLat(), p.getPosition().getLon()) <= tempR)
 			Filter.position_data.add(new Record(p.getDate(), p.getPosition(), p.getWifiList()));
 		else {

@@ -8,7 +8,7 @@ import Data_Setup.Position;
 import Data_Setup.Record;
 import Data_Setup.Record_Pos_Wifi_Time;
 import GUI.GUI_Wrapper;
-import db.Database;
+import Memory.Data_Structures;
 
 
 /**
@@ -70,7 +70,15 @@ public class CSV_File {
 
 		}
 
-		Database.All_Data.addAll(sorted_data_list);
+		if(Data_Structures.Sql_flag == true) {
+			
+			Data_Structures.Sql_Data.addAll(sorted_data_list);
+		}
+		else {
+			
+			Data_Structures.All_Data.addAll(sorted_data_list);
+		}
+		
 		sorted_data_list.clear();
 		data_list.clear();
 
@@ -85,9 +93,19 @@ public class CSV_File {
 		Writing.CSV_File.Write_Headers(savefile);
 		StringBuilder stringBuilder = new StringBuilder();
 		FileWriter fw = new FileWriter(savefile, true);
-		for (int i = 0; i < Database.All_Data.size(); i++) {
-			stringBuilder.append("\n");
-			stringBuilder.append((Database.All_Data.get(i).toString().replace("[", "").replace("]", "")));	
+
+		if(Data_Structures.Sql_flag == true)
+		{
+			for (int i = 0; i < Data_Structures.Sql_Data.size(); i++) {
+				stringBuilder.append("\n");
+				stringBuilder.append((Data_Structures.Sql_Data.get(i).toString().replace("[", "").replace("]", "")));	
+			}
+		}
+		else {
+			for (int i = 0; i < Data_Structures.All_Data.size(); i++) {
+				stringBuilder.append("\n");
+				stringBuilder.append((Data_Structures.All_Data.get(i).toString().replace("[", "").replace("]", "")));	
+			}
 		}
 
 		fw.write(stringBuilder.toString());
@@ -96,26 +114,26 @@ public class CSV_File {
 	}
 
 	/**
- 	 * Writing the exact Position to CSV File for each MAC.
- 	 * @throws IOException
- 	 */
+	 * Writing the exact Position to CSV File for each MAC.
+	 * @throws IOException
+	 */
 	public static void write_Algo1(ArrayList<Record_Pos_Wifi_Time> final_rpwt_array) throws IOException {
-		
+
 		StringBuilder stringBuilder = new StringBuilder();
- 		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm1+".csv");
- 		String titles_list = "#ID"+","+"MAC"+","+"SSID"+","+"Frequency"+","+"Signal"+","+"Alt"+","+"Lon"+"," +"Lat"+","+"Time";
- 		stringBuilder.append(titles_list);
- 		for (int i = 0; i < final_rpwt_array.size(); i++) {
- 			final_rpwt_array.get(i).setLine(i+1);
- 			stringBuilder.append("\n");
- 			stringBuilder.append((final_rpwt_array.get(i).toString().replace("[", "").replace("]", "")));	
+		FileWriter fw = new FileWriter(GUI_Wrapper.algorithm1+".csv");
+		String titles_list = "#ID"+","+"MAC"+","+"SSID"+","+"Frequency"+","+"Signal"+","+"Alt"+","+"Lon"+"," +"Lat"+","+"Time";
+		stringBuilder.append(titles_list);
+		for (int i = 0; i < final_rpwt_array.size(); i++) {
+			final_rpwt_array.get(i).setLine(i+1);
+			stringBuilder.append("\n");
+			stringBuilder.append((final_rpwt_array.get(i).toString().replace("[", "").replace("]", "")));	
 		}
- 
- 		fw.write(stringBuilder.toString());
- 		fw.close();	
+
+		fw.write(stringBuilder.toString());
+		fw.close();	
 	}
-	
-	
+
+
 	/**
 	 * Writing the Positions for each line from the "nogps" file after the calculation to CSV file.
 	 * @throws IOException
@@ -135,7 +153,7 @@ public class CSV_File {
 		fw.close();
 		final_pos_array.clear();
 	}
-	
-	
-	
+
+
+
 }

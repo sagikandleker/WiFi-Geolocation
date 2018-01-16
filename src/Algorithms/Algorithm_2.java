@@ -9,7 +9,7 @@ import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Record_Pos_Mac_Signal;
 import Data_Setup.Record_Pos_Wifi_Time;
 import Data_Setup.Signal;
-import db.Database;
+import Memory.Data_Structures;
 
 
 /**
@@ -57,7 +57,7 @@ public class Algorithm_2 {
 			Algo2(hash, three);
 		}
 
-		Writing.CSV_File.write_Algo2(Database.final_algo2_data);
+		Writing.CSV_File.write_Algo2(Data_Structures.final_algo2_data);
 
 	}
 
@@ -116,7 +116,7 @@ public class Algorithm_2 {
 		
 		if(comb_data.size() == 1) {
 			position = new Position(comb_data.get(size).getPosition());
-			Database.final_algo2_data.add(position);
+			Data_Structures.final_algo2_data.add(position);
 
 		}
 		else {
@@ -248,6 +248,6 @@ public class Algorithm_2 {
 			size++;
 		}
 
-		Database.final_algo2_data.add(position);
+		Data_Structures.final_algo2_data.add(position);
 	}
 }

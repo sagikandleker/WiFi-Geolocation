@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchEvent.Kind;
-
-import db.Database;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.text.ParseException;
+
+import Data_base.ConnectionMySQL;
+import Memory.Data_Structures;
 
 /**
  * Thread Watcher on folder to change.
@@ -55,16 +56,31 @@ public class Thread_Watcher implements Runnable {
 
 	}
 
+	/**
+	 * If the folder had been changed the function take action and update the Data structure.
+	 * @param event
+	 */
 	private void takeActionOnChangeEvent(WatchEvent<?> event) {
 
 		Kind<?> kind = event.kind();
 
 		if (kind.equals(StandardWatchEventKinds.ENTRY_CREATE)) {
-			Database.All_Data.clear();
+			Data_Structures.All_Data.clear();
 
 			try {
+				if(Data_Structures.Sql_flag == true) {
 				Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
-				GUI.textField.setText("Size of data: " + Database.All_Data.size());
+				ConnectionMySQL.start();
+				GUI.textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
+				}
+				else {
+					
+					Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
+					GUI.textField.setText("Size of data: " + Data_Structures.All_Data.size());
+				}
+				
+				
+				
 
 			}
 			catch (IOException | ParseException e) {
@@ -75,10 +91,18 @@ public class Thread_Watcher implements Runnable {
 
 		else if (kind.equals(StandardWatchEventKinds.ENTRY_DELETE)) {
 
-			Database.All_Data.clear();
+			Data_Structures.All_Data.clear();
 			try {
-				Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
-				GUI.textField.setText("Size of data: " + Database.All_Data.size());
+				if(Data_Structures.Sql_flag == true) {
+					Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
+					ConnectionMySQL.start();
+					GUI.textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
+					}
+					else {
+						
+						Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
+						GUI.textField.setText("Size of data: " + Data_Structures.All_Data.size());
+					}
 
 			} 
 			catch (IOException | ParseException e) {
@@ -88,11 +112,19 @@ public class Thread_Watcher implements Runnable {
 
 		else if (kind.equals(StandardWatchEventKinds.ENTRY_MODIFY)) {
 
-			Database.All_Data.clear();
+			Data_Structures.All_Data.clear();
 
 			try {
-				Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
-				GUI.textField.setText("Size of data: " + Database.All_Data.size());
+				if(Data_Structures.Sql_flag == true) {
+					Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
+					ConnectionMySQL.start();
+					GUI.textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
+					}
+					else {
+						
+						Reading.Folder_Path.getFiles(GUI_Wrapper.folder);
+						GUI.textField.setText("Size of data: " + Data_Structures.All_Data.size());
+					}
 
 			} 
 			catch (IOException e) {

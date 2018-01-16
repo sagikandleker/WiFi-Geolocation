@@ -1,17 +1,12 @@
 package GUI.Panels;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import javax.swing.JTextField;
-import javax.swing.JScrollPane;
 
+
+@SuppressWarnings("serial")
 public class Panel_Info extends JFrame {
 //App Information:
 	//How does it work? Simple you add folder with Wigle files or just one Wigle file and you can choose what to do next.

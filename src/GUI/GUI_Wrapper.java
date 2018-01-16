@@ -12,6 +12,7 @@ import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
+import Data_base.ConnectionMySQL;
 import Filtering.And_Filter;
 import Filtering.Filter;
 import Filtering.ID_Filter;
@@ -19,9 +20,9 @@ import Filtering.Not_Filter;
 import Filtering.Or_Filter;
 import Filtering.Position_Filter;
 import Filtering.Time_Filter;
+import Memory.Data_Structures;
 import Writing.CSV_File;
 import Writing.KML_File;
-import db.Database;
 
 public class GUI_Wrapper {
 
@@ -48,6 +49,7 @@ public class GUI_Wrapper {
 		} else {
 			System.out.println("No Selection");
 		}
+		
 
 		folder = chooser.getSelectedFile();
 
@@ -56,7 +58,7 @@ public class GUI_Wrapper {
 		}
 
 		Reading.Folder_Path.getFiles(folder);
-		Mac_Hashmap.Build_Hash(Database.All_Data, "Algo1");
+		Mac_Hashmap.Build_Hash(Data_Structures.All_Data, "Algo1");
 
 	}
 
@@ -77,8 +79,10 @@ public class GUI_Wrapper {
 		}
 		if(name.equalsIgnoreCase("mainfile"))
 		{
+					
 			file = chooser.getSelectedFile();
 			Reading.Wigle_File.read(file);
+			
 		}
 		else if(name.equalsIgnoreCase("nogpsfile"))
 		{
@@ -94,7 +98,7 @@ public class GUI_Wrapper {
 
 	public static void clearData() {
 
-		Database.All_Data.clear();
+		Data_Structures.All_Data.clear();
 
 	}
 
@@ -135,7 +139,7 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("allData")) {
 				savefile = fileChooser.getSelectedFile();
-				KML_File.KML(Database.All_Data, savefile+".kml");	
+				KML_File.KML(Data_Structures.All_Data, savefile+".kml");	
 			}
 
 			if(name.equalsIgnoreCase("TimeFilter")) {

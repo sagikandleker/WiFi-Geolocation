@@ -17,17 +17,12 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.text.ParseException;
 import javax.swing.SwingConstants;
-
 import Filtering.ID_Filter;
 import Filtering.Position_Filter;
 import Filtering.Time_Filter;
-
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.Color;
-import javax.swing.JTree;
 import javax.swing.JEditorPane;
 
 

@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import Algorithms.Mac_Hashmap;
 import GUI.GUI_Wrapper;
-import db.Database;
+import Memory.Data_Structures;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -399,10 +399,10 @@ public class Panel_Algorithm_2 extends JFrame {
 
 					try {
 						GUI_Wrapper.algo2Short(Allm_Alls);
-						textField_2.setText(""+Database.final_algo2_data.get(0).alt);
-						textField_5.setText(""+Database.final_algo2_data.get(0).lon);
-						textField_1.setText(""+Database.final_algo2_data.get(0).lat);
-						Database.final_algo2_data.clear();
+						textField_2.setText(""+Data_Structures.final_algo2_data.get(0).alt);
+						textField_5.setText(""+Data_Structures.final_algo2_data.get(0).lon);
+						textField_1.setText(""+Data_Structures.final_algo2_data.get(0).lat);
+						Data_Structures.final_algo2_data.clear();
 						Mac_Hashmap.hash.clear();
 					} catch (IOException | ParseException e1) {
 						// TODO Auto-generated catch block
@@ -415,10 +415,10 @@ public class Panel_Algorithm_2 extends JFrame {
 					String line = textField.getText();
 					try {
 						GUI_Wrapper.algo2Line(line);
-						textField_2.setText(""+Database.final_algo2_data.get(0).alt);
-						textField_5.setText(""+Database.final_algo2_data.get(0).lon);
-						textField_1.setText(""+Database.final_algo2_data.get(0).lat);
-						Database.final_algo2_data.clear();
+						textField_2.setText(""+Data_Structures.final_algo2_data.get(0).alt);
+						textField_5.setText(""+Data_Structures.final_algo2_data.get(0).lon);
+						textField_1.setText(""+Data_Structures.final_algo2_data.get(0).lat);
+						Data_Structures.final_algo2_data.clear();
 						Mac_Hashmap.hash.clear();
 					} catch (IOException | ParseException e1) {
 						// TODO Auto-generated catch block

@@ -18,6 +18,7 @@ import Data_Setup.SSID;
 import Data_Setup.Signal;
 import Data_Setup.Time;
 import Data_Setup.Wifi;
+import Memory.Data_Structures;
 import Writing.CSV_File;
 
 /**
@@ -78,7 +79,8 @@ public class Wigle_File {
 
 		}
 
-		br.close();
-		CSV_File.Build_ArrayList(wigle_data);
+		br.close();	
+		CSV_File.Build_ArrayList(wigle_data);	
+		
 	}
 }

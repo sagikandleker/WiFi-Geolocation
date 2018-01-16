@@ -11,7 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	@RunWith(Suite.class)
 	@SuiteClasses({ Position_Test.class, Time_Test.class, Wifi_Test.class })
 	
-	public class All_Tests {
+	public class Test_All {
 		
 		
 	}
