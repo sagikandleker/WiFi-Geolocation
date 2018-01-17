@@ -28,6 +28,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JEditorPane;
+import javax.swing.JRadioButton;
 
 public class GUI {
 	
@@ -45,7 +46,7 @@ public class GUI {
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
 		UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
-
+	
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -209,7 +210,7 @@ public class GUI {
 				algorithm1.setVisible(true);
 			}
 		});
-		btnAlgorithm.setBounds(412, 70, 98, 27);
+		btnAlgorithm.setBounds(412, 70, 139, 27);
 		frmOop.getContentPane().add(btnAlgorithm);
 
 		JButton btnAlgorithm_1 = new JButton("Algorithm 2");
@@ -222,12 +223,12 @@ public class GUI {
 
 			}
 		});
-		btnAlgorithm_1.setBounds(412, 109, 98, 27);
+		btnAlgorithm_1.setBounds(412, 109, 139, 27);
 		frmOop.getContentPane().add(btnAlgorithm_1);
 
 		textField = new JTextField();
 		textField.setFont(new Font("Georgia Pro Semibold", Font.BOLD, 20));
-		textField.setBounds(22, 278, 183, 34);
+		textField.setBounds(22, 278, 225, 34);
 		frmOop.getContentPane().add(textField);
 		textField.setColumns(10);
 		textField.setEditable(false);
@@ -258,7 +259,7 @@ public class GUI {
 
 			}
 		});
-		btnInfo.setBounds(377, 284, 162, 27);
+		btnInfo.setBounds(610, 283, 162, 27);
 		frmOop.getContentPane().add(btnInfo);
 
 		JEditorPane editorPane = new JEditorPane();
@@ -279,7 +280,7 @@ public class GUI {
 		editorPane_2.setBounds(403, 44, 136, 2);
 		frmOop.getContentPane().add(editorPane_2);
 		
-		JButton btnMysql = new JButton("mySQL");
+		JButton btnMysql = new JButton("Login to Sql");
 		btnMysql.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -289,10 +290,10 @@ public class GUI {
 			
 			}
 		});
-		btnMysql.setBounds(251, 188, 97, 25);
+		btnMysql.setBounds(593, 71, 179, 25);
 		frmOop.getContentPane().add(btnMysql);
 		
-		JButton btnLoadDataFrom = new JButton("Load Data From SQL");
+		JButton btnLoadDataFrom = new JButton("Load Data From Sql");
 		btnLoadDataFrom.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -306,10 +307,22 @@ public class GUI {
 				}
 			}
 		});
-		btnLoadDataFrom.setBounds(249, 227, 151, 25);
+		btnLoadDataFrom.setBounds(593, 110, 179, 25);
 		frmOop.getContentPane().add(btnLoadDataFrom);
+		
+		JLabel lblSql = new JLabel("Sql");
+		lblSql.setForeground(Color.DARK_GRAY);
+		lblSql.setFont(new Font("Elephant", Font.BOLD, 18));
+		lblSql.setBounds(646, 7, 114, 48);
+		frmOop.getContentPane().add(lblSql);
+		
+		JEditorPane editorPane_3 = new JEditorPane();
+		editorPane_3.setEditable(false);
+		editorPane_3.setBackground(Color.DARK_GRAY);
+		editorPane_3.setBounds(625, 44, 97, 2);
+		frmOop.getContentPane().add(editorPane_3);
 		frmOop.setBackground(Color.WHITE);
-		frmOop.setBounds(100, 100, 589, 380);
+		frmOop.setBounds(100, 100, 804, 367);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
