@@ -1,4 +1,4 @@
-package Tests;
+package Test_Data_Setup;
 
 
 import static org.junit.Assert.*;

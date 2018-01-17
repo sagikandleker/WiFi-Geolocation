@@ -70,15 +70,17 @@ public class CSV_File {
 
 		}
 
+		
+
 		if(Data_Structures.Sql_flag == true) {
-			
+
 			Data_Structures.Sql_Data.addAll(sorted_data_list);
 		}
 		else {
-			
+
 			Data_Structures.All_Data.addAll(sorted_data_list);
 		}
-		
+
 		sorted_data_list.clear();
 		data_list.clear();
 

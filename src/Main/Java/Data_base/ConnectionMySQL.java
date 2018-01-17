@@ -10,15 +10,13 @@ import Data_Setup.Time;
 import Memory.Data_Structures;
 
 
-
-
 public class ConnectionMySQL {
 
-	 private static String  ip = "";//"5.29.193.52";
-	 private static String  user = "";//"oop1";
-	 private static String  password = "";//"Lambda1();";
-	 private static String  port = "";//3306
-	 private static String m_Url = "";//"jdbc:mysql://" + ip + ":"+port+"/oop_course_ariel?useSSL=false";
+	 private static String  ip = "";
+	 private static String  user = "";
+	 private static String  password = "";
+	 private static String  port = "";
+	 private static String m_Url = "";
 	 
 
 	 public static boolean login(String u, String p, String i, String t ) {

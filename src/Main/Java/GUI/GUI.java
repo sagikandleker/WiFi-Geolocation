@@ -21,14 +21,12 @@ import java.nio.file.Path;
 import java.text.ParseException;
 import java.awt.event.MouseAdapter;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JEditorPane;
-import javax.swing.JRadioButton;
 
 public class GUI {
 	
@@ -46,7 +44,7 @@ public class GUI {
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
 		UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
-	
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -98,12 +96,13 @@ public class GUI {
 					e.printStackTrace();
 				}
 				// Browse button to select directory
+				
 				if(Data_Structures.Sql_flag == true) {
 					
-					textField.setText("size of data: " + Data_Structures.Sql_Data.size());
+					textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
 				}
 				else {
-					textField.setText("size of data: " + Data_Structures.All_Data.size());
+					textField.setText("Size of data: " + Data_Structures.All_Data.size());
 				}
 				
 			}

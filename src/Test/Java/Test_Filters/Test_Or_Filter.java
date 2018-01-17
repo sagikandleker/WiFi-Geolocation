@@ -1,16 +1,15 @@
-package Tests;
+package Test_Filters;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import Data_Setup.Position;
 import Filtering.ID_Filter;
 import Filtering.Position_Filter;
 import Filtering.Time_Filter;
 
-public class Test_And_Filter {
-	
+public class Test_Or_Filter {
+
 	Time_Filter tfilter1 = new Time_Filter("2017-12-03 12:00", "2017-12-03 12:10");
 	Time_Filter tfilter2 = new Time_Filter("", "");
 	

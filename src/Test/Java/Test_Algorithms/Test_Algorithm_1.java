@@ -1,4 +1,4 @@
-package Tests;
+package Test_Algorithms;
 
 import static org.junit.Assert.*;
 

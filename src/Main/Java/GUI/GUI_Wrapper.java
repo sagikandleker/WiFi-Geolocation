@@ -12,7 +12,6 @@ import Data_Setup.Mac;
 import Data_Setup.Position;
 import Data_Setup.Record_Mac_Signal;
 import Data_Setup.Signal;
-import Data_base.ConnectionMySQL;
 import Filtering.And_Filter;
 import Filtering.Filter;
 import Filtering.ID_Filter;
@@ -139,7 +138,15 @@ public class GUI_Wrapper {
 
 			if(name.equalsIgnoreCase("allData")) {
 				savefile = fileChooser.getSelectedFile();
-				KML_File.KML(Data_Structures.All_Data, savefile+".kml");	
+				if(Data_Structures.Sql_flag == true) {
+					KML_File.KML(Data_Structures.Sql_Data, savefile+".kml");	
+					
+				}
+				else {
+					KML_File.KML(Data_Structures.All_Data, savefile+".kml");	
+				}
+				
+				
 			}
 
 			if(name.equalsIgnoreCase("TimeFilter")) {

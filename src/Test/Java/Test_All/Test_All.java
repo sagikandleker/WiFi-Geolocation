@@ -1,8 +1,12 @@
-package Tests;
+package Test_All;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
+import Test_Algorithms.*;
+import Test_Data_Setup.*;
+import Test_Filters.*;
 
 /**
  * AllTests Testing all the Testing Classes.

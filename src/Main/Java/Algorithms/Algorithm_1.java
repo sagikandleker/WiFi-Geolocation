@@ -29,7 +29,7 @@ import Memory.Data_Structures;
  	}
  
  	/**
- 	 * 	The Algorithm 1 function searching the exact Position for each MAC by the data from HashMap.
+ 	 * 	The Algorithm 1 function searching the exact Position for each MAC by the data from HashMap.*
  	 * @param record
  	 */
  	public static void Algo1(ArrayList<Record_Pos_Wifi_Time> record) {
