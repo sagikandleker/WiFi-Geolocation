@@ -1,24 +1,24 @@
 package GUI.Panels;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
+import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import Data_base.ConnectionMySQL;
 import Memory.Data_Structures;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Font;
+import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class Panel_Login extends JFrame {
-
+	private static Panel_Login frame;
 	private JPanel contentPane;
 	public static String user;
 	public static String password;
@@ -36,7 +36,7 @@ public class Panel_Login extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Panel_Login frame = new Panel_Login();
+					 frame = new Panel_Login();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,33 +50,35 @@ public class Panel_Login extends JFrame {
 	 */
 	public Panel_Login() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 295, 324);
+		setBounds(100, 100, 378, 329);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblMysql = new JLabel("mySQL");
-		lblMysql.setBounds(128, 13, 64, 16);
+		JLabel lblMysql = new JLabel("Sql Login Panel");
+		lblMysql.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblMysql.setFont(new Font("Segoe UI Semilight", Font.BOLD, 20));
+		lblMysql.setBounds(111, 16, 175, 25);
 		contentPane.add(lblMysql);
 		
 		textField = new JTextField();
-		textField.setBounds(94, 71, 116, 22);
+		textField.setBounds(111, 71, 175, 22);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(94, 106, 116, 22);
+		textField_1.setBounds(111, 106, 175, 22);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(94, 141, 116, 22);
+		textField_2.setBounds(111, 141, 175, 22);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(94, 176, 116, 22);
+		textField_3.setBounds(111, 176, 175, 22);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 		
@@ -94,6 +96,11 @@ public class Panel_Login extends JFrame {
 					port = textField_3.getText();
 					
 					Data_Structures.Sql_flag = ConnectionMySQL.login(user, password, ip, port);
+					if(Data_Structures.Sql_flag==true) {
+						JOptionPane.showMessageDialog(null, "Login Succesfull");
+						setVisible(false);
+					    dispose();
+					}
 				}
 				else {
 					
@@ -103,22 +110,26 @@ public class Panel_Login extends JFrame {
 				
 			}
 		});
-		btnLogin.setBounds(105, 239, 97, 25);
+		btnLogin.setBounds(150, 238, 97, 25);
 		contentPane.add(btnLogin);
 		
 		JLabel lblNewLabel = new JLabel("User");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblNewLabel.setBounds(12, 74, 56, 16);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setBounds(12, 109, 56, 16);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblNewLabel_1.setBounds(12, 109, 84, 16);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("IP");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblNewLabel_2.setBounds(12, 144, 56, 16);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Port");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblNewLabel_3.setBounds(12, 179, 56, 16);
 		contentPane.add(lblNewLabel_3);
 	}
