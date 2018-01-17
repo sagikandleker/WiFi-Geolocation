@@ -9,7 +9,10 @@ import org.junit.runners.Suite.SuiteClasses;
  */
 
 	@RunWith(Suite.class)
-	@SuiteClasses({ Position_Test.class, Time_Test.class, Wifi_Test.class })
+	@SuiteClasses({ Test_Wifi.class, Test_Time.class, Test_Position.class, Test_Mac.class
+		, Test_Record.class, Test_And_Filter.class, Test_Or_Filter.class, Test_Not_Filter.class
+		, Test_Algorithm_1.class})
+	
 	
 	public class Test_All {
 		

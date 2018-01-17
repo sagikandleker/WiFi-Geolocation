@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import Data_Setup.Position;
 
-public class Position_Test {
+public class Test_Position {
 	
 	public static final double alt1 = 39.01806582;
 	public static final double lon1 = 34.80988156;

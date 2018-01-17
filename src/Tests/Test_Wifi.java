@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import Data_Setup.Wifi;
 
-public class Wifi_Test {
+public class Test_Wifi {
 		
 	public final static String ssid = "Bezeq";
 	public final static String mac = "6a:12:f5:f9:5e:71";

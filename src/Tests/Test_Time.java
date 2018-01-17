@@ -11,7 +11,7 @@ import java.util.Date;
 import org.junit.Test;
 import Data_Setup.Time;
 
-public class Time_Test {
+public class Test_Time {
 
 	public final static String time1 = "27/10/17 20:00";
 	public final static String time2 = "27/10/17 20:00";
