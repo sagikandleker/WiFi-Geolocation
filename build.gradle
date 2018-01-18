@@ -46,11 +46,23 @@ task copyJar(type: Copy) {
   from "lib"
   into "build/libs"
   include "*.jar"
+  println("copyJar")
 }
 
+task gui(type: JavaExec) {
+	
+   	main = 'main.java.gui.gui'
+    classpath = sourceSets.main.runtimeClasspath
+}
 
-task run{
-println("run")
+task fatJar(type: Jar) {
+    baseName = project.name
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+    manifest {
+        attributes 'Main-Class': 'main.java.gui.gui'
+    }
+    println("fatJar")
 }
 
 build.finalizedBy(copyJar)
