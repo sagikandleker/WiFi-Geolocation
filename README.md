@@ -6,3 +6,5 @@ The wifi will be order with higher signal. After creating the CSV file we need t
 In addition, it is possible to Filter the information put data by - ID, Time, Position.<br />
 Use 2 different Algorithms, One showing the approximate location of a specific MAC.<br />
 The second displays the revalued location of the device identifier using 3 pairs of MAC & Signal.<br />
+
+The project supports Gradle - https://gradle.org/install/ and mySQL - https://www.mysql.com/downloads/
