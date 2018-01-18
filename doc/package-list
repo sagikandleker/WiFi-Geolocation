@@ -1,9 +1,13 @@
 Algorithms
 Data_Setup
+Data_base
 Filtering
 GUI
 GUI.Panels
+Memory
 Reading
-Tests
+Test_Algorithms
+Test_All
+Test_Data_Setup
+Test_Filters
 Writing
-db
