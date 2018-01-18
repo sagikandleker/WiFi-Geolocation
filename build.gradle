@@ -51,7 +51,7 @@ task copyJar(type: Copy) {
 
 task gui(type: JavaExec) {
 	
-   	main = 'main.java.gui.gui'
+   	main = 'GUI.GUI'
     classpath = sourceSets.main.runtimeClasspath
 }
 
@@ -60,10 +60,49 @@ task fatJar(type: Jar) {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
     manifest {
-        attributes 'Main-Class': 'main.java.gui.gui'
+        attributes 'Main-Class': 'GUI.GUI'
     }
     println("fatJar")
 }
+
+task zip(type: Zip) {
+
+    from('Input_data/') {
+	into('Input_data')        
+	}
+	
+	from('Output_data/') {
+	into('Output_data')        
+	}
+	
+	from('doc/') {
+	into('doc')        
+	}
+	
+	from('docs/') {
+	into('docs')        
+	}
+
+    from('src/') {
+	into('src')        
+	}
+	
+    from('lib/') {
+        include '*.jar'
+        into('libs')
+    }
+    
+    from('Images/') {
+        into('Images')
+
+    }
+       
+	from('/'){
+	include 'build.gradle','.classpath','.project','.gitignore','settings.gradle'
+	into('')
+	}
+}
+
 
 build.finalizedBy(copyJar)
 
