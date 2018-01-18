@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="Memory.Data_Structures" project="Object_Oriented_Programming" 
-    file="/Object_Oriented_Programming/src/Main/Java/Memory/Data_Structures.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="640" y="239"/>    
+  <class id="1" language="java" name="Data_base.ConnectionMySQL" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Data_base/ConnectionMySQL.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="512" y="193"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

@@ -1,54 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="Algorithms.Algorithm_Main" project="OOP" 
-    file="/OOP/src/Algorithms/Algorithm_Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1353" y="115"/>    
+  <class id="1" language="java" name="Algorithms.Mac_Hashmap" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Algorithms/Mac_Hashmap.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="690" y="109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="Algorithms.Algorithm_Tools" project="OOP" 
-    file="/OOP/src/Algorithms/Algorithm_Tools.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="120" y="163"/>    
+  <class id="2" language="java" name="Algorithms.Algorithm_Tools" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Algorithms/Algorithm_Tools.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1924" y="552"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="Algorithms.Algorithm_1" project="OOP" file="/OOP/src/Algorithms/Algorithm_1.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="185" width="367" x="298" y="-139"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+  <class id="3" language="java" name="Algorithms.Algorithm_Main" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Algorithms/Algorithm_Main.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1159" y="399"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="Algorithms.Algorithm_2" project="OOP" file="/OOP/src/Algorithms/Algorithm_2.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="385" width="836" x="294" y="117"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+  <class id="4" language="java" name="Algorithms.Record_Pos_Pi" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Algorithms/Record_Pos_Pi.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1418" y="-75"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="Algorithms.Mac_Hashmap" project="OOP" file="/OOP/src/Algorithms/Mac_Hashmap.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="267" width="679" x="782" y="-286"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+  <class id="5" language="java" name="Algorithms.Algorithm_1" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Algorithms/Algorithm_1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1570" y="192"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="Algorithms.Record_Pos_Pi" project="OOP" 
-    file="/OOP/src/Algorithms/Record_Pos_Pi.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1341" y="357"/>    
+  <class id="6" language="java" name="Algorithms.Algorithm_2" project="Object_Oriented_Programming" 
+    file="/Object_Oriented_Programming/src/Main/Java/Algorithms/Algorithm_2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2273" y="10"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -56,32 +58,60 @@
     </display>  
   </class>  
   <dependency id="7">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
   </dependency>  
   <dependency id="8">    
-    <end type="SOURCE" refId="4"/>    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
   <dependency id="9">    
     <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
+    <end type="TARGET" refId="5"/>  
   </dependency>  
   <dependency id="10">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="3"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
   </dependency>  
   <dependency id="11">    
     <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="TARGET" refId="1"/>  
   </dependency>  
   <dependency id="12">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
   </dependency>  
   <dependency id="13">    
-    <end type="SOURCE" refId="1"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="16">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="19">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="20">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
