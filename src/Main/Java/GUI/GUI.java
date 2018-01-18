@@ -27,13 +27,17 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JEditorPane;
+import javax.swing.JRadioButtonMenuItem;
+import java.awt.Panel;
+import java.awt.Button;
 
 public class GUI {
-	
-	
+
+
 	private JFrame frmOop;
 	public static JTextField textField;
 	public static Path directoryPath;
+	public static JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -96,15 +100,15 @@ public class GUI {
 					e.printStackTrace();
 				}
 				// Browse button to select directory
-				
+
 				if(Data_Structures.Sql_flag == true) {
-					
+
 					textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
 				}
 				else {
 					textField.setText("Size of data: " + Data_Structures.All_Data.size());
 				}
-				
+
 			}
 		});
 		btnBrowse.setBounds(22, 70, 183, 27);
@@ -122,12 +126,12 @@ public class GUI {
 				}
 
 				if(Data_Structures.Sql_flag == true) {
-					textField.setText("size of data: " + Data_Structures.Sql_Data.size());
+					textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
 				}
 				else {
-					textField.setText("size of data: " + Data_Structures.All_Data.size());
+					textField.setText("Size of data: " + Data_Structures.All_Data.size());
 				}
-				
+
 			}
 		});
 		btnBrowse_1.setBounds(22, 109, 183, 27);
@@ -278,48 +282,76 @@ public class GUI {
 		editorPane_2.setBackground(Color.DARK_GRAY);
 		editorPane_2.setBounds(403, 44, 136, 2);
 		frmOop.getContentPane().add(editorPane_2);
-		
+
 		JButton btnMysql = new JButton("Login to Sql");
 		btnMysql.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				
+
 				Panel_Login pl = new Panel_Login();
 				pl.setVisible(true);
-			
+
 			}
 		});
+
+		btnNewButton = new JButton("");
+		btnNewButton.setBounds(742, 78, 15, 12);
+		btnNewButton.setEnabled(false);
+		frmOop.getContentPane().add(btnNewButton);
 		btnMysql.setBounds(593, 71, 179, 25);
 		frmOop.getContentPane().add(btnMysql);
-		
+
 		JButton btnLoadDataFrom = new JButton("Load Data From Sql");
 		btnLoadDataFrom.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				try {
-					Data_Structures.Sql_Data.clear();
-					ConnectionMySQL.start();
-					textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
-				} catch (IOException | ParseException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				if(Data_Structures.Sql_flag == true) {
+					try {
+						Data_Structures.Sql_Data.clear();
+						ConnectionMySQL.start();
+						textField.setText("Size of data: " + Data_Structures.Sql_Data.size());
+					} catch (IOException | ParseException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}
 			}
 		});
 		btnLoadDataFrom.setBounds(593, 110, 179, 25);
 		frmOop.getContentPane().add(btnLoadDataFrom);
-		
+
 		JLabel lblSql = new JLabel("Sql");
 		lblSql.setForeground(Color.DARK_GRAY);
 		lblSql.setFont(new Font("Elephant", Font.BOLD, 18));
-		lblSql.setBounds(646, 7, 114, 48);
+		lblSql.setBounds(646, 7, 84, 48);
 		frmOop.getContentPane().add(lblSql);
-		
+
 		JEditorPane editorPane_3 = new JEditorPane();
 		editorPane_3.setEditable(false);
 		editorPane_3.setBackground(Color.DARK_GRAY);
 		editorPane_3.setBounds(625, 44, 97, 2);
 		frmOop.getContentPane().add(editorPane_3);
+
+		JButton btnNewButton_1 = new JButton("Logout");
+		btnNewButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				btnNewButton.setForeground(Color.RED);
+				btnNewButton.setBackground(Color.RED);
+				ConnectionMySQL.login("", "", "", "");
+				Data_Structures.Sql_flag = false;
+			}
+		});
+		btnNewButton_1.setBounds(593, 147, 179, 25);
+		frmOop.getContentPane().add(btnNewButton_1);
+		if(Data_Structures.Sql_flag == true) {
+			btnNewButton.setForeground(Color.GREEN);
+			btnNewButton.setBackground(Color.GREEN);
+		}
+		else {
+			btnNewButton.setForeground(Color.RED);
+			btnNewButton.setBackground(Color.RED);
+		}
 		frmOop.setBackground(Color.WHITE);
 		frmOop.setBounds(100, 100, 804, 367);
 		frmOop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

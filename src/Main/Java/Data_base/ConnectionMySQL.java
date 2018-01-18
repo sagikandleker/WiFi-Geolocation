@@ -20,9 +20,18 @@ public class ConnectionMySQL {
 	 
 
 	 public static boolean login(String u, String p, String i, String t ) {
-		Connection m_Connection = null;
-		
-		
+		 
+		 if(u.equalsIgnoreCase("") && p.equalsIgnoreCase("" )&& i.equalsIgnoreCase("")
+				 && t.equalsIgnoreCase("")) {
+			 
+			 	user = u;
+				password = p;
+				ip = i;
+				port = t;
+		 }
+		 else {
+		 
+		Connection m_Connection = null;			
 		user = u;
 		password = p;
 		ip = i;
@@ -54,8 +63,10 @@ public class ConnectionMySQL {
 					ex.printStackTrace();
 				}
 			}
-		 
-	 }
+		 }
+		return false;
+	
+}
 
 	public static void start() throws IOException, ParseException  {
 		

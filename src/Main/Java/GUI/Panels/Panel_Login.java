@@ -1,6 +1,7 @@
 package GUI.Panels;
 
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -97,13 +98,16 @@ public class Panel_Login extends JFrame {
 					
 					Data_Structures.Sql_flag = ConnectionMySQL.login(user, password, ip, port);
 					if(Data_Structures.Sql_flag==true) {
+						GUI.GUI.btnNewButton.setForeground(Color.GREEN);
+						GUI.GUI.btnNewButton.setBackground(Color.GREEN);
 						JOptionPane.showMessageDialog(null, "Login Succesfull");
 						setVisible(false);
 					    dispose();
 					}
 				}
 				else {
-					
+					GUI.GUI.btnNewButton.setForeground(Color.RED);
+					GUI.GUI.btnNewButton.setBackground(Color.RED);
 					JOptionPane.showMessageDialog(null, "Invalid Input");
 					
 				}
