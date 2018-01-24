@@ -52,7 +52,7 @@ task copyJar(type: Copy) {
 
 // This task opens the GUI of the project.
 task gui(type: JavaExec) {
-	
+
    	main = 'GUI.GUI'
     classpath = sourceSets.main.runtimeClasspath
 }
