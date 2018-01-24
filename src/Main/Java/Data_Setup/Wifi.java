@@ -72,6 +72,6 @@ public class Wifi {
 
 	@Override
 	public String toString() {
-		return mac + "," + ssid + "," + frequency + "," + signal;
+		return ssid + "," + mac + "," + frequency + "," + signal;
 	}
 }
