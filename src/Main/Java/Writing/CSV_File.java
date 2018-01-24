@@ -18,11 +18,6 @@ import Memory.Data_Structures;
 
 public class CSV_File {
 
-
-	/*public static void clearData() {
-		Database.All_Data.clear();
-	}*/
-
 	/**
 	 *  Write_Headers Create CSV file with Headers.
 	 */
