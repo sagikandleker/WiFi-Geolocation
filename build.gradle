@@ -42,6 +42,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+// This task copy the Jar files from lib folder to build/libs folder.
 task copyJar(type: Copy) {
   from "lib"
   into "build/libs"
@@ -49,12 +50,14 @@ task copyJar(type: Copy) {
   println("copyJar")
 }
 
+// This task opens the GUI of the project.
 task gui(type: JavaExec) {
 	
    	main = 'GUI.GUI'
     classpath = sourceSets.main.runtimeClasspath
 }
 
+// This task creating fat Jar with the files of project.
 task fatJar(type: Jar) {
     baseName = project.name
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
@@ -65,6 +68,7 @@ task fatJar(type: Jar) {
     println("fatJar")
 }
 
+// This task creating Zip file with the files of project.
 task zip(type: Zip) {
 
     from('Input_data/') {
